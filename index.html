@@ -1,101 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>HYSCENT | The Art of Niche Fragrance</title>
 
-<meta name="description" content="HYSCENT creates luxury niche fragrances inspired by oriental culture, nature and timeless emotions.">
+<meta name="description" content="HYSCENT creates luxury niche fragrances inspired by oriental culture, nature and modern elegance.">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
 
 <style>
 
-body{
+*{
 margin:0;
-background:#0b0b0b;
-color:#f5f1e8;
-font-family:Georgia,serif;
+padding:0;
+box-sizing:border-box;
 }
+
+
+body{
+background:#0b0b0b;
+color:#f5f2eb;
+font-family:Inter,sans-serif;
+}
+
+
+header{
+
+height:90px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 8%;
+
+border-bottom:1px solid rgba(255,255,255,.1);
+
+}
+
+
+.logo{
+
+font-family:"Playfair Display";
+font-size:32px;
+letter-spacing:5px;
+
+}
+
+
+nav a{
+
+color:white;
+text-decoration:none;
+margin-left:35px;
+font-size:14px;
+
+}
+
+
 
 .hero{
-height:100vh;
+
+height:90vh;
+
 display:flex;
+
 align-items:center;
-justify-content:center;
-text-align:center;
+
+padding:0 8%;
+
 background:
+
 linear-gradient(
-rgba(0,0,0,.45),
-rgba(0,0,0,.85)
+rgba(0,0,0,.35),
+rgba(0,0,0,.8)
 ),
-url("https://images.unsplash.com/photo-1595425970377-c9703cf48b6b");
+
+url("https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc");
+
 background-size:cover;
+
 background-position:center;
+
 }
 
-.content{
-max-width:800px;
-padding:40px;
+
+
+.hero-text{
+
+max-width:650px;
+
 }
 
-h1{
-font-size:70px;
-letter-spacing:12px;
-margin-bottom:20px;
+
+.hero h1{
+
+font-family:"Playfair Display";
+
+font-size:72px;
+
+font-weight:400;
+
+line-height:1.1;
+
 }
 
-h2{
-font-weight:normal;
-letter-spacing:5px;
+
+
+.hero p{
+
+margin-top:30px;
+
+font-size:20px;
+
+font-weight:300;
+
+letter-spacing:2px;
+
 }
 
-p{
-font-size:18px;
-line-height:2;
-color:#ddd;
-}
+
 
 .button{
+
 display:inline-block;
-margin-top:40px;
-padding:15px 45px;
-border:1px solid #c9b27c;
-color:#c9b27c;
+
+margin-top:45px;
+
+padding:16px 45px;
+
+border:1px solid white;
+
+color:white;
+
 text-decoration:none;
+
 letter-spacing:3px;
+
 }
 
-.button:hover{
-background:#c9b27c;
-color:#111;
+
+
+section{
+
+padding:100px 8%;
+
 }
+
+
+
+.title{
+
+font-family:"Playfair Display";
+
+font-size:48px;
+
+text-align:center;
+
+margin-bottom:50px;
+
+}
+
+
+
+.collections{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+}
+
+
+.card{
+
+height:420px;
+
+background:#151515;
+
+display:flex;
+
+align-items:end;
+
+padding:35px;
+
+background-size:cover;
+
+background-position:center;
+
+}
+
+
+
+.card h3{
+
+font-family:"Playfair Display";
+
+font-size:32px;
+
+}
+
+
+
+.about{
+
+text-align:center;
+
+max-width:900px;
+
+margin:auto;
+
+font-size:20px;
+
+line-height:2;
+
+font-weight:300;
+
+}
+
+
+
+footer{
+
+padding:40px;
+
+text-align:center;
+
+border-top:1px solid #333;
+
+font-size:14px;
+
+}
+
+
+
+@media(max-width:800px){
+
+.hero h1{
+
+font-size:45px;
+
+}
+
+
+.collections{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+
 
 </style>
 
 </head>
 
+
 <body>
 
-<section class="hero">
 
-<div class="content">
+<header>
 
-<h1>HYSCENT</h1>
+<div class="logo">
+HYSCENT
+</div>
 
-<h2>THE ART OF NICHE FRAGRANCE</h2>
+
+<nav>
+
+<a href="#">HOME</a>
+
+<a href="#">COLLECTIONS</a>
+
+<a href="#">CUSTOM</a>
+
+<a href="#">CONTACT</a>
+
+</nav>
+
+
+</header>
+
+
+
+<div class="hero">
+
+
+<div class="hero-text">
+
+
+<h1>
+The Art<br>
+of Niche Fragrance
+</h1>
+
 
 <p>
-Original fragrances inspired by nature, oriental wisdom and timeless luxury.
+Original perfumes inspired by oriental culture,
+nature and timeless emotions.
 </p>
+
 
 <a class="button" href="#">
 DISCOVER COLLECTION
 </a>
 
+
 </div>
+
+
+</div>
+
+
+
+<section>
+
+
+<h2 class="title">
+Signature Collections
+</h2>
+
+
+
+<div class="collections">
+
+
+<div class="card"
+style="background-image:url('https://images.unsplash.com/photo-1594035910387-fea47794261f')">
+
+<h3>
+Oriental Essence
+</h3>
+
+</div>
+
+
+
+<div class="card"
+style="background-image:url('https://images.unsplash.com/photo-1600612253971-422e7f7faeb6')">
+
+<h3>
+Wild Nature
+</h3>
+
+</div>
+
+
+
+<div class="card"
+style="background-image:url('https://images.unsplash.com/photo-1595425970377-c9703cf9b43d')">
+
+<h3>
+Modern Luxury
+</h3>
+
+</div>
+
+
+</div>
+
 
 </section>
 
 
+
+
+<section>
+
+
+<h2 class="title">
+About HYSCENT
+</h2>
+
+
+<p class="about">
+
+HYSCENT is a luxury fragrance house dedicated to creating original niche perfumes.
+
+Combining oriental inspiration, natural ingredients and contemporary aesthetics,
+we transform memories, landscapes and emotions into unique scents.
+
+</p>
+
+
+</section>
+
+
+
+
+<section>
+
+
+<h2 class="title">
+Private Label & OEM
+</h2>
+
+
+<p class="about">
+
+From concept development to packaging,
+HYSCENT provides complete fragrance customization solutions
+for global brands, retailers and private clients.
+
+</p>
+
+
+</section>
+
+
+
+
+<footer>
+
+© 2026 HYSCENT  
+<br>
+The Art of Niche Fragrance
+
+</footer>
+
+
 </body>
+
 </html>
