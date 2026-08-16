@@ -1,926 +1,533 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>HYSCENT | Luxury Fragrance & Custom Models</title>
-
-<meta name="description"
-content="HYSCENT creates luxury niche fragrances, custom perfumes and collectible models for global brands.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="HYSCENT — Luxury Fragrance & Custom Models">
+<title>HYSCENT — Luxury Fragrance & Custom Models</title>
 
 <style>
-
-/* =========================
-   GLOBAL
-========================= */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+:root{
+  --bg:#050505;
+  --gold:#c9a24a;
+  --gold2:#f0c867;
+  --text:#f5f0e6;
+  --muted:#8f8b84;
 }
-
-html{
-    scroll-behavior:smooth;
-}
-
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-    background:#090909;
-    color:#f5f1e8;
-    font-family:'Inter',sans-serif;
-    overflow-x:hidden;
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font:13px Arial,Helvetica,sans-serif;
 }
-
-a{
-    color:inherit;
-    text-decoration:none;
+a{color:inherit;text-decoration:none}
+.wrap{
+  width:min(1400px,92%);
+  margin:auto;
 }
-
-button{
-    font-family:inherit;
-}
-
 
 /* =========================
-   HEADER
+   NAVIGATION
 ========================= */
 
-header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:86px;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    padding:0 7%;
-
-    z-index:1000;
-
-    background:rgba(8,8,8,.75);
-    backdrop-filter:blur(15px);
-
-    border-bottom:1px solid rgba(255,255,255,.08);
+nav{
+  height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid #181818;
 }
 
 .logo{
-    font-family:'Playfair Display',serif;
-
-    font-size:30px;
-
-    letter-spacing:7px;
+  font:26px Georgia,serif;
+  color:var(--gold2);
+  letter-spacing:4px;
 }
 
-nav{
-    display:flex;
-    gap:38px;
+.logo small{
+  display:block;
+  font:8px Arial,sans-serif;
+  letter-spacing:1.5px;
+  color:#999;
+  margin-top:5px;
 }
 
-nav a{
-    font-size:12px;
-
-    letter-spacing:2px;
-
-    color:#ddd;
-
-    transition:.3s;
+.links{
+  display:flex;
+  gap:30px;
 }
 
-nav a:hover{
-    color:#c8a86b;
+.links a{
+  padding:30px 0;
+  color:#ddd;
+  font-size:12px;
 }
 
+.links a:hover{
+  color:var(--gold2);
+}
+
+.right{
+  display:flex;
+  gap:15px;
+  align-items:center;
+  font-size:11px;
+}
+
+.quote{
+  border:1px solid var(--gold);
+  padding:11px 15px;
+  color:var(--gold2);
+}
 
 /* =========================
    HERO
 ========================= */
 
 .hero{
-
-    min-height:100vh;
-
-    display:flex;
-
-    align-items:center;
-
-    padding:120px 8% 80px;
-
-    position:relative;
-
-    background:
-    linear-gradient(
-        90deg,
-        rgba(0,0,0,.92) 0%,
-        rgba(0,0,0,.70) 45%,
-        rgba(0,0,0,.25) 100%
-    ),
-
-    url("https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=2000&q=90");
-
-    background-size:cover;
-
-    background-position:center;
+  border-bottom:1px solid #302615;
+  background:
+  radial-gradient(
+    circle at 50% 45%,
+    #281d0c 0,
+    #090806 30%,
+    #050505 65%
+  );
 }
 
-.hero-content{
-    max-width:720px;
+.heroGrid{
+  min-height:510px;
+  display:grid;
+  grid-template-columns:1fr 1.25fr 1fr;
+  align-items:center;
 }
 
-.hero-kicker{
-
-    font-size:12px;
-
-    letter-spacing:6px;
-
-    color:#c8a86b;
-
-    margin-bottom:25px;
+.heroArt{
+  height:420px;
 }
 
-.hero h1{
-
-    font-family:'Playfair Display',serif;
-
-    font-size:clamp(52px,7vw,92px);
-
-    font-weight:400;
-
-    line-height:1.02;
+.heroArt svg{
+  width:100%;
+  height:100%;
 }
 
-.hero h1 span{
-    color:#c8a86b;
+.copy{
+  padding:30px;
 }
 
-.hero-description{
-
-    margin-top:32px;
-
-    max-width:650px;
-
-    color:#c8c4bc;
-
-    line-height:1.9;
-
-    font-size:16px;
-
-    font-weight:300;
+.kicker{
+  letter-spacing:6px;
+  color:var(--gold2);
+  font-size:11px;
 }
 
-.hero-buttons{
+.copy h1{
+  font:400 50px/1.05 Georgia,serif;
+  margin:18px 0;
+}
 
-    display:flex;
+.copy h1 span{
+  color:var(--gold2);
+}
 
-    gap:15px;
+.copy p{
+  color:#aaa;
+  line-height:1.8;
+  max-width:600px;
+}
 
-    margin-top:42px;
-
-    flex-wrap:wrap;
+.btns{
+  display:flex;
+  gap:12px;
+  margin-top:25px;
+  flex-wrap:wrap;
 }
 
 .btn{
-
-    padding:16px 32px;
-
-    border:1px solid rgba(255,255,255,.5);
-
-    font-size:12px;
-
-    letter-spacing:3px;
-
-    transition:.3s;
-
-    cursor:pointer;
-
-    background:transparent;
-
-    color:white;
+  border:1px solid var(--gold);
+  padding:14px 20px;
+  color:var(--gold2);
+  display:inline-block;
 }
 
-.btn:hover{
-    background:#f5f1e8;
-    color:#080808;
+.btn.primary{
+  background:linear-gradient(135deg,#e0b655,#9a7126);
+  color:#080808;
 }
-
-.btn-gold{
-
-    background:#b7965b;
-
-    border-color:#b7965b;
-
-    color:#080808;
-}
-
-.btn-gold:hover{
-    background:#d1b477;
-}
-
 
 /* =========================
-   SECTION
+   SECTIONS
 ========================= */
 
 section{
-    padding:120px 8%;
+  padding:36px 0;
 }
 
-.section-kicker{
-
-    text-align:center;
-
-    font-size:11px;
-
-    letter-spacing:5px;
-
-    color:#b7965b;
-
-    margin-bottom:18px;
+.head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  margin-bottom:15px;
 }
 
-.section-title{
-
-    font-family:'Playfair Display',serif;
-
-    text-align:center;
-
-    font-size:54px;
-
-    font-weight:400;
-
-    margin-bottom:65px;
+.head h2{
+  font:400 24px Georgia,serif;
+  margin:0;
 }
 
+.head p{
+  color:#888;
+  font-size:11px;
+  margin:8px 0 0;
+}
+
+.view{
+  font-size:11px;
+}
+
+.view b{
+  color:var(--gold2);
+  font-size:19px;
+  margin-left:7px;
+}
 
 /* =========================
-   FRAGRANCE
+   PRODUCT GRID
 ========================= */
 
-.fragrance-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:24px;
+.grid{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:10px;
 }
 
-.fragrance-card{
-
-    background:#121212;
-
-    overflow:hidden;
-
-    cursor:pointer;
-
-    transition:.5s;
-
-    border:1px solid rgba(255,255,255,.06);
+.card{
+  border:1px solid #1c1c1c;
+  background:#090909;
+  overflow:hidden;
+  transition:.25s;
 }
 
-.fragrance-card:hover{
-
-    transform:translateY(-8px);
-
-    border-color:rgba(183,150,91,.5);
+.card:hover{
+  transform:translateY(-4px);
+  border-color:#81672e;
 }
 
-.fragrance-image{
-
-    height:440px;
-
-    background-size:cover;
-
-    background-position:center;
-
-    transition:.7s;
+.pic{
+  height:215px;
+  background:#0b0b0b;
 }
 
-.fragrance-card:hover .fragrance-image{
-
-    transform:scale(1.04);
+.pic svg{
+  width:100%;
+  height:100%;
+  display:block;
 }
 
-.fragrance-info{
-
-    padding:30px;
+.body{
+  padding:12px;
+  min-height:91px;
 }
 
-.fragrance-info h3{
-
-    font-family:'Playfair Display',serif;
-
-    font-size:28px;
-
-    font-weight:400;
-
-    margin-bottom:10px;
+.body h3{
+  font:15px Georgia,serif;
+  margin:0 0 6px;
 }
 
-.fragrance-info p{
-
-    color:#888;
-
-    line-height:1.7;
-
-    font-size:14px;
+.sub{
+  font-size:10px;
+  color:#c5a44e;
 }
 
-.fragrance-tag{
-
-    display:inline-block;
-
-    margin-top:18px;
-
-    color:#b7965b;
-
-    font-size:10px;
-
-    letter-spacing:3px;
+.meta{
+  font-size:9px;
+  color:#707070;
+  margin-top:5px;
 }
 
+.plus{
+  float:right;
+  border:1px solid var(--gold);
+  color:var(--gold2);
+  border-radius:50%;
+  width:23px;
+  height:23px;
+  text-align:center;
+  line-height:20px;
+  font-size:17px;
+}
 
 /* =========================
-   CUSTOM SECTION
+   FEATURES
 ========================= */
 
-.custom-section{
-
-    position:relative;
-
-    background:
-
-    linear-gradient(
-        rgba(0,0,0,.82),
-        rgba(0,0,0,.94)
-    ),
-
-    url("https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&w=2000&q=90");
-
-    background-size:cover;
-
-    background-position:center;
-
-    text-align:center;
+.features{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid #191919;
+  border-bottom:1px solid #191919;
 }
 
-.custom-section h2{
-
-    font-family:'Playfair Display',serif;
-
-    font-size:58px;
-
-    font-weight:400;
+.feature{
+  padding:23px 18px;
+  border-right:1px solid #191919;
 }
 
-.custom-section p{
-
-    max-width:700px;
-
-    margin:25px auto 40px;
-
-    line-height:1.9;
-
-    color:#bbb;
+.feature:last-child{
+  border:0;
 }
 
-.custom-options{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:20px;
-
-    flex-wrap:wrap;
+.feature strong{
+  display:block;
+  font-size:11px;
+  margin:8px 0;
 }
 
-.custom-card{
-
-    width:330px;
-
-    min-height:230px;
-
-    border:1px solid rgba(255,255,255,.16);
-
-    background:rgba(10,10,10,.65);
-
-    padding:45px 30px;
-
-    cursor:pointer;
-
-    transition:.4s;
+.feature span{
+  font-size:10px;
+  color:#777;
 }
-
-.custom-card:hover{
-
-    border-color:#b7965b;
-
-    transform:translateY(-8px);
-}
-
-.custom-card .number{
-
-    color:#b7965b;
-
-    font-size:12px;
-
-    letter-spacing:4px;
-}
-
-.custom-card h3{
-
-    font-family:'Playfair Display',serif;
-
-    font-size:30px;
-
-    font-weight:400;
-
-    margin:22px 0 12px;
-}
-
-.custom-card p{
-
-    margin:0;
-
-    font-size:13px;
-
-    color:#888;
-}
-
 
 /* =========================
    ABOUT
 ========================= */
 
 .about{
-
-    max-width:900px;
-
-    margin:auto;
-
-    text-align:center;
+  border-top:1px solid #191919;
 }
 
-.about p{
-
-    font-size:18px;
-
-    color:#aaa;
-
-    line-height:2;
-
-    font-weight:300;
+.two{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
 }
 
+.two h2,
+.contact h2{
+  font:400 32px Georgia,serif;
+}
+
+.two p,
+.contact p{
+  color:#999;
+  line-height:1.9;
+}
+
+.box{
+  border:1px solid #49391c;
+  padding:28px;
+  background:
+  radial-gradient(
+    circle at 80% 20%,
+    #2a200d,
+    transparent 45%
+  );
+}
+
+.box strong{
+  font:400 25px Georgia,serif;
+  color:var(--gold2);
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:50px;
+}
+
+.info{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:20px;
+}
+
+.info div{
+  border:1px solid #1c1c1c;
+  padding:15px;
+}
+
+.info label{
+  display:block;
+  color:#666;
+  font-size:9px;
+  margin-bottom:7px;
+}
+
+.info a{
+  font-size:12px;
+}
+
+form{
+  border:1px solid #1c1c1c;
+  padding:22px;
+}
+
+input,
+textarea{
+  width:100%;
+  padding:13px;
+  margin:0 0 10px;
+  background:#080808;
+  border:1px solid #222;
+  color:white;
+}
+
+textarea{
+  height:100px;
+}
 
 /* =========================
    FOOTER
 ========================= */
 
 footer{
-
-    padding:55px 8%;
-
-    border-top:1px solid #222;
-
-    text-align:center;
+  border-top:1px solid #191919;
+  padding:24px 0;
+  color:#666;
+  font-size:10px;
 }
 
-.footer-logo{
-
-    font-family:'Playfair Display',serif;
-
-    font-size:30px;
-
-    letter-spacing:6px;
-
-    margin-bottom:18px;
+.foot{
+  display:flex;
+  justify-content:space-between;
 }
-
-footer p{
-
-    color:#666;
-
-    font-size:12px;
-
-    letter-spacing:2px;
-}
-
 
 /* =========================
-   MODAL
+   RESPONSIVE
 ========================= */
 
-.modal{
+@media(max-width:1100px){
 
-    position:fixed;
+  .links{
+    gap:15px;
+  }
 
-    inset:0;
-
-    background:rgba(0,0,0,.82);
-
-    backdrop-filter:blur(12px);
-
+  .right span{
     display:none;
+  }
 
-    align-items:center;
+  .grid{
+    grid-template-columns:repeat(3,1fr);
+  }
 
-    justify-content:center;
+  .heroGrid{
+    grid-template-columns:1fr 1.3fr 1fr;
+  }
 
-    z-index:2000;
-
-    padding:20px;
+  .copy h1{
+    font-size:40px;
+  }
 }
 
-.modal.active{
-    display:flex;
-}
+@media(max-width:700px){
 
-.modal-box{
+  nav{
+    height:68px;
+  }
 
-    width:min(900px,100%);
+  .links,
+  .quote{
+    display:none;
+  }
 
-    max-height:92vh;
+  .heroGrid{
+    grid-template-columns:1fr;
+  }
 
-    overflow-y:auto;
+  .heroGrid .heroArt:first-child{
+    display:none;
+  }
 
-    background:#111;
+  .copy{
+    padding:55px 0 10px;
+  }
 
-    border:1px solid rgba(255,255,255,.14);
+  .copy h1{
+    font-size:39px;
+  }
 
-    position:relative;
+  .heroArt{
+    height:300px;
+  }
 
-    padding:45px;
-}
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
 
-.close{
-
-    position:absolute;
-
-    top:20px;
-
-    right:25px;
-
-    font-size:28px;
-
-    color:#888;
-
-    cursor:pointer;
-}
-
-.close:hover{
-    color:white;
-}
-
-.modal-header{
-
-    margin-bottom:35px;
-}
-
-.modal-header small{
-
-    color:#b7965b;
-
-    letter-spacing:4px;
-
-    font-size:10px;
-}
-
-.modal-header h2{
-
-    font-family:'Playfair Display',serif;
-
-    font-size:45px;
-
-    font-weight:400;
-
-    margin-top:10px;
-}
-
-
-/* =========================
-   TYPE SWITCH
-========================= */
-
-.type-switch{
-
-    display:grid;
-
+  .features{
     grid-template-columns:1fr 1fr;
+  }
 
-    margin-bottom:35px;
+  .feature:nth-child(2){
+    border-right:0;
+  }
 
-    border:1px solid #333;
-}
+  .two,
+  .contact{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
 
-.type-btn{
+  .info{
+    grid-template-columns:1fr;
+  }
 
-    padding:18px;
-
-    background:transparent;
-
-    color:#777;
-
-    border:0;
-
-    cursor:pointer;
-
-    letter-spacing:3px;
-
-    font-size:11px;
-}
-
-.type-btn.active{
-
-    background:#b7965b;
-
-    color:#080808;
-}
-
-
-/* =========================
-   FORM
-========================= */
-
-.form-group{
-
-    margin-bottom:25px;
-}
-
-.form-group label{
-
-    display:block;
-
-    font-size:11px;
-
-    letter-spacing:2px;
-
-    color:#999;
-
-    margin-bottom:12px;
-}
-
-.options{
-
-    display:flex;
-
+  .foot{
+    flex-direction:column;
     gap:10px;
-
-    flex-wrap:wrap;
+  }
 }
 
-.option{
+@media(max-width:430px){
 
-    padding:13px 18px;
+  .grid{
+    grid-template-columns:1fr;
+  }
 
-    border:1px solid #333;
-
-    background:#0c0c0c;
-
-    color:#aaa;
-
-    cursor:pointer;
-
-    font-size:12px;
-
-    transition:.3s;
+  .pic{
+    height:235px;
+  }
 }
-
-.option:hover,
-.option.selected{
-
-    border-color:#b7965b;
-
-    color:#b7965b;
-}
-
-.quantity{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:20px;
-}
-
-.quantity button{
-
-    width:38px;
-
-    height:38px;
-
-    background:#181818;
-
-    color:white;
-
-    border:1px solid #333;
-
-    cursor:pointer;
-
-    font-size:20px;
-}
-
-.quantity span{
-
-    min-width:50px;
-
-    text-align:center;
-}
-
-
-/* =========================
-   INPUT
-========================= */
-
-input,
-textarea,
-select{
-
-    width:100%;
-
-    padding:15px;
-
-    background:#0a0a0a;
-
-    border:1px solid #333;
-
-    color:white;
-
-    outline:none;
-
-    font-family:inherit;
-}
-
-input:focus,
-textarea:focus{
-
-    border-color:#b7965b;
-}
-
-textarea{
-
-    min-height:130px;
-
-    resize:vertical;
-}
-
-.form-grid{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:18px;
-}
-
-
-/* =========================
-   SUBMIT
-========================= */
-
-.submit-btn{
-
-    width:100%;
-
-    margin-top:15px;
-
-    padding:18px;
-
-    background:#b7965b;
-
-    color:#080808;
-
-    border:0;
-
-    letter-spacing:3px;
-
-    font-size:12px;
-
-    cursor:pointer;
-
-    transition:.3s;
-}
-
-.submit-btn:hover{
-
-    background:#d1b477;
-}
-
-
-/* =========================
-   MODEL / FRAGRANCE CONTENT
-========================= */
-
-.custom-content{
-    display:none;
-}
-
-.custom-content.active{
-    display:block;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:900px){
-
-    nav{
-        display:none;
-    }
-
-    header{
-        padding:0 5%;
-    }
-
-    section{
-        padding:80px 5%;
-    }
-
-    .hero{
-        padding:120px 7% 70px;
-    }
-
-    .fragrance-grid{
-        grid-template-columns:1fr;
-    }
-
-    .fragrance-image{
-        height:380px;
-    }
-
-    .section-title{
-        font-size:42px;
-    }
-
-    .custom-section h2{
-        font-size:43px;
-    }
-
-    .modal-box{
-        padding:30px 22px;
-    }
-
-    .modal-header h2{
-        font-size:36px;
-    }
-
-    .form-grid{
-        grid-template-columns:1fr;
-    }
-
-}
-
 </style>
-
 </head>
-
 
 <body>
 
-
 <!-- =========================
-     HEADER
+     NAVIGATION
 ========================= -->
 
-<header>
+<nav class="wrap">
 
-<div class="logo">
-HYSCENT
+<a class="logo" href="#home">
+HYSCENT<sup style="font-size:8px">®</sup>
+<small>LUXURY FRAGRANCE & CUSTOM MODELS</small>
+</a>
+
+<div class="links">
+<a href="#home">HOME</a>
+<a href="#fragrance">FRAGRANCE</a>
+<a href="#models">MODELS</a>
+<a href="#custom">CUSTOM</a>
+<a href="#about">ABOUT US</a>
+<a href="#contact">CONTACT</a>
 </div>
 
-<nav>
-
-<a href="#home">HOME</a>
-
-<a href="#fragrance">FRAGRANCE</a>
-
-<a href="#custom">CUSTOM</a>
-
-<a href="#models">MODELS</a>
-
-<a href="#about">ABOUT</a>
-
-<a href="#contact">CONTACT</a>
+<div class="right">
+<span>⌕</span>
+<a class="quote" href="#contact">REQUEST A QUOTE</a>
+<span>+86 187 7430 6344</span>
+<span>iloree@163.com</span>
+</div>
 
 </nav>
-
-</header>
-
 
 
 <!-- =========================
@@ -929,1062 +536,1615 @@ HYSCENT
 
 <section class="hero" id="home">
 
-<div class="hero-content">
+<div class="wrap heroGrid">
 
-<div class="hero-kicker">
+<div class="heroArt" id="heroPerfume"></div>
+
+<div class="copy">
+
+<div class="kicker">
 THE ART OF CREATION
 </div>
 
 <h1>
-Luxury<br>
-<span>Beyond</span><br>
-Fragrance
+LUXURY FRAGRANCE
+<br>
+<span>&</span> CUSTOM MODELS
 </h1>
 
-<p class="hero-description">
-
-HYSCENT creates original niche fragrances,
-private label perfumes and collectible models
-for brands, retailers and creators worldwide.
-
+<p>
+HYSCENT creates premium fragrances and high-end collectible models for brands,
+collectors, private clients and businesses worldwide.
 </p>
 
-<div class="hero-buttons">
+<div class="btns">
 
-<button
-class="btn btn-gold"
-onclick="openCustom('fragrance')">
+<a class="btn primary" href="#fragrance">
+▣ CUSTOM FRAGRANCE
+</a>
 
-CUSTOM FRAGRANCE
-
-</button>
-
-<a
-href="#fragrance"
-class="btn">
-
-EXPLORE COLLECTION
-
+<a class="btn" href="#models">
+▣ CUSTOM MODELS
 </a>
 
 </div>
 
 </div>
 
-</section>
+<div class="heroArt" id="heroTank"></div>
 
+</div>
+
+</section>
 
 
 <!-- =========================
      FRAGRANCE
 ========================= -->
 
-<section id="fragrance">
+<section class="wrap" id="fragrance">
 
-<div class="section-kicker">
-SIGNATURE COLLECTION
-</div>
+<div class="head">
 
-<h2 class="section-title">
-Niche Fragrance
-</h2>
-
-
-<div class="fragrance-grid">
-
-
-<div class="fragrance-card">
-
-<div
-class="fragrance-image"
-style="background-image:url('https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1200&q=85');">
-</div>
-
-<div class="fragrance-info">
-
-<h3>
-Oud Dynasty
-</h3>
-
+<div>
+<h2>SIGNATURE FRAGRANCE COLLECTION</h2>
 <p>
-Deep oud, precious woods and incense inspired by
-ancient oriental ceremonies.
+Premium bottle concepts, original scent directions and private-label solutions.
 </p>
+</div>
 
-<span class="fragrance-tag">
-ORIENTAL / WOODY
-</span>
+<a class="view" href="#contact">
+VIEW ALL FRAGRANCES <b>→</b>
+</a>
 
 </div>
 
-</div>
-
-
-
-<div class="fragrance-card">
-
-<div
-class="fragrance-image"
-style="background-image:url('https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&w=1200&q=85');">
-</div>
-
-<div class="fragrance-info">
-
-<h3>
-Imperial Amber
-</h3>
-
-<p>
-Warm amber, spices and precious woods surrounded
-by a modern luxurious character.
-</p>
-
-<span class="fragrance-tag">
-AMBER / SPICY
-</span>
-
-</div>
-
-</div>
-
-
-
-<div class="fragrance-card">
-
-<div
-class="fragrance-image"
-style="background-image:url('https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=1200&q=85');">
-</div>
-
-<div class="fragrance-info">
-
-<h3>
-Jasmine Moon
-</h3>
-
-<p>
-A delicate floral composition inspired by
-moonlit oriental gardens.
-</p>
-
-<span class="fragrance-tag">
-FLORAL / MUSK
-</span>
-
-</div>
-
-</div>
-
-
-
-</div>
+<div class="grid" id="perfumes"></div>
 
 </section>
 
+
+<!-- =========================
+     MILITARY MODELS
+========================= -->
+
+<section class="wrap" id="models">
+
+<div class="head">
+
+<div>
+<h2>MILITARY MODEL CASES</h2>
+<p>
+High-precision collectible models, custom painting and miniature diorama scenes.
+</p>
+</div>
+
+<a class="view" href="#contact">
+VIEW ALL MODELS <b>→</b>
+</a>
+
+</div>
+
+<div class="grid" id="modelsGrid"></div>
+
+</section>
+
+
+<!-- =========================
+     FEATURES
+========================= -->
+
+<div class="wrap features">
+
+<div class="feature">
+✦
+<strong>PREMIUM QUALITY</strong>
+<span>Top-tier materials & craftsmanship</span>
+</div>
+
+<div class="feature">
+♧
+<strong>CUSTOM SOLUTIONS</strong>
+<span>OEM / ODM / Private Label</span>
+</div>
+
+<div class="feature">
+◇
+<strong>GLOBAL SHIPPING</strong>
+<span>Worldwide delivery service</span>
+</div>
+
+<div class="feature">
+♙
+<strong>EXPERT TEAM</strong>
+<span>Professional support from concept to delivery</span>
+</div>
+
+</div>
 
 
 <!-- =========================
      CUSTOM
 ========================= -->
 
-<section class="custom-section" id="custom">
+<section class="about wrap" id="custom">
 
-<div class="section-kicker">
-CREATE YOUR OWN
-</div>
+<div class="two">
+
+<div>
 
 <h2>
-Custom Creation
+FROM CONCEPT TO COLLECTIBLE
 </h2>
 
 <p>
-
-From fragrance development to collectible models,
-HYSCENT provides customized solutions for global brands,
-retailers, creators and private clients.
-
+From a sketch or reference to a finished presentation piece,
+HYSCENT develops bespoke fragrance bottles, military models,
+display models and miniature scenes.
 </p>
 
-
-<div class="custom-options">
-
-
-<div
-class="custom-card"
-onclick="openCustom('fragrance')">
-
-<div class="number">
-01
 </div>
 
-<h3>
-Custom Fragrance
-</h3>
+<div class="box">
+
+<strong>
+OEM · ODM · PRIVATE LABEL
+</strong>
 
 <p>
-OEM · ODM · Private Label
+Custom bottle concepts, fragrance development, model prototyping,
+painting, diorama scenes and branded presentation solutions.
 </p>
 
 </div>
-
-
-
-<div
-class="custom-card"
-onclick="openCustom('model')">
-
-<div class="number">
-02
-</div>
-
-<h3>
-Custom Models
-</h3>
-
-<p>
-Figures · Toys · Collectibles · IP Models
-</p>
-
-</div>
-
 
 </div>
 
 </section>
-
 
 
 <!-- =========================
      ABOUT
 ========================= -->
 
-<section id="about">
+<section class="about wrap" id="about">
 
-<div class="section-kicker">
-ABOUT HYSCENT
-</div>
+<div class="two">
 
-<h2 class="section-title">
-A New Language of Luxury
-</h2>
+<div>
 
-<div class="about">
+<h2>HYSCENT</h2>
 
 <p>
-
-HYSCENT is a creative manufacturing partner
-specializing in niche fragrance and customized
-collectible products.
-
-We combine oriental inspiration,
-modern aesthetics and professional manufacturing
-to transform ideas into products.
-
-From the first concept to final production,
-we help brands create products with identity,
-emotion and lasting value.
-
+Luxury fragrance and custom model studio focused on premium presentation,
+distinctive product concepts and collectible craftsmanship.
 </p>
+
+</div>
+
+<div class="box">
+
+<strong>
+BUILT FOR BRANDS & COLLECTORS
+</strong>
+
+<p>
+Fragrance, corporate gifts, military displays and custom miniature scenes
+developed around your requirements.
+</p>
+
+</div>
 
 </div>
 
 </section>
 
 
-
 <!-- =========================
-     FOOTER
+     CONTACT
 ========================= -->
 
-<footer id="contact">
+<section class="contact wrap" id="contact">
 
-<div class="footer-logo">
-HYSCENT
+<div>
+
+<h2>
+LET'S CREATE SOMETHING DISTINCTIVE.
+</h2>
+
+<p>
+Tell us about your fragrance or model project.
+We can discuss bottle design, private label, custom painting,
+scale models, packaging and presentation.
+</p>
+
+<div class="info">
+
+<div>
+<label>PHONE / WHATSAPP</label>
+<a href="tel:+8618774306344">
++86 187 7430 6344
+</a>
 </div>
 
-<p>
-THE ART OF NICHE FRAGRANCE · CUSTOM CREATION
-</p>
+<div>
+<label>EMAIL</label>
+<a href="mailto:iloree@163.com">
+iloree@163.com
+</a>
+</div>
 
-<br>
+</div>
 
-<p>
+</div>
+
+
+<form
+action="mailto:iloree@163.com"
+method="post"
+enctype="text/plain"
+>
+
+<h3>REQUEST A QUOTE</h3>
+
+<input
+name="name"
+placeholder="Your name"
+>
+
+<input
+name="email"
+placeholder="Your email"
+>
+
+<input
+name="project"
+placeholder="Project type — Fragrance / Model / Custom"
+>
+
+<textarea
+name="message"
+placeholder="Tell us about your project..."
+></textarea>
+
+<button class="btn primary" type="submit">
+SEND ENQUIRY →
+</button>
+
+</form>
+
+</section>
+
+
+<footer>
+
+<div class="wrap foot">
+
+<span>
 © 2026 HYSCENT. ALL RIGHTS RESERVED.
-</p>
+</span>
+
+<span>
++86 187 7430 6344 · iloree@163.com
+</span>
+
+</div>
 
 </footer>
 
 
-
-<!-- =========================
-     CUSTOM MODAL
-========================= -->
-
-<div
-class="modal"
-id="customModal">
-
-<div class="modal-box">
-
-<div
-class="close"
-onclick="closeCustom()">
-
-×
-
-</div>
-
-
-<div class="modal-header">
-
-<small>
-HYSCENT CUSTOM CREATION
-</small>
-
-<h2>
-Create Your Product
-</h2>
-
-</div>
-
-
-
-<!-- TYPE -->
-
-<div class="type-switch">
-
-<button
-class="type-btn active"
-id="fragranceTab"
-onclick="switchType('fragrance')">
-
-FRAGRANCE
-
-</button>
-
-<button
-class="type-btn"
-id="modelTab"
-onclick="switchType('model')">
-
-MODEL
-
-</button>
-
-</div>
-
-
-
-<!-- =====================
-     FRAGRANCE FORM
-===================== -->
-
-<div
-class="custom-content active"
-id="fragranceContent">
-
-
-<div class="form-group">
-
-<label>
-FRAGRANCE STYLE
-</label>
-
-<div class="options">
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-WOODY OUD
-
-</div>
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-AMBER SPICY
-
-</div>
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-FRESH CITRUS
-
-</div>
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-WHITE FLORAL
-
-</div>
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-DARK WOODS
-
-</div>
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-CUSTOM SCENT
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="form-group">
-
-<label>
-BOTTLE SIZE
-</label>
-
-<div class="options">
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-30 ML
-
-</div>
-
-<div
-class="option selected"
-onclick="selectOption(this)">
-
-50 ML
-
-</div>
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-100 ML
-
-</div>
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-CUSTOM
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="form-group">
-
-<label>
-QUANTITY
-</label>
-
-<div class="quantity">
-
-<button onclick="changeQuantity(-1)">
-−
-</button>
-
-<span id="fragranceQuantity">
-100
-</span>
-
-<button onclick="changeQuantity(1)">
-+
-</button>
-
-</div>
-
-</div>
-
-
-
-<div class="form-group">
-
-<label>
-BUSINESS MODEL
-</label>
-
-<div class="options">
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-OEM
-
-</div>
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-ODM
-
-</div>
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-PRIVATE LABEL
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- =====================
-     MODEL FORM
-===================== -->
-
-<div
-class="custom-content"
-id="modelContent">
-
-
-<div class="form-group">
-
-<label>
-MODEL TYPE
-</label>
-
-<div class="options">
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-CHARACTER FIGURE
-
-</div>
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-COLLECTIBLE TOY
-
-</div>
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-BRAND MASCOT
-
-</div>
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-IP MODEL
-
-</div>
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-DISPLAY FIGURE
-
-</div>
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-CUSTOM MODEL
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="form-group">
-
-<label>
-MODEL SIZE
-</label>
-
-<div class="options">
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-10 CM
-
-</div>
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-15 CM
-
-</div>
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-20 CM
-
-</div>
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-30 CM
-
-</div>
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-CUSTOM SIZE
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="form-group">
-
-<label>
-QUANTITY
-</label>
-
-<div class="quantity">
-
-<button onclick="changeModelQuantity(-1)">
-−
-</button>
-
-<span id="modelQuantity">
-50
-</span>
-
-<button onclick="changeModelQuantity(1)">
-+
-</button>
-
-</div>
-
-</div>
-
-
-
-<div class="form-group">
-
-<label>
-PROJECT TYPE
-</label>
-
-<div class="options">
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-RETAIL
-
-</div>
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-WHOLESALE
-
-</div>
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-BRAND PROMOTION
-
-</div>
-
-<div
-class="option"
-onclick="selectOption(this)">
-
-GIFT
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- =====================
-     CONTACT FORM
-===================== -->
-
-<div class="form-grid">
-
-<div>
-
-<div class="form-group">
-
-<label>
-YOUR NAME
-</label>
-
-<input
-type="text"
-id="customerName"
-placeholder="Your name">
-
-</div>
-
-</div>
-
-
-
-<div>
-
-<div class="form-group">
-
-<label>
-COMPANY
-</label>
-
-<input
-type="text"
-id="company"
-placeholder="Company name">
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="form-grid">
-
-<div>
-
-<div class="form-group">
-
-<label>
-EMAIL
-</label>
-
-<input
-type="email"
-id="email"
-placeholder="your@email.com">
-
-</div>
-
-</div>
-
-
-
-<div>
-
-<div class="form-group">
-
-<label>
-WHATSAPP
-</label>
-
-<input
-type="text"
-id="whatsapp"
-placeholder="+86">
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="form-group">
-
-<label>
-PROJECT DESCRIPTION
-</label>
-
-<textarea
-id="description"
-placeholder="Tell us about your product, fragrance direction, packaging, target market or project requirements..."></textarea>
-
-</div>
-
-
-
-<button
-class="submit-btn"
-onclick="submitInquiry()">
-
-REQUEST A QUOTE
-
-</button>
-
-
-</div>
-
-</div>
-
-
-
 <script>
 
-/* =========================
-   MODAL
-========================= */
+/* =====================================================
+   HYSCENT SINGLE-FILE IMAGE SYSTEM
 
-const modal =
-document.getElementById("customModal");
+   这里没有任何 jpg / png / webp。
+   产品视觉全部直接由 SVG 代码生成。
 
-
-function openCustom(type){
-
-    modal.classList.add("active");
-
-    switchType(type);
-
-    document.body.style.overflow="hidden";
-}
-
-
-function closeCustom(){
-
-    modal.classList.remove("active");
-
-    document.body.style.overflow="auto";
-}
-
-
-modal.addEventListener("click",function(e){
-
-    if(e.target === modal){
-
-        closeCustom();
-
-    }
-
-});
+   因此：
+   index.html
+   ↓
+   直接包含全部图片
+   ↓
+   GitHub Pages 不需要图片文件夹
+===================================================== */
 
 
 /* =========================
-   SWITCH TYPE
+   PERFUME SVG
 ========================= */
 
-function switchType(type){
+function perfumeSVG(i){
 
-    const fragranceContent =
-    document.getElementById("fragranceContent");
+const data=[
 
-    const modelContent =
-    document.getElementById("modelContent");
+[
+"NOIR ABSOLU",
+"#2c1909",
+"#080808",
+"#080808",
+"#d8b45a",
+"WOODY · LEATHER · OUD"
+],
 
-    const fragranceTab =
-    document.getElementById("fragranceTab");
+[
+"AMBER OUD",
+"#481b08",
+"#140905",
+"#a34e12",
+"#efc15d",
+"AMBER · SPICY · WARM"
+],
 
-    const modelTab =
-    document.getElementById("modelTab");
+[
+"WHITE MUSK",
+"#2c2d2b",
+"#d9d8ce",
+"#eeeeea",
+"#ffffff",
+"MUSK · POWDERY · CLEAN"
+],
+
+[
+"GREEN VETIVER",
+"#12261a",
+"#315d2e",
+"#71923b",
+"#d0d76c",
+"CITRUS · VETIVER · FRESH"
+],
+
+[
+"ROSE BLUSH",
+"#401c25",
+"#8e3550",
+"#d87f96",
+"#f1b6c1",
+"FLORAL · ROSE · SWEET"
+],
+
+[
+"OCEAN BREEZE",
+"#092630",
+"#07506c",
+"#1c8aa1",
+"#a7e0e7",
+"MARINE · AQUATIC · FRESH"
+]
+
+];
+
+const d=data[i];
+
+return `
+
+<svg
+viewBox="0 0 260 215"
+xmlns="http://www.w3.org/2000/svg"
+>
+
+<defs>
+
+<linearGradient
+id="perfume${i}"
+x1="0"
+y1="0"
+x2="1"
+y2="1"
+>
+
+<stop
+stop-color="${d[2]}"
+/>
+
+<stop
+offset=".45"
+stop-color="${d[1]}"
+/>
+
+<stop
+offset="1"
+stop-color="${d[3]}"
+/>
+
+</linearGradient>
+
+</defs>
 
 
-    if(type === "fragrance"){
+<rect
+width="260"
+height="215"
+fill="${d[1]}"
+/>
 
-        fragranceContent.classList.add("active");
 
-        modelContent.classList.remove("active");
+<ellipse
+cx="130"
+cy="190"
+rx="72"
+ry="9"
+fill="#000"
+opacity=".7"
+/>
 
-        fragranceTab.classList.add("active");
 
-        modelTab.classList.remove("active");
+<!-- CAP -->
 
-    }else{
+<rect
+x="101"
+y="25"
+width="58"
+height="32"
+rx="5"
+fill="${d[3]}"
+stroke="${d[4]}"
+stroke-width="1.5"
+/>
 
-        fragranceContent.classList.remove("active");
 
-        modelContent.classList.add("active");
+<!-- BOTTLE -->
 
-        fragranceTab.classList.remove("active");
+<rect
+x="82"
+y="52"
+width="96"
+height="132"
+rx="${i==4?20:10}"
+fill="url(#perfume${i})"
+stroke="${d[4]}"
+stroke-width="2"
+/>
 
-        modelTab.classList.add("active");
 
-    }
+<!-- LABEL -->
+
+<rect
+x="94"
+y="99"
+width="72"
+height="52"
+fill="#080808"
+opacity=".94"
+stroke="${d[4]}"
+/>
+
+
+<text
+x="130"
+y="118"
+text-anchor="middle"
+fill="${d[4]}"
+font-size="9"
+font-family="Georgia"
+>
+HYSCENT
+</text>
+
+
+<text
+x="130"
+y="136"
+text-anchor="middle"
+fill="#fff"
+font-size="7"
+letter-spacing="1"
+>
+${d[0]}
+</text>
+
+
+<text
+x="130"
+y="147"
+text-anchor="middle"
+fill="#888"
+font-size="5"
+>
+${d[5]}
+</text>
+
+
+<!-- GLASS REFLECTION -->
+
+<path
+d="M91 67L110 59V176L91 165Z"
+fill="#fff"
+opacity=".09"
+/>
+
+</svg>
+
+`;
 
 }
 
 
 /* =========================
-   OPTION SELECT
+   MILITARY MODEL SVG
 ========================= */
 
-function selectOption(element){
+function modelSVG(i){
 
-    const parent =
-    element.parentElement;
+const bg=[
+"#4b3822",
+"#3b382d",
+"#30373b",
+"#5f675d",
+"#1b3440",
+"#4a3828"
+][i];
 
-    const options =
-    parent.querySelectorAll(".option");
 
-    options.forEach(function(option){
+/* M1A2 */
 
-        option.classList.remove("selected");
+if(i===0){
 
-    });
+return `
 
-    element.classList.add("selected");
+<svg viewBox="0 0 260 215"
+xmlns="http://www.w3.org/2000/svg">
+
+<rect width="260" height="215" fill="${bg}"/>
+
+<path
+d="M0 178Q70 145 130 162T260 150V215H0Z"
+fill="#2a2116"
+/>
+
+<ellipse
+cx="130"
+cy="184"
+rx="98"
+ry="14"
+fill="#000"
+opacity=".7"
+/>
+
+<g transform="translate(22 48)scale(.68)">
+
+<!-- TRACK -->
+
+<path
+d="M50 150Q40 105 75 90H315Q345 105 337 150Q327 175 300 180H82Q55 175 50 150Z"
+fill="#111"
+stroke="#9b7c48"
+stroke-width="3"
+/>
+
+<!-- HULL -->
+
+<path
+d="M75 95L125 60H280L315 95L295 132H85Z"
+fill="#55503a"
+stroke="#b28b4d"
+stroke-width="3"
+/>
+
+<!-- TURRET -->
+
+<path
+d="M128 62Q150 25 225 25Q275 28 292 63L275 88H140Z"
+fill="#4d4736"
+stroke="#b28b4d"
+stroke-width="3"
+/>
+
+<!-- CANNON -->
+
+<path
+d="M220 40L415 20Q430 18 433 28L430 36L258 58Z"
+fill="#292b25"
+stroke="#a47d43"
+stroke-width="3"
+/>
+
+<!-- CREW -->
+
+<circle
+cx="170"
+cy="31"
+r="10"
+fill="#90764a"
+/>
+
+<rect
+x="159"
+y="38"
+width="22"
+height="26"
+rx="7"
+fill="#34352d"
+/>
+
+<circle
+cx="230"
+cy="31"
+r="10"
+fill="#90764a"
+/>
+
+<rect
+x="219"
+y="38"
+width="22"
+height="26"
+rx="7"
+fill="#34352d"
+/>
+
+</g>
+
+</svg>
+
+`;
+
+}
+
+
+/* LAV-25 */
+
+if(i===1){
+
+return `
+
+<svg viewBox="0 0 260 215"
+xmlns="http://www.w3.org/2000/svg">
+
+<rect width="260" height="215" fill="${bg}"/>
+
+<path
+d="M0 180L60 150L130 165L200 145L260 160V215H0Z"
+fill="#28261e"
+/>
+
+<ellipse
+cx="130"
+cy="185"
+rx="95"
+ry="13"
+fill="#000"
+opacity=".7"
+/>
+
+<g transform="translate(30 65)scale(.65)">
+
+<rect
+x="45"
+y="105"
+width="285"
+height="60"
+rx="15"
+fill="#131713"
+stroke="#81744d"
+stroke-width="3"
+/>
+
+<path
+d="M70 105L92 48H240L305 85L315 105Z"
+fill="#4e5b48"
+stroke="#8f8054"
+stroke-width="3"
+/>
+
+<path
+d="M105 48L135 25H218L240 48Z"
+fill="#3b4435"
+stroke="#8f8054"
+stroke-width="3"
+/>
+
+<rect
+x="154"
+y="16"
+width="42"
+height="25"
+rx="5"
+fill="#171a16"
+stroke="#8f8054"
+stroke-width="3"
+/>
+
+<rect
+x="194"
+y="26"
+width="82"
+height="7"
+fill="#1a1c18"
+/>
+
+<g
+fill="#191b17"
+stroke="#756643"
+stroke-width="5"
+>
+
+<circle cx="82" cy="147" r="24"/>
+<circle cx="140" cy="147" r="24"/>
+<circle cx="198" cy="147" r="24"/>
+<circle cx="256" cy="147" r="24"/>
+
+</g>
+
+</g>
+
+</svg>
+
+`;
+
+}
+
+
+/* F/A-18 */
+
+if(i===2){
+
+return `
+
+<svg viewBox="0 0 260 215"
+xmlns="http://www.w3.org/2000/svg">
+
+<rect
+width="260"
+height="215"
+fill="${bg}"
+/>
+
+<ellipse
+cx="130"
+cy="177"
+rx="100"
+ry="14"
+fill="#000"
+opacity=".7"
+/>
+
+<g transform="translate(18 50)">
+
+<!-- WINGS -->
+
+<path
+d="M105 82L8 28L82 85Z"
+fill="#737b7d"
+stroke="#c0c0ba"
+stroke-width="2"
+/>
+
+<path
+d="M119 82L240 30L148 91Z"
+fill="#62696b"
+stroke="#c0c0ba"
+stroke-width="2"
+/>
+
+<!-- BODY -->
+
+<path
+d="M42 88Q90 67 195 81L224 91L195 101Q90 113 42 94Z"
+fill="#555c5f"
+stroke="#d2d2cd"
+stroke-width="2"
+/>
+
+<!-- COCKPIT -->
+
+<path
+d="M65 80Q90 65 115 78L108 87H70Z"
+fill="#121a20"
+stroke="#9eb1b5"
+/>
+
+<!-- ENGINES -->
+
+<ellipse
+cx="139"
+cy="84"
+rx="15"
+ry="8"
+fill="#15191a"
+stroke="#8e9495"
+/>
+
+<ellipse
+cx="139"
+cy="101"
+rx="15"
+ry="8"
+fill="#15191a"
+stroke="#8e9495"
+/>
+
+</g>
+
+</svg>
+
+`;
+
+}
+
+
+/* UH-60 */
+
+if(i===3){
+
+return `
+
+<svg viewBox="0 0 260 215"
+xmlns="http://www.w3.org/2000/svg">
+
+<rect width="260" height="215" fill="${bg}"/>
+
+<ellipse
+cx="130"
+cy="185"
+rx="98"
+ry="13"
+fill="#000"
+opacity=".7"
+/>
+
+<g transform="translate(15 45)">
+
+<!-- ROTOR -->
+
+<ellipse
+cx="128"
+cy="52"
+rx="90"
+ry="6"
+fill="#222"
+stroke="#aaa"
+/>
+
+<path
+d="M126 48V89"
+stroke="#777"
+stroke-width="4"
+/>
+
+<!-- BODY -->
+
+<path
+d="M67 95Q105 62 167 78L215 101L176 119H80Z"
+fill="#40483c"
+stroke="#a9a58b"
+stroke-width="2"
+/>
+
+<!-- TAIL -->
+
+<path
+d="M167 81L235 51L242 57L182 91Z"
+fill="#343a33"
+stroke="#8f8d7a"
+stroke-width="2"
+/>
+
+<!-- CABIN -->
+
+<rect
+x="93"
+y="82"
+width="46"
+height="32"
+rx="8"
+fill="#111816"
+stroke="#89968a"
+stroke-width="2"
+/>
+
+<path
+d="M99 87H133L137 104H96Z"
+fill="#4a5a55"
+/>
+
+<circle
+cx="62"
+cy="114"
+r="10"
+fill="#171917"
+stroke="#817e69"
+stroke-width="2"
+/>
+
+<circle
+cx="186"
+cy="113"
+r="10"
+fill="#171917"
+stroke="#817e69"
+stroke-width="2"
+/>
+
+</g>
+
+</svg>
+
+`;
+
+}
+
+
+/* DESTROYER */
+
+if(i===4){
+
+return `
+
+<svg viewBox="0 0 260 215"
+xmlns="http://www.w3.org/2000/svg">
+
+<rect width="260" height="215" fill="${bg}"/>
+
+<path
+d="M0 160Q30 145 60 160T120 160T180 160T240 160T300 160V215H0Z"
+fill="#102f3a"
+/>
+
+<path
+d="M0 177Q40 160 80 177T160 177T240 177"
+fill="none"
+stroke="#6aa0a7"
+opacity=".5"
+stroke-width="3"
+/>
+
+<ellipse
+cx="130"
+cy="183"
+rx="100"
+ry="13"
+fill="#000"
+opacity=".65"
+/>
+
+<g transform="translate(20 50)">
+
+<!-- HULL -->
+
+<path
+d="M20 110L235 110L205 140L57 140Z"
+fill="#565d60"
+stroke="#b5b3a4"
+stroke-width="2"
+/>
+
+<!-- SUPERSTRUCTURE -->
+
+<path
+d="M75 107L95 68H174L199 107Z"
+fill="#707676"
+stroke="#aaa99b"
+stroke-width="2"
+/>
+
+<rect
+x="104"
+y="43"
+width="45"
+height="30"
+fill="#4e5556"
+stroke="#aaa99b"
+/>
+
+<rect
+x="112"
+y="24"
+width="5"
+height="30"
+fill="#aaa99b"
+/>
+
+<rect
+x="138"
+y="20"
+width="5"
+height="34"
+fill="#aaa99b"
+/>
+
+<path
+d="M113 23L95 11M142 19L163 8"
+stroke="#aaa99b"
+/>
+
+</g>
+
+</svg>
+
+`;
+
+}
+
+
+/* DIORAMA */
+
+return `
+
+<svg viewBox="0 0 260 215"
+xmlns="http://www.w3.org/2000/svg">
+
+<rect
+width="260"
+height="215"
+fill="${bg}"
+/>
+
+<!-- BASE -->
+
+<path
+d="M25 180L92 135L232 150L252 200L25 200Z"
+fill="#171717"
+stroke="#92784a"
+/>
+
+<!-- ROAD -->
+
+<path
+d="M65 170L115 140L220 153L225 178Z"
+fill="#68655e"
+/>
+
+<path
+d="M110 154L211 164"
+stroke="#e2d5a1"
+stroke-width="4"
+stroke-dasharray="14 8"
+/>
+
+<!-- TANK -->
+
+<g transform="translate(88 82)scale(.45)">
+
+<path
+d="M50 150Q40 105 75 90H315Q345 105 337 150Q327 175 300 180H82Q55 175 50 150Z"
+fill="#111"
+stroke="#9b7c48"
+stroke-width="3"
+/>
+
+<path
+d="M75 95L125 60H280L315 95L295 132H85Z"
+fill="#50523c"
+stroke="#b08b4a"
+stroke-width="3"
+/>
+
+<path
+d="M128 62Q150 25 225 25Q275 28 292 63L275 88H140Z"
+fill="#4a4836"
+stroke="#b08b4a"
+stroke-width="3"
+/>
+
+<path
+d="M220 40L415 20Q430 18 433 28L430 36L258 58Z"
+fill="#292b25"
+stroke="#a47d43"
+stroke-width="3"
+/>
+
+</g>
+
+<!-- RUINS -->
+
+<path
+d="M27 147V94L48 85V133L64 127V158Z"
+fill="#685543"
+stroke="#aa8c5b"
+/>
+
+<path
+d="M215 151V88L238 101V158Z"
+fill="#5e4d3b"
+stroke="#a98c5b"
+/>
+
+</svg>
+
+`;
 
 }
 
 
 /* =========================
-   QUANTITY
+   HERO PERFUME
 ========================= */
 
-let fragranceQuantity = 100;
+function heroPerfumeSVG(){
 
-function changeQuantity(value){
+return `
 
-    fragranceQuantity += value;
+<svg
+viewBox="0 0 520 420"
+xmlns="http://www.w3.org/2000/svg"
+>
 
-    if(fragranceQuantity < 1){
+<defs>
 
-        fragranceQuantity = 1;
+<linearGradient
+id="heroPerf"
+x1="0"
+y1="0"
+x2="1"
+y2="1"
+>
 
-    }
+<stop stop-color="#f0ca72"/>
+<stop offset=".25" stop-color="#55360e"/>
+<stop offset=".55" stop-color="#080808"/>
+<stop offset=".85" stop-color="#8b621e"/>
+<stop offset="1" stop-color="#e8bd5b"/>
 
-    document.getElementById(
-        "fragranceQuantity"
-    ).innerText = fragranceQuantity;
+</linearGradient>
 
-}
+</defs>
 
 
-let modelQuantity = 50;
+<path
+d="M0 330Q90 270 180 305T350 300T520 320V420H0Z"
+fill="#1b140b"
+/>
 
-function changeModelQuantity(value){
 
-    modelQuantity += value;
+<ellipse
+cx="170"
+cy="350"
+rx="125"
+ry="22"
+fill="#000"
+opacity=".8"
+/>
 
-    if(modelQuantity < 1){
 
-        modelQuantity = 1;
+<!-- LARGE PERFUME -->
 
-    }
+<rect
+x="80"
+y="80"
+width="155"
+height="42"
+rx="7"
+fill="#080808"
+stroke="#a77d2c"
+/>
 
-    document.getElementById(
-        "modelQuantity"
-    ).innerText = modelQuantity;
+<rect
+x="96"
+y="52"
+width="123"
+height="35"
+rx="7"
+fill="url(#heroPerf)"
+/>
+
+<rect
+x="72"
+y="112"
+width="171"
+height="220"
+rx="18"
+fill="url(#heroPerf)"
+stroke="#d4ab50"
+stroke-width="2"
+/>
+
+<rect
+x="93"
+y="166"
+width="129"
+height="92"
+fill="#080808"
+stroke="#8d6726"
+/>
+
+<text
+x="157"
+y="195"
+text-anchor="middle"
+fill="#dcb55d"
+font-size="17"
+font-family="Georgia"
+>
+HYSCENT
+</text>
+
+<text
+x="157"
+y="219"
+text-anchor="middle"
+fill="#fff"
+font-size="11"
+letter-spacing="2"
+>
+OUD IMPERIAL
+</text>
+
+<text
+x="157"
+y="238"
+text-anchor="middle"
+fill="#888"
+font-size="7"
+>
+EXTRAIT DE PARFUM
+</text>
+
+<path
+d="M90 128L113 117V321L90 306Z"
+fill="#fff"
+opacity=".08"
+/>
+
+
+<!-- SMALL PERFUME -->
+
+<g transform="translate(310 145)">
+
+<rect
+x="48"
+y="0"
+width="105"
+height="31"
+rx="6"
+fill="#b36d1c"
+/>
+
+<rect
+x="38"
+y="25"
+width="125"
+height="151"
+rx="18"
+fill="#7e3d10"
+stroke="#d49b3e"
+stroke-width="2"
+/>
+
+<rect
+x="56"
+y="72"
+width="90"
+height="55"
+fill="#090909"
+stroke="#9b6c25"
+/>
+
+<text
+x="101"
+y="96"
+text-anchor="middle"
+fill="#dcb761"
+font-size="11"
+font-family="Georgia"
+>
+HYSCENT
+</text>
+
+<text
+x="101"
+y="114"
+text-anchor="middle"
+fill="#fff"
+font-size="8"
+letter-spacing="1"
+>
+AMBER NOIR
+</text>
+
+</g>
+
+</svg>
+
+`;
 
 }
 
 
 /* =========================
-   SUBMIT
+   HERO TANK
 ========================= */
 
-function submitInquiry(){
+function heroTankSVG(){
 
-    const name =
-    document.getElementById("customerName").value;
+return `
 
-    const email =
-    document.getElementById("email").value;
+<svg
+viewBox="0 0 520 420"
+xmlns="http://www.w3.org/2000/svg"
+>
 
-    const company =
-    document.getElementById("company").value;
+<defs>
 
-    const whatsapp =
-    document.getElementById("whatsapp").value;
+<linearGradient
+id="heroTank"
+x1="0"
+y1="0"
+x2="1"
+y2="1"
+>
 
-    const description =
-    document.getElementById("description").value;
+<stop stop-color="#8f7a50"/>
+<stop offset=".4" stop-color="#45402e"/>
+<stop offset="1" stop-color="#151714"/>
 
+</linearGradient>
 
-    if(!name || !email){
-
-        alert(
-            "Please enter your name and email."
-        );
-
-        return;
-
-    }
-
-
-    alert(
-        "Thank you, " +
-        name +
-        ". Your inquiry has been prepared. HYSCENT will contact you soon."
-    );
+</defs>
 
 
-    console.log({
+<path
+d="M0 360Q90 300 190 325T355 315T520 335V420H0Z"
+fill="#302516"
+/>
 
-        name:name,
+<ellipse
+cx="275"
+cy="350"
+rx="210"
+ry="28"
+fill="#000"
+opacity=".75"
+/>
 
-        company:company,
 
-        email:email,
+<g transform="translate(50 95)">
 
-        whatsapp:whatsapp,
+<!-- TRACK -->
 
-        description:description,
+<path
+d="M65 205Q55 165 90 150H330Q365 165 360 205Q350 235 315 242H100Q70 235 65 205Z"
+fill="#111"
+stroke="#9b7d46"
+stroke-width="3"
+/>
 
-        fragranceQuantity:fragranceQuantity,
 
-        modelQuantity:modelQuantity
+<!-- HULL -->
 
-    });
+<path
+d="M95 120L145 88H298L337 125L320 173H104Z"
+fill="url(#heroTank)"
+stroke="#b08b4a"
+stroke-width="3"
+/>
+
+
+<!-- TURRET -->
+
+<path
+d="M152 93Q170 55 240 53Q290 56 305 93L285 115H164Z"
+fill="#4a4433"
+stroke="#b18b4b"
+stroke-width="3"
+/>
+
+
+<!-- CANNON -->
+
+<path
+d="M236 68L430 47Q445 45 447 53L444 61L277 86Z"
+fill="#39372d"
+stroke="#b18b4b"
+stroke-width="3"
+/>
+
+
+<rect
+x="270"
+y="74"
+width="175"
+height="10"
+rx="5"
+fill="#262720"
+/>
+
+
+<!-- CREW -->
+
+<circle
+cx="192"
+cy="66"
+r="8"
+fill="#8d7750"
+/>
+
+<rect
+x="184"
+y="70"
+width="16"
+height="20"
+rx="5"
+fill="#36362c"
+/>
+
+
+<circle
+cx="253"
+cy="62"
+r="8"
+fill="#8d7750"
+/>
+
+<rect
+x="245"
+y="67"
+width="16"
+height="20"
+rx="5"
+fill="#36362c"
+/>
+
+</g>
+
+</svg>
+
+`;
 
 }
+
+
+/* =========================
+   INSERT HERO
+========================= */
+
+document.getElementById("heroPerfume").innerHTML =
+heroPerfumeSVG();
+
+document.getElementById("heroTank").innerHTML =
+heroTankSVG();
+
+
+/* =========================
+   INSERT PERFUMES
+========================= */
+
+const perfumeNames=[
+
+[
+"NOIR ABSOLU",
+"Woody · Leather · Oud",
+"EXTRAIT DE PARFUM"
+],
+
+[
+"AMBER OUD",
+"Amber · Spicy · Warm",
+"EAU DE PARFUM"
+],
+
+[
+"WHITE MUSK",
+"Musk · Powdery · Clean",
+"EAU DE PARFUM"
+],
+
+[
+"GREEN VETIVER",
+"Citrus · Vetiver · Fresh",
+"EAU DE PARFUM"
+],
+
+[
+"ROSE BLUSH",
+"Floral · Rose · Sweet",
+"EAU DE PARFUM"
+],
+
+[
+"OCEAN BREEZE",
+"Marine · Aquatic · Fresh",
+"EAU DE PARFUM"
+]
+
+];
+
+document.getElementById("perfumes").innerHTML =
+
+perfumeNames.map((p,i)=>`
+
+<article class="card">
+
+<div class="pic">
+${perfumeSVG(i)}
+</div>
+
+<div class="body">
+
+<span class="plus">+</span>
+
+<h3>${p[0]}</h3>
+
+<div class="sub">
+${p[1]}
+</div>
+
+<div class="meta">
+${p[2]}
+</div>
+
+</div>
+
+</article>
+
+`).join("");
+
+
+/* =========================
+   INSERT MODELS
+========================= */
+
+const modelNames=[
+
+[
+"M1A2 ABRAMS",
+"1:35 SCALE · CUSTOM PAINT",
+"REALISTIC WEATHERING"
+],
+
+[
+"LAV-25 ARMORED VEHICLE",
+"1:35 SCALE · DIORAMA SCENE",
+"HAND WEATHERED FINISH"
+],
+
+[
+"F/A-18E SUPER HORNET",
+"1:48 SCALE · PRECISION BUILD",
+"PANEL-LINE DETAILING"
+],
+
+[
+"UH-60 BLACK HAWK",
+"1:35 SCALE · CUSTOM DETAIL",
+"TACTICAL WEATHERING"
+],
+
+[
+"DDG-51 DESTROYER",
+"1:700 SCALE · WATER EFFECT",
+"MARITIME DISPLAY MODEL"
+],
+
+[
+"URBAN COMBAT DIORAMA",
+"1:35 SCALE · SCENE MODEL",
+"CUSTOM STORYTELLING SET"
+]
+
+];
+
+document.getElementById("modelsGrid").innerHTML =
+
+modelNames.map((p,i)=>`
+
+<article class="card">
+
+<div class="pic">
+${modelSVG(i)}
+</div>
+
+<div class="body">
+
+<span class="plus">+</span>
+
+<h3>${p[0]}</h3>
+
+<div class="sub">
+${p[1]}
+</div>
+
+<div class="meta">
+${p[2]}
+</div>
+
+</div>
+
+</article>
+
+`).join("");
 
 </script>
 
-
 </body>
-
 </html>
