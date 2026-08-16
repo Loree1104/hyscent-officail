@@ -1,32 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>HYSCENT | Luxury Fragrance & Custom Manufacturing</title>
+<title>HYSCENT | Luxury Fragrance & Custom Models</title>
 
 <meta name="description"
-content="HYSCENT — Luxury fragrance, private label, OEM, ODM and custom figure manufacturing.">
+content="HYSCENT creates luxury niche fragrances, custom perfumes and collectible models for global brands.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
 
 <style>
 
-/* =========================================================
-   HYSCENT
-   Luxury Fragrance & Custom Manufacturing
-========================================================= */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
-
-:root{
-    --black:#070707;
-    --black2:#0d0d0d;
-    --gold:#c9a45b;
-    --gold-light:#e4c47b;
-    --cream:#f3efe7;
-    --gray:#999;
-    --line:rgba(255,255,255,.12);
-}
+/* =========================
+   GLOBAL
+========================= */
 
 *{
     margin:0;
@@ -39,21 +35,10 @@ html{
 }
 
 body{
-    background:var(--black);
-    color:var(--cream);
-    font-family:Inter,Arial,sans-serif;
+    background:#090909;
+    color:#f5f1e8;
+    font-family:'Inter',sans-serif;
     overflow-x:hidden;
-}
-
-button,
-input,
-select,
-textarea{
-    font-family:inherit;
-}
-
-button{
-    cursor:pointer;
 }
 
 a{
@@ -61,3380 +46,1945 @@ a{
     text-decoration:none;
 }
 
+button{
+    font-family:inherit;
+}
 
-/* =========================================================
-   NAVIGATION
-========================================================= */
+
+/* =========================
+   HEADER
+========================= */
 
 header{
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    height:82px;
-    z-index:1000;
+    height:86px;
 
     display:flex;
     align-items:center;
     justify-content:space-between;
 
-    padding:0 6%;
+    padding:0 7%;
 
-    background:rgba(5,5,5,.82);
-    backdrop-filter:blur(16px);
+    z-index:1000;
 
-    border-bottom:1px solid var(--line);
+    background:rgba(8,8,8,.75);
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .logo{
-    display:flex;
-    flex-direction:column;
-}
+    font-family:'Playfair Display',serif;
 
-.logo-main{
-    font-family:"Playfair Display",serif;
-    font-size:29px;
+    font-size:30px;
+
     letter-spacing:7px;
-}
-
-.logo-sub{
-    margin-top:2px;
-    color:var(--gold);
-    font-size:8px;
-    letter-spacing:4px;
 }
 
 nav{
     display:flex;
-    align-items:center;
-    gap:35px;
+    gap:38px;
 }
 
 nav a{
     font-size:12px;
+
     letter-spacing:2px;
+
     color:#ddd;
+
     transition:.3s;
 }
 
 nav a:hover{
-    color:var(--gold-light);
-}
-
-.nav-custom{
-    padding:13px 20px;
-    border:1px solid rgba(201,164,91,.7);
-    color:var(--gold-light)!important;
-}
-
-.mobile-menu{
-    display:none;
-    font-size:25px;
+    color:#c8a86b;
 }
 
 
-/* =========================================================
+/* =========================
    HERO
-========================================================= */
+========================= */
 
 .hero{
+
     min-height:100vh;
-    position:relative;
 
     display:flex;
+
     align-items:center;
 
-    padding:130px 9% 80px;
+    padding:120px 8% 80px;
 
-    overflow:hidden;
-
-    background:
-        radial-gradient(
-            circle at 78% 50%,
-            rgba(157,105,30,.18),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 30% 80%,
-            rgba(90,50,10,.12),
-            transparent 30%
-        ),
-        #070707;
-}
-
-.hero::before{
-    content:"";
-    position:absolute;
-    inset:0;
+    position:relative;
 
     background:
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,.96) 0%,
-            rgba(0,0,0,.7) 48%,
-            rgba(0,0,0,.15) 100%
-        );
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.92) 0%,
+        rgba(0,0,0,.70) 45%,
+        rgba(0,0,0,.25) 100%
+    ),
 
-    pointer-events:none;
+    url("https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=2000&q=90");
+
+    background-size:cover;
+
+    background-position:center;
 }
 
 .hero-content{
-    position:relative;
-    z-index:3;
-    max-width:760px;
+    max-width:720px;
 }
 
-.eyebrow{
-    color:var(--gold);
-    font-size:11px;
+.hero-kicker{
+
+    font-size:12px;
+
     letter-spacing:6px;
-    margin-bottom:30px;
+
+    color:#c8a86b;
+
+    margin-bottom:25px;
 }
 
 .hero h1{
-    font-family:"Playfair Display",serif;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:clamp(52px,7vw,92px);
+
     font-weight:400;
-    font-size:clamp(55px,7vw,100px);
-    line-height:.98;
+
+    line-height:1.02;
 }
 
-.hero h1 em{
-    color:var(--gold-light);
-    font-style:italic;
+.hero h1 span{
+    color:#c8a86b;
 }
 
 .hero-description{
-    max-width:680px;
-    margin-top:35px;
-    color:#bbb;
-    font-size:16px;
-    line-height:1.9;
-}
 
-.hero-meta{
-    margin-top:25px;
-    color:#777;
-    font-size:12px;
-    letter-spacing:2px;
+    margin-top:32px;
+
+    max-width:650px;
+
+    color:#c8c4bc;
+
+    line-height:1.9;
+
+    font-size:16px;
+
+    font-weight:300;
 }
 
 .hero-buttons{
+
     display:flex;
+
     gap:15px;
-    margin-top:45px;
+
+    margin-top:42px;
+
+    flex-wrap:wrap;
 }
 
 .btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
 
-    min-height:52px;
-    padding:0 32px;
+    padding:16px 32px;
 
-    border:1px solid var(--gold);
+    border:1px solid rgba(255,255,255,.5);
 
-    font-size:11px;
+    font-size:12px;
+
     letter-spacing:3px;
 
     transition:.3s;
+
+    cursor:pointer;
+
+    background:transparent;
+
+    color:white;
+}
+
+.btn:hover{
+    background:#f5f1e8;
+    color:#080808;
 }
 
 .btn-gold{
-    background:var(--gold);
+
+    background:#b7965b;
+
+    border-color:#b7965b;
+
     color:#080808;
 }
 
 .btn-gold:hover{
-    background:var(--gold-light);
-}
-
-.btn-outline{
-    color:white;
-}
-
-.btn-outline:hover{
-    background:white;
-    color:black;
+    background:#d1b477;
 }
 
 
-/* =========================================================
-   CODE GENERATED PERFUME BOTTLE
-========================================================= */
-
-.hero-product{
-    position:absolute;
-    right:8%;
-    top:50%;
-    transform:translateY(-50%);
-
-    width:390px;
-    height:570px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    z-index:2;
-}
-
-.glow{
-    position:absolute;
-    width:360px;
-    height:360px;
-    border-radius:50%;
-
-    background:rgba(201,164,91,.13);
-    filter:blur(70px);
-}
-
-.perfume{
-    position:relative;
-    width:210px;
-    height:300px;
-
-    border-radius:15px 15px 25px 25px;
-
-    background:
-        linear-gradient(
-            110deg,
-            #050505 0%,
-            #1b1a17 25%,
-            #050505 55%,
-            #29251c 80%,
-            #070707 100%
-        );
-
-    border:1px solid rgba(201,164,91,.7);
-
-    box-shadow:
-        0 40px 100px rgba(0,0,0,.9),
-        inset 0 0 40px rgba(255,255,255,.04);
-
-    animation:floatBottle 5s ease-in-out infinite;
-}
-
-@keyframes floatBottle{
-    0%,100%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-14px);
-    }
-}
-
-.cap{
-    position:absolute;
-    width:115px;
-    height:65px;
-    top:-63px;
-    left:47px;
-
-    border-radius:10px 10px 4px 4px;
-
-    background:
-        linear-gradient(
-            90deg,
-            #5d461e,
-            #e2bb69,
-            #725521,
-            #dcb866
-        );
-
-    border:1px solid #9e7730;
-}
-
-.neck{
-    position:absolute;
-    width:80px;
-    height:25px;
-    top:-24px;
-    left:65px;
-
-    background:#b58b40;
-    border:1px solid #e2c278;
-}
-
-.bottle-label{
-    position:absolute;
-
-    left:24px;
-    right:24px;
-    top:65px;
-    bottom:45px;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-
-    border:1px solid rgba(201,164,91,.7);
-
-    text-align:center;
-}
-
-.bottle-label strong{
-    font-family:"Playfair Display",serif;
-    font-size:26px;
-    letter-spacing:2px;
-}
-
-.bottle-label span{
-    color:var(--gold);
-    font-size:8px;
-    letter-spacing:4px;
-    margin-top:14px;
-}
-
-.bottle-symbol{
-    color:var(--gold-light);
-    font-size:28px;
-    margin:15px 0;
-}
-
-
-/* =========================================================
+/* =========================
    SECTION
-========================================================= */
+========================= */
 
 section{
     padding:120px 8%;
 }
 
-.section-eyebrow{
-    color:var(--gold);
-    font-size:10px;
-    letter-spacing:5px;
+.section-kicker{
+
     text-align:center;
+
+    font-size:11px;
+
+    letter-spacing:5px;
+
+    color:#b7965b;
+
     margin-bottom:18px;
 }
 
 .section-title{
+
+    font-family:'Playfair Display',serif;
+
     text-align:center;
-    font-family:"Playfair Display",serif;
-    font-size:clamp(42px,5vw,68px);
+
+    font-size:54px;
+
     font-weight:400;
-}
 
-.section-description{
-    max-width:680px;
-    margin:25px auto 0;
-
-    color:#999;
-    text-align:center;
-    line-height:1.8;
+    margin-bottom:65px;
 }
 
 
-/* =========================================================
-   BUSINESS CATEGORIES
-========================================================= */
+/* =========================
+   FRAGRANCE
+========================= */
 
-.business-section{
-    background:#0b0b0b;
-}
-
-.business-grid{
-    margin-top:65px;
+.fragrance-grid{
 
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:2px;
 
-    background:#272727;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:24px;
 }
 
-.business-card{
-    min-height:390px;
+.fragrance-card{
 
-    padding:45px 38px;
+    background:#121212;
 
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-end;
-
-    position:relative;
     overflow:hidden;
 
-    background:
-        radial-gradient(
-            circle at 70% 30%,
-            rgba(201,164,91,.16),
-            transparent 35%
-        ),
-        #111;
+    cursor:pointer;
+
+    transition:.5s;
+
+    border:1px solid rgba(255,255,255,.06);
 }
 
-.business-card::before{
-    content:"";
-    position:absolute;
-    inset:0;
+.fragrance-card:hover{
 
-    background:linear-gradient(
-        transparent 35%,
-        rgba(0,0,0,.95)
-    );
+    transform:translateY(-8px);
+
+    border-color:rgba(183,150,91,.5);
 }
 
-.business-number{
-    position:absolute;
-    top:35px;
-    left:38px;
+.fragrance-image{
 
-    color:#555;
-    font-family:"Playfair Display",serif;
-    font-size:20px;
+    height:440px;
+
+    background-size:cover;
+
+    background-position:center;
+
+    transition:.7s;
 }
 
-.business-icon{
-    position:absolute;
-    right:40px;
-    top:35px;
+.fragrance-card:hover .fragrance-image{
 
-    color:var(--gold);
-    font-size:42px;
+    transform:scale(1.04);
 }
 
-.business-card-content{
-    position:relative;
-    z-index:2;
-}
-
-.business-card h3{
-    font-family:"Playfair Display",serif;
-    font-size:34px;
-    font-weight:400;
-}
-
-.business-card p{
-    margin-top:18px;
-    color:#999;
-    font-size:14px;
-    line-height:1.8;
-}
-
-.business-link{
-    margin-top:25px;
-    display:inline-block;
-
-    color:var(--gold-light);
-    font-size:10px;
-    letter-spacing:3px;
-}
-
-
-/* =========================================================
-   CUSTOM FRAGRANCE PREVIEW
-========================================================= */
-
-.custom-preview{
-    background:#050505;
-}
-
-.custom-box{
-    max-width:1100px;
-    margin:65px auto 0;
-
-    padding:50px;
-
-    border:1px solid var(--line);
-
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-
-    background:
-        radial-gradient(
-            circle at 80% 20%,
-            rgba(201,164,91,.1),
-            transparent 35%
-        );
-}
-
-.custom-steps{
-    display:flex;
-    flex-direction:column;
-    gap:28px;
-}
-
-.step{
-    display:flex;
-    gap:20px;
-}
-
-.step-number{
-    width:38px;
-    height:38px;
-
-    flex-shrink:0;
-
-    border:1px solid var(--gold);
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    color:var(--gold);
-    font-size:12px;
-}
-
-.step h4{
-    font-size:15px;
-    font-weight:500;
-}
-
-.step p{
-    margin-top:7px;
-    color:#777;
-    font-size:13px;
-    line-height:1.6;
-}
-
-.custom-visual{
-    min-height:390px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(201,164,91,.16),
-            transparent 55%
-        );
-}
-
-.mini-bottle{
-    width:145px;
-    height:210px;
-
-    position:relative;
-
-    border:1px solid var(--gold);
-
-    border-radius:12px 12px 20px 20px;
-
-    background:linear-gradient(
-        120deg,
-        #080808,
-        #27231b,
-        #080808
-    );
-
-    box-shadow:0 30px 70px rgba(0,0,0,.8);
-}
-
-.mini-cap{
-    position:absolute;
-    top:-45px;
-    left:33px;
-
-    width:78px;
-    height:46px;
-
-    background:linear-gradient(
-        90deg,
-        #7b5d28,
-        #e0bc6b,
-        #775720
-    );
-
-    border-radius:7px 7px 2px 2px;
-}
-
-.mini-label{
-    position:absolute;
-    top:48px;
-    left:16px;
-    right:16px;
-    bottom:30px;
-
-    border:1px solid var(--gold);
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    text-align:center;
-
-    font-family:"Playfair Display",serif;
-    font-size:18px;
-}
-
-
-/* =========================================================
-   COLLECTION
-========================================================= */
-
-.collection-section{
-    background:#0b0b0b;
-}
-
-.collection-grid{
-    margin-top:65px;
-
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.collection-card{
-    min-height:400px;
+.fragrance-info{
 
     padding:30px;
-
-    display:flex;
-    align-items:flex-end;
-
-    position:relative;
-    overflow:hidden;
-
-    border:1px solid var(--line);
-
-    background:
-        radial-gradient(
-            circle at 50% 35%,
-            rgba(201,164,91,.18),
-            transparent 32%
-        ),
-        linear-gradient(
-            140deg,
-            #17130d,
-            #070707
-        );
 }
 
-.collection-card::after{
-    content:"";
+.fragrance-info h3{
 
-    position:absolute;
-    inset:0;
+    font-family:'Playfair Display',serif;
 
-    background:linear-gradient(
-        transparent 40%,
-        rgba(0,0,0,.95)
-    );
+    font-size:28px;
+
+    font-weight:400;
+
+    margin-bottom:10px;
 }
 
-.collection-card-content{
-    position:relative;
-    z-index:2;
+.fragrance-info p{
+
+    color:#888;
+
+    line-height:1.7;
+
+    font-size:14px;
 }
 
-.collection-card small{
-    color:var(--gold);
-    font-size:9px;
+.fragrance-tag{
+
+    display:inline-block;
+
+    margin-top:18px;
+
+    color:#b7965b;
+
+    font-size:10px;
+
     letter-spacing:3px;
 }
 
-.collection-card h3{
-    margin-top:10px;
 
-    font-family:"Playfair Display",serif;
-    font-size:32px;
-    font-weight:400;
-}
+/* =========================
+   CUSTOM SECTION
+========================= */
 
-.collection-card p{
-    margin-top:12px;
+.custom-section{
 
-    color:#888;
-    font-size:12px;
-    line-height:1.7;
-}
+    position:relative;
 
-
-/* =========================================================
-   MANUFACTURING
-========================================================= */
-
-.manufacturing{
     background:
-        linear-gradient(
-            90deg,
-            #080808,
-            #12100b
-        );
-}
 
-.manufacturing-grid{
-    max-width:1100px;
-    margin:60px auto 0;
+    linear-gradient(
+        rgba(0,0,0,.82),
+        rgba(0,0,0,.94)
+    ),
 
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:1px;
+    url("https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&w=2000&q=90");
 
-    background:#292929;
-}
+    background-size:cover;
 
-.manufacturing-item{
-    background:#0d0d0d;
-    padding:35px 25px;
+    background-position:center;
+
     text-align:center;
 }
 
-.manufacturing-item strong{
-    display:block;
+.custom-section h2{
 
-    font-family:"Playfair Display",serif;
-    font-size:28px;
-    color:var(--gold-light);
+    font-family:'Playfair Display',serif;
+
+    font-size:58px;
+
+    font-weight:400;
 }
 
-.manufacturing-item span{
-    display:block;
+.custom-section p{
 
-    margin-top:10px;
+    max-width:700px;
+
+    margin:25px auto 40px;
+
+    line-height:1.9;
+
+    color:#bbb;
+}
+
+.custom-options{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+}
+
+.custom-card{
+
+    width:330px;
+
+    min-height:230px;
+
+    border:1px solid rgba(255,255,255,.16);
+
+    background:rgba(10,10,10,.65);
+
+    padding:45px 30px;
+
+    cursor:pointer;
+
+    transition:.4s;
+}
+
+.custom-card:hover{
+
+    border-color:#b7965b;
+
+    transform:translateY(-8px);
+}
+
+.custom-card .number{
+
+    color:#b7965b;
+
+    font-size:12px;
+
+    letter-spacing:4px;
+}
+
+.custom-card h3{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:30px;
+
+    font-weight:400;
+
+    margin:22px 0 12px;
+}
+
+.custom-card p{
+
+    margin:0;
+
+    font-size:13px;
 
     color:#888;
-    font-size:10px;
-    letter-spacing:2px;
 }
 
 
-/* =========================================================
+/* =========================
    ABOUT
-========================================================= */
+========================= */
 
 .about{
-    max-width:850px;
+
+    max-width:900px;
+
     margin:auto;
+
     text-align:center;
 }
 
 .about p{
-    margin-top:35px;
 
-    color:#999;
+    font-size:18px;
+
+    color:#aaa;
+
     line-height:2;
-    font-size:16px;
+
+    font-weight:300;
 }
 
 
-/* =========================================================
+/* =========================
    FOOTER
-========================================================= */
+========================= */
 
 footer{
-    padding:60px 8% 35px;
 
-    border-top:1px solid var(--line);
+    padding:55px 8%;
 
-    background:#050505;
+    border-top:1px solid #222;
+
+    text-align:center;
 }
 
-.footer-top{
-    display:flex;
-    justify-content:space-between;
-    gap:40px;
+.footer-logo{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:30px;
+
+    letter-spacing:6px;
+
+    margin-bottom:18px;
 }
 
-.footer-brand p{
-    margin-top:20px;
+footer p{
 
     color:#666;
+
     font-size:12px;
-    line-height:1.7;
-}
 
-.footer-links{
-    display:flex;
-    gap:45px;
-}
-
-.footer-links a{
-    color:#777;
-    font-size:11px;
     letter-spacing:2px;
 }
 
-.footer-bottom{
-    margin-top:55px;
-    padding-top:20px;
 
-    border-top:1px solid var(--line);
-
-    color:#555;
-    font-size:10px;
-    letter-spacing:1px;
-}
-
-
-/* =========================================================
+/* =========================
    MODAL
-========================================================= */
+========================= */
 
-.modal-overlay{
+.modal{
+
     position:fixed;
-    inset:0;
 
-    z-index:2000;
+    inset:0;
 
     background:rgba(0,0,0,.82);
 
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(12px);
 
     display:none;
 
     align-items:center;
+
     justify-content:center;
 
+    z-index:2000;
+
     padding:20px;
 }
 
-.modal-overlay.active{
+.modal.active{
     display:flex;
 }
 
-.custom-modal{
-    width:min(1180px,100%);
+.modal-box{
+
+    width:min(900px,100%);
+
     max-height:92vh;
 
-    overflow:hidden;
+    overflow-y:auto;
 
-    background:#f8f7f4;
-    color:#151515;
+    background:#111;
 
-    box-shadow:0 30px 100px rgba(0,0,0,.8);
-}
+    border:1px solid rgba(255,255,255,.14);
 
-.modal-header{
-    height:75px;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    padding:0 30px;
-
-    border-bottom:1px solid #ddd;
-}
-
-.modal-title{
-    font-size:20px;
-    letter-spacing:3px;
-}
-
-.modal-close{
-    width:38px;
-    height:38px;
-
-    border:0;
-    background:transparent;
-
-    font-size:25px;
-    color:#555;
-}
-
-.modal-body{
-    display:grid;
-    grid-template-columns:260px 1fr 260px;
-
-    min-height:620px;
-}
-
-.modal-column{
-    padding:28px;
-
-    border-right:1px solid #e4e4e4;
-}
-
-.modal-column:last-child{
-    border-right:0;
-}
-
-.modal-step-title{
-    color:#aaa;
-
-    font-size:10px;
-    letter-spacing:2px;
-    font-weight:600;
-
-    margin-bottom:20px;
-}
-
-.form-field{
-    margin-bottom:15px;
-}
-
-.form-field label{
-    display:block;
-
-    margin-bottom:7px;
-
-    font-size:10px;
-    color:#777;
-    letter-spacing:1px;
-}
-
-.form-field input,
-.form-field select,
-.form-field textarea{
-    width:100%;
-
-    padding:13px;
-
-    border:1px solid #ddd;
-
-    background:white;
-
-    outline:none;
-}
-
-.form-field textarea{
-    min-height:90px;
-    resize:vertical;
-}
-
-.pack-card{
-    padding:20px;
-
-    border:1px solid #ddd;
-
-    background:#fbfaf7;
-}
-
-.pack-card h3{
-    font-family:"Playfair Display",serif;
-    font-size:22px;
-}
-
-.pack-card p{
-    margin-top:10px;
-    color:#999;
-    font-size:11px;
-    line-height:1.6;
-}
-
-.progress{
-    margin-top:20px;
-
-    height:4px;
-
-    background:#eee;
-}
-
-.progress-bar{
-    height:100%;
-    width:0%;
-
-    background:var(--gold);
-}
-
-.gender-tabs{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-
-    gap:8px;
-
-    margin-bottom:20px;
-}
-
-.gender-tab{
-    padding:12px 5px;
-
-    border:1px solid #ddd;
-
-    background:white;
-
-    font-size:10px;
-    letter-spacing:1px;
-}
-
-.gender-tab.active{
-    background:#c59e4c;
-    color:white;
-
-    border-color:#c59e4c;
-}
-
-.search-box{
     position:relative;
-    margin-bottom:15px;
+
+    padding:45px;
 }
 
-.search-box input{
-    width:100%;
+.close{
 
-    padding:14px 15px;
+    position:absolute;
 
-    border:0;
+    top:20px;
 
-    background:#f0f1f3;
+    right:25px;
 
-    outline:none;
-}
+    font-size:28px;
 
-.brand-list{
-    height:390px;
+    color:#888;
 
-    overflow-y:auto;
-
-    padding-right:5px;
-}
-
-.brand-group{
-    margin-bottom:14px;
-}
-
-.brand-name{
-    padding:9px 0;
-
-    color:#aaa;
-
-    font-size:10px;
-    letter-spacing:1.5px;
-
-    border-bottom:1px solid #eee;
-}
-
-.scent-item{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    padding:13px 10px;
-
-    border-bottom:1px solid #eee;
-
-    font-size:12px;
-}
-
-.scent-item button{
-    width:29px;
-    height:29px;
-
-    border:0;
-
-    border-radius:50%;
-
-    background:#111;
-    color:white;
-
-    font-size:18px;
-}
-
-.scent-item button:hover{
-    background:var(--gold);
-}
-
-.selected-list{
-    min-height:150px;
-    max-height:280px;
-
-    overflow-y:auto;
-}
-
-.selected-empty{
-    color:#aaa;
-    font-size:12px;
-    line-height:1.7;
-}
-
-.selected-item{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    padding:12px 0;
-
-    border-bottom:1px solid #eee;
-
-    font-size:11px;
-}
-
-.remove{
-    color:#999;
-    border:0;
-    background:none;
-}
-
-.summary{
-    margin-top:25px;
-
-    padding-top:20px;
-
-    border-top:1px solid #ddd;
-}
-
-.summary-row{
-    display:flex;
-    justify-content:space-between;
-
-    margin-bottom:12px;
-
-    font-size:12px;
-}
-
-.summary-row strong{
-    color:#111;
-}
-
-.modal-submit{
-    width:100%;
-
-    padding:16px;
-
-    border:0;
-
-    background:#111;
-    color:white;
-
-    letter-spacing:2px;
-
-    margin-top:15px;
-}
-
-.modal-submit:hover{
-    background:#c59e4c;
-}
-
-
-/* =========================================================
-   FIGURE MODAL
-========================================================= */
-
-.figure-options{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:10px;
-}
-
-.option-card{
-    padding:15px;
-
-    border:1px solid #ddd;
-
-    background:white;
-
-    font-size:11px;
-}
-
-.option-card:hover{
-    border-color:var(--gold);
-}
-
-.upload-box{
-    padding:30px 15px;
-
-    text-align:center;
-
-    border:1px dashed #bbb;
-
-    color:#999;
-
-    font-size:11px;
-
-    margin-top:15px;
-}
-
-.upload-box input{
-    display:none;
-}
-
-.upload-label{
-    display:block;
     cursor:pointer;
 }
 
-#previewImage{
-    display:none;
+.close:hover{
+    color:white;
+}
 
-    max-width:100%;
-    max-height:170px;
+.modal-header{
 
-    margin:15px auto 0;
+    margin-bottom:35px;
+}
+
+.modal-header small{
+
+    color:#b7965b;
+
+    letter-spacing:4px;
+
+    font-size:10px;
+}
+
+.modal-header h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:45px;
+
+    font-weight:400;
+
+    margin-top:10px;
 }
 
 
-/* =========================================================
-   TOAST
-========================================================= */
+/* =========================
+   TYPE SWITCH
+========================= */
 
-.toast{
-    position:fixed;
+.type-switch{
 
-    right:25px;
-    bottom:25px;
+    display:grid;
 
-    z-index:3000;
+    grid-template-columns:1fr 1fr;
 
-    padding:16px 22px;
+    margin-bottom:35px;
 
-    background:#f5f2ea;
-    color:#111;
+    border:1px solid #333;
+}
 
-    box-shadow:0 15px 50px rgba(0,0,0,.5);
+.type-btn{
 
-    transform:translateY(120px);
+    padding:18px;
 
-    opacity:0;
+    background:transparent;
 
-    transition:.4s;
+    color:#777;
+
+    border:0;
+
+    cursor:pointer;
+
+    letter-spacing:3px;
+
+    font-size:11px;
+}
+
+.type-btn.active{
+
+    background:#b7965b;
+
+    color:#080808;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-group{
+
+    margin-bottom:25px;
+}
+
+.form-group label{
+
+    display:block;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    color:#999;
+
+    margin-bottom:12px;
+}
+
+.options{
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+}
+
+.option{
+
+    padding:13px 18px;
+
+    border:1px solid #333;
+
+    background:#0c0c0c;
+
+    color:#aaa;
+
+    cursor:pointer;
 
     font-size:12px;
+
+    transition:.3s;
 }
 
-.toast.show{
-    transform:translateY(0);
-    opacity:1;
+.option:hover,
+.option.selected{
+
+    border-color:#b7965b;
+
+    color:#b7965b;
+}
+
+.quantity{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+}
+
+.quantity button{
+
+    width:38px;
+
+    height:38px;
+
+    background:#181818;
+
+    color:white;
+
+    border:1px solid #333;
+
+    cursor:pointer;
+
+    font-size:20px;
+}
+
+.quantity span{
+
+    min-width:50px;
+
+    text-align:center;
 }
 
 
-/* =========================================================
-   RESPONSIVE
-========================================================= */
+/* =========================
+   INPUT
+========================= */
+
+input,
+textarea,
+select{
+
+    width:100%;
+
+    padding:15px;
+
+    background:#0a0a0a;
+
+    border:1px solid #333;
+
+    color:white;
+
+    outline:none;
+
+    font-family:inherit;
+}
+
+input:focus,
+textarea:focus{
+
+    border-color:#b7965b;
+}
+
+textarea{
+
+    min-height:130px;
+
+    resize:vertical;
+}
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:18px;
+}
+
+
+/* =========================
+   SUBMIT
+========================= */
+
+.submit-btn{
+
+    width:100%;
+
+    margin-top:15px;
+
+    padding:18px;
+
+    background:#b7965b;
+
+    color:#080808;
+
+    border:0;
+
+    letter-spacing:3px;
+
+    font-size:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.submit-btn:hover{
+
+    background:#d1b477;
+}
+
+
+/* =========================
+   MODEL / FRAGRANCE CONTENT
+========================= */
+
+.custom-content{
+    display:none;
+}
+
+.custom-content.active{
+    display:block;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:900px){
-
-    header{
-        padding:0 5%;
-    }
 
     nav{
         display:none;
     }
 
-    .mobile-menu{
-        display:block;
+    header{
+        padding:0 5%;
+    }
+
+    section{
+        padding:80px 5%;
     }
 
     .hero{
-        padding:130px 7% 80px;
+        padding:120px 7% 70px;
     }
 
-    .hero-product{
-        opacity:.25;
-        right:-90px;
-    }
-
-    .business-grid,
-    .collection-grid{
+    .fragrance-grid{
         grid-template-columns:1fr;
     }
 
-    .custom-box{
+    .fragrance-image{
+        height:380px;
+    }
+
+    .section-title{
+        font-size:42px;
+    }
+
+    .custom-section h2{
+        font-size:43px;
+    }
+
+    .modal-box{
+        padding:30px 22px;
+    }
+
+    .modal-header h2{
+        font-size:36px;
+    }
+
+    .form-grid{
         grid-template-columns:1fr;
-    }
-
-    .manufacturing-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .modal-body{
-        grid-template-columns:1fr;
-        max-height:calc(92vh - 75px);
-        overflow-y:auto;
-    }
-
-    .modal-column{
-        border-right:0;
-        border-bottom:1px solid #ddd;
-    }
-
-    .brand-list{
-        height:300px;
-    }
-
-    .footer-top{
-        flex-direction:column;
-    }
-}
-
-@media(max-width:600px){
-
-    section{
-        padding:85px 6%;
-    }
-
-    .hero h1{
-        font-size:54px;
-    }
-
-    .hero-buttons{
-        flex-direction:column;
-        align-items:stretch;
-    }
-
-    .btn{
-        width:100%;
-    }
-
-    .business-card{
-        min-height:320px;
-    }
-
-    .custom-box{
-        padding:25px;
-    }
-
-    .manufacturing-grid{
-        grid-template-columns:1fr;
-    }
-
-    .footer-links{
-        flex-direction:column;
-        gap:15px;
     }
 
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =======================================================
+<!-- =========================
      HEADER
-======================================================= -->
+========================= -->
 
 <header>
 
-    <a href="#home" class="logo">
-        <span class="logo-main">HYSCENT</span>
-        <span class="logo-sub">THE ART OF NICHE FRAGRANCE</span>
-    </a>
+<div class="logo">
+HYSCENT
+</div>
 
-    <nav>
+<nav>
 
-        <a href="#home">HOME</a>
+<a href="#home">HOME</a>
 
-        <a href="#fragrance">FRAGRANCE</a>
+<a href="#fragrance">FRAGRANCE</a>
 
-        <a href="#custom">CUSTOM</a>
+<a href="#custom">CUSTOM</a>
 
-        <a href="#figures">FIGURES</a>
+<a href="#models">MODELS</a>
 
-        <a href="#about">ABOUT</a>
+<a href="#about">ABOUT</a>
 
-        <a href="#contact">CONTACT</a>
+<a href="#contact">CONTACT</a>
 
-        <a href="javascript:void(0)"
-           class="nav-custom"
-           onclick="openFragranceModal()">
-           CUSTOM FRAGRANCE
-        </a>
-
-    </nav>
-
-    <div class="mobile-menu">☰</div>
+</nav>
 
 </header>
 
 
 
-<!-- =======================================================
+<!-- =========================
      HERO
-======================================================= -->
+========================= -->
 
-<main id="home">
+<section class="hero" id="home">
 
-<section class="hero">
+<div class="hero-content">
 
-    <div class="hero-content">
+<div class="hero-kicker">
+THE ART OF CREATION
+</div>
 
-        <div class="eyebrow">
-            THE ART OF NICHE FRAGRANCE
-        </div>
+<h1>
+Luxury<br>
+<span>Beyond</span><br>
+Fragrance
+</h1>
 
-        <h1>
-            A Scent<br>
-            Beyond <em>Time.</em>
-        </h1>
+<p class="hero-description">
 
-        <p class="hero-description">
+HYSCENT creates original niche fragrances,
+private label perfumes and collectible models
+for brands, retailers and creators worldwide.
 
-            Original niche fragrances inspired by oriental culture,
-            precious woods, natural ingredients and timeless emotions.
+</p>
 
-        </p>
+<div class="hero-buttons">
 
-        <p class="hero-meta">
-            PRIVATE LABEL · OEM · ODM · CUSTOM FRAGRANCE · CUSTOM FIGURES
-        </p>
+<button
+class="btn btn-gold"
+onclick="openCustom('fragrance')">
 
-        <div class="hero-buttons">
+CUSTOM FRAGRANCE
 
-            <a href="#fragrance"
-               class="btn btn-gold">
-                DISCOVER FRAGRANCE
-            </a>
+</button>
 
-            <button
-                class="btn btn-outline"
-                onclick="openFragranceModal()">
-                BUILD YOUR PRODUCT
-            </button>
+<a
+href="#fragrance"
+class="btn">
 
-        </div>
+EXPLORE COLLECTION
 
-    </div>
+</a>
 
+</div>
 
-    <div class="hero-product">
-
-        <div class="glow"></div>
-
-        <div class="perfume">
-
-            <div class="cap"></div>
-
-            <div class="neck"></div>
-
-            <div class="bottle-label">
-
-                <strong>HYSCENT</strong>
-
-                <div class="bottle-symbol">
-                    ✦
-                </div>
-
-                <span>
-                    THE ART OF<br>
-                    NICHE FRAGRANCE
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
 
-<!-- =======================================================
-     WHAT WE CREATE
-======================================================= -->
+<!-- =========================
+     FRAGRANCE
+========================= -->
 
-<section class="business-section" id="custom">
+<section id="fragrance">
 
-    <div class="section-eyebrow">
-        WHAT WE CREATE
-    </div>
+<div class="section-kicker">
+SIGNATURE COLLECTION
+</div>
 
-    <h2 class="section-title">
-        From Scent<br>
-        To Product.
-    </h2>
-
-    <p class="section-description">
-
-        HYSCENT provides fragrance development,
-        private label manufacturing and custom product
-        solutions for brands, retailers and creative businesses.
-
-    </p>
+<h2 class="section-title">
+Niche Fragrance
+</h2>
 
 
-    <div class="business-grid">
+<div class="fragrance-grid">
 
 
-        <div class="business-card">
+<div class="fragrance-card">
 
-            <div class="business-number">01</div>
+<div
+class="fragrance-image"
+style="background-image:url('https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1200&q=85');">
+</div>
 
-            <div class="business-icon">✦</div>
+<div class="fragrance-info">
 
-            <div class="business-card-content">
+<h3>
+Oud Dynasty
+</h3>
 
-                <h3>
-                    Fragrance
-                </h3>
+<p>
+Deep oud, precious woods and incense inspired by
+ancient oriental ceremonies.
+</p>
 
-                <p>
-                    Choose a fragrance direction,
-                    customize your bottle, packaging,
-                    logo and quantity.
-                </p>
+<span class="fragrance-tag">
+ORIENTAL / WOODY
+</span>
 
-                <a href="javascript:void(0)"
-                   onclick="openFragranceModal()"
-                   class="business-link">
-                    START CUSTOMIZATION →
-                </a>
+</div>
 
-            </div>
-
-        </div>
+</div>
 
 
 
-        <div class="business-card" id="figures">
+<div class="fragrance-card">
 
-            <div class="business-number">02</div>
+<div
+class="fragrance-image"
+style="background-image:url('https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&w=1200&q=85');">
+</div>
 
-            <div class="business-icon">◇</div>
+<div class="fragrance-info">
 
-            <div class="business-card-content">
+<h3>
+Imperial Amber
+</h3>
 
-                <h3>
-                    Custom Figures
-                </h3>
+<p>
+Warm amber, spices and precious woods surrounded
+by a modern luxurious character.
+</p>
 
-                <p>
-                    Turn your character, artwork or idea
-                    into a collectible figure or custom model.
-                </p>
+<span class="fragrance-tag">
+AMBER / SPICY
+</span>
 
-                <a href="javascript:void(0)"
-                   onclick="openFigureModal()"
-                   class="business-link">
-                    START FIGURE PROJECT →
-                </a>
+</div>
 
-            </div>
-
-        </div>
-
+</div>
 
 
-        <div class="business-card">
 
-            <div class="business-number">03</div>
+<div class="fragrance-card">
 
-            <div class="business-icon">◈</div>
+<div
+class="fragrance-image"
+style="background-image:url('https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=1200&q=85');">
+</div>
 
-            <div class="business-card-content">
+<div class="fragrance-info">
 
-                <h3>
-                    Private Label
-                </h3>
+<h3>
+Jasmine Moon
+</h3>
 
-                <p>
-                    From formula and bottle to packaging
-                    and branding, create your own product.
-                </p>
+<p>
+A delicate floral composition inspired by
+moonlit oriental gardens.
+</p>
 
-                <a href="#contact"
-                   class="business-link">
-                    REQUEST QUOTE →
-                </a>
+<span class="fragrance-tag">
+FLORAL / MUSK
+</span>
 
-            </div>
+</div>
 
-        </div>
+</div>
 
 
-    </div>
+
+</div>
 
 </section>
 
 
 
-<!-- =======================================================
-     CUSTOM FRAGRANCE
-======================================================= -->
+<!-- =========================
+     CUSTOM
+========================= -->
 
-<section class="custom-preview" id="fragrance">
+<section class="custom-section" id="custom">
 
-    <div class="section-eyebrow">
-        CUSTOM FRAGRANCE
-    </div>
+<div class="section-kicker">
+CREATE YOUR OWN
+</div>
 
-    <h2 class="section-title">
-        Build Your Fragrance.
-    </h2>
+<h2>
+Custom Creation
+</h2>
 
-    <p class="section-description">
+<p>
 
-        Select your fragrance direction,
-        reference scent, bottle size and quantity.
-        Then send us your requirements for quotation.
+From fragrance development to collectible models,
+HYSCENT provides customized solutions for global brands,
+retailers, creators and private clients.
 
-    </p>
-
-
-    <div class="custom-box">
-
-        <div class="custom-steps">
+</p>
 
 
-            <div class="step">
-
-                <div class="step-number">01</div>
-
-                <div>
-                    <h4>
-                        Choose Scent Direction
-                    </h4>
-
-                    <p>
-                        MEN · WOMEN · UNISEX
-                    </p>
-                </div>
-
-            </div>
+<div class="custom-options">
 
 
+<div
+class="custom-card"
+onclick="openCustom('fragrance')">
 
-            <div class="step">
+<div class="number">
+01
+</div>
 
-                <div class="step-number">02</div>
+<h3>
+Custom Fragrance
+</h3>
 
-                <div>
-                    <h4>
-                        Select Reference Fragrance
-                    </h4>
+<p>
+OEM · ODM · Private Label
+</p>
 
-                    <p>
-                        Browse popular fragrance directions
-                        from leading fragrance houses.
-                    </p>
-                </div>
-
-            </div>
+</div>
 
 
 
-            <div class="step">
+<div
+class="custom-card"
+onclick="openCustom('model')">
 
-                <div class="step-number">03</div>
+<div class="number">
+02
+</div>
 
-                <div>
-                    <h4>
-                        Choose Specification
-                    </h4>
+<h3>
+Custom Models
+</h3>
 
-                    <p>
-                        30ml · 50ml · 100ml · Custom Bottle
-                    </p>
-                </div>
+<p>
+Figures · Toys · Collectibles · IP Models
+</p>
 
-            </div>
-
-
-
-            <div class="step">
-
-                <div class="step-number">04</div>
-
-                <div>
-                    <h4>
-                        Send Your Inquiry
-                    </h4>
-
-                    <p>
-                        Our team will review your requirements
-                        and contact you.
-                    </p>
-                </div>
-
-            </div>
+</div>
 
 
-            <button
-                class="btn btn-gold"
-                onclick="openFragranceModal()">
-
-                START CUSTOMIZATION
-
-            </button>
-
-        </div>
-
-
-        <div class="custom-visual">
-
-            <div class="mini-bottle">
-
-                <div class="mini-cap"></div>
-
-                <div class="mini-label">
-                    HYSCENT
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
 
-<!-- =======================================================
-     COLLECTIONS
-======================================================= -->
-
-<section class="collection-section">
-
-    <div class="section-eyebrow">
-        SIGNATURE DIRECTIONS
-    </div>
-
-    <h2 class="section-title">
-        The Fragrance Library.
-    </h2>
-
-    <p class="section-description">
-        Explore scent directions that can be used
-        as references for your custom fragrance project.
-    </p>
-
-
-    <div class="collection-grid">
-
-
-        <div class="collection-card">
-
-            <div class="collection-card-content">
-
-                <small>01 · ORIENTAL</small>
-
-                <h3>
-                    Oud Dynasty
-                </h3>
-
-                <p>
-                    Agarwood, incense, amber,
-                    woods and warm spices.
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="collection-card">
-
-            <div class="collection-card-content">
-
-                <small>02 · AMBER</small>
-
-                <h3>
-                    Imperial Amber
-                </h3>
-
-                <p>
-                    Golden amber, vanilla,
-                    precious woods and musk.
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="collection-card">
-
-            <div class="collection-card-content">
-
-                <small>03 · FLORAL</small>
-
-                <h3>
-                    Jasmine Moon
-                </h3>
-
-                <p>
-                    Jasmine, white flowers,
-                    soft musk and moonlit gardens.
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="collection-card">
-
-            <div class="collection-card-content">
-
-                <small>04 · WOODY</small>
-
-                <h3>
-                    Dragon Wood
-                </h3>
-
-                <p>
-                    Dry woods, incense,
-                    leather and mysterious resins.
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="collection-card">
-
-            <div class="collection-card-content">
-
-                <small>05 · TEA</small>
-
-                <h3>
-                    Tea Ceremony
-                </h3>
-
-                <p>
-                    Green tea, herbs,
-                    soft woods and natural freshness.
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="collection-card">
-
-            <div class="collection-card-content">
-
-                <small>06 · SILK ROAD</small>
-
-                <h3>
-                    Silk Road
-                </h3>
-
-                <p>
-                    Spices, flowers, woods
-                    and exotic ingredients.
-                </p>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =======================================================
-     MANUFACTURING
-======================================================= -->
-
-<section class="manufacturing">
-
-    <div class="section-eyebrow">
-        GLOBAL MANUFACTURING
-    </div>
-
-    <h2 class="section-title">
-        From Concept<br>
-        To Creation.
-    </h2>
-
-
-    <div class="manufacturing-grid">
-
-        <div class="manufacturing-item">
-            <strong>01</strong>
-            <span>SCENT DEVELOPMENT</span>
-        </div>
-
-        <div class="manufacturing-item">
-            <strong>02</strong>
-            <span>BOTTLE & PACKAGING</span>
-        </div>
-
-        <div class="manufacturing-item">
-            <strong>03</strong>
-            <span>PRIVATE LABEL</span>
-        </div>
-
-        <div class="manufacturing-item">
-            <strong>04</strong>
-            <span>GLOBAL DELIVERY</span>
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =======================================================
+<!-- =========================
      ABOUT
-======================================================= -->
+========================= -->
 
 <section id="about">
 
-    <div class="about">
+<div class="section-kicker">
+ABOUT HYSCENT
+</div>
 
-        <div class="section-eyebrow">
-            ABOUT HYSCENT
-        </div>
+<h2 class="section-title">
+A New Language of Luxury
+</h2>
 
-        <h2 class="section-title">
-            Crafted For<br>
-            Your Brand.
-        </h2>
+<div class="about">
 
-        <p>
+<p>
 
-            HYSCENT is a fragrance and custom manufacturing
-            concept focused on creating distinctive products
-            for modern brands.
+HYSCENT is a creative manufacturing partner
+specializing in niche fragrance and customized
+collectible products.
 
-            <br><br>
+We combine oriental inspiration,
+modern aesthetics and professional manufacturing
+to transform ideas into products.
 
-            From fragrance inspiration and formulation
-            to bottle design, packaging, private label
-            and custom collectible products,
-            we transform ideas into finished products.
+From the first concept to final production,
+we help brands create products with identity,
+emotion and lasting value.
 
-        </p>
+</p>
 
-    </div>
-
-</section>
-
-
-
-<!-- =======================================================
-     CONTACT
-======================================================= -->
-
-<section id="contact" class="manufacturing">
-
-    <div class="section-eyebrow">
-        START A PROJECT
-    </div>
-
-    <h2 class="section-title">
-        Let's Create<br>
-        Something Distinctive.
-    </h2>
-
-    <p class="section-description">
-
-        Tell us what you are looking to create.
-        Our team can review your fragrance,
-        packaging or custom figure requirements.
-
-    </p>
-
-    <div style="text-align:center;margin-top:40px;">
-
-        <button
-            class="btn btn-gold"
-            onclick="openFragranceModal()">
-
-            REQUEST A QUOTE
-
-        </button>
-
-    </div>
+</div>
 
 </section>
 
 
-</main>
 
-
-
-<!-- =======================================================
+<!-- =========================
      FOOTER
-======================================================= -->
+========================= -->
 
-<footer>
+<footer id="contact">
 
-    <div class="footer-top">
+<div class="footer-logo">
+HYSCENT
+</div>
 
-        <div class="footer-brand">
+<p>
+THE ART OF NICHE FRAGRANCE · CUSTOM CREATION
+</p>
 
-            <div class="logo">
+<br>
 
-                <span class="logo-main">
-                    HYSCENT
-                </span>
-
-                <span class="logo-sub">
-                    THE ART OF NICHE FRAGRANCE
-                </span>
-
-            </div>
-
-            <p>
-                Luxury fragrance · Private Label · OEM · ODM<br>
-                Custom Figures · Product Development
-            </p>
-
-        </div>
-
-
-        <div class="footer-links">
-
-            <a href="#fragrance">
-                FRAGRANCE
-            </a>
-
-            <a href="#figures">
-                FIGURES
-            </a>
-
-            <a href="#about">
-                ABOUT
-            </a>
-
-            <a href="#contact">
-                CONTACT
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-        © 2026 HYSCENT · THE ART OF NICHE FRAGRANCE
-
-    </div>
+<p>
+© 2026 HYSCENT. ALL RIGHTS RESERVED.
+</p>
 
 </footer>
 
 
 
-<!-- =======================================================
-     FRAGRANCE CUSTOM MODAL
-======================================================= -->
-
-<div class="modal-overlay" id="fragranceModal">
-
-    <div class="custom-modal">
-
-        <div class="modal-header">
-
-            <div class="modal-title">
-                BUILD YOUR FRAGRANCE
-            </div>
-
-            <button
-                class="modal-close"
-                onclick="closeFragranceModal()">
-                ×
-            </button>
-
-        </div>
-
-
-        <div class="modal-body">
-
-
-            <!-- LEFT -->
-
-            <div class="modal-column">
-
-                <div class="modal-step-title">
-                    1. PROJECT INFORMATION
-                </div>
-
-
-                <div class="form-field">
-
-                    <label>
-                        YOUR NAME *
-                    </label>
-
-                    <input
-                        id="clientName"
-                        type="text"
-                        placeholder="Full Name">
-
-                </div>
-
-
-                <div class="form-field">
-
-                    <label>
-                        COMPANY
-                    </label>
-
-                    <input
-                        id="companyName"
-                        type="text"
-                        placeholder="Company Name">
-
-                </div>
-
-
-                <div class="form-field">
-
-                    <label>
-                        EMAIL *
-                    </label>
-
-                    <input
-                        id="clientEmail"
-                        type="email"
-                        placeholder="Email Address">
-
-                </div>
-
-
-                <div class="form-field">
-
-                    <label>
-                        WHATSAPP
-                    </label>
-
-                    <input
-                        id="clientWhatsapp"
-                        type="text"
-                        placeholder="+00 000 000 000">
-
-                </div>
-
-
-                <div class="pack-card">
-
-                    <h3>
-                        CUSTOM
-                    </h3>
-
-                    <p>
-                        Build your own fragrance
-                        specification and send us
-                        your requirements.
-                    </p>
-
-                    <div class="progress">
-
-                        <div
-                            class="progress-bar"
-                            id="progressBar">
-                        </div>
-
-                    </div>
-
-                    <p id="progressText">
-                        0 / 4 selections
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- CENTER -->
-
-            <div class="modal-column">
-
-                <div class="modal-step-title">
-                    2. CHOOSE FRAGRANCE
-                </div>
-
-
-                <div class="gender-tabs">
-
-                    <button
-                        class="gender-tab active"
-                        onclick="filterGender('MEN',this)">
-                        MEN
-                    </button>
-
-                    <button
-                        class="gender-tab"
-                        onclick="filterGender('WOMEN',this)">
-                        WOMEN
-                    </button>
-
-                    <button
-                        class="gender-tab"
-                        onclick="filterGender('UNISEX',this)">
-                        UNISEX
-                    </button>
-
-                </div>
-
-
-                <div class="search-box">
-
-                    <input
-                        id="scentSearch"
-                        type="text"
-                        placeholder="Search fragrance direction..."
-                        oninput="searchScents()">
-
-                </div>
-
-
-                <div
-                    class="brand-list"
-                    id="brandList">
-                </div>
-
-            </div>
-
-
-
-            <!-- RIGHT -->
-
-            <div class="modal-column">
-
-                <div class="modal-step-title">
-                    3. SPECIFICATION
-                </div>
-
-
-                <div class="form-field">
-
-                    <label>
-                        BOTTLE SIZE
-                    </label>
-
-                    <select id="bottleSize">
-
-                        <option>30ml</option>
-                        <option selected>50ml</option>
-                        <option>100ml</option>
-                        <option>Custom</option>
-
-                    </select>
-
-                </div>
-
-
-                <div class="form-field">
-
-                    <label>
-                        QUANTITY
-                    </label>
-
-                    <select id="quantity">
-
-                        <option>50 - 99</option>
-                        <option>100 - 499</option>
-                        <option>500 - 999</option>
-                        <option>1000+</option>
-
-                    </select>
-
-                </div>
-
-
-                <div class="form-field">
-
-                    <label>
-                        BOTTLE
-                    </label>
-
-                    <select id="bottleType">
-
-                        <option>Standard Bottle</option>
-                        <option>Custom Bottle</option>
-                        <option>Premium Glass</option>
-
-                    </select>
-
-                </div>
-
-
-                <div class="form-field">
-
-                    <label>
-                        PACKAGING
-                    </label>
-
-                    <select id="packaging">
-
-                        <option>Standard</option>
-                        <option>Custom Label</option>
-                        <option>Custom Box</option>
-                        <option>Full Custom Packaging</option>
-
-                    </select>
-
-                </div>
-
-
-                <div class="form-field">
-
-                    <label>
-                        ADDITIONAL REQUIREMENTS
-                    </label>
-
-                    <textarea
-                        id="requirements"
-                        placeholder="Tell us about your project..."></textarea>
-
-                </div>
-
-
-                <div class="summary">
-
-                    <div class="summary-row">
-
-                        <span>
-                            Selected scents
-                        </span>
-
-                        <strong id="selectedCount">
-                            0
-                        </strong>
-
-                    </div>
-
-
-                    <div class="selected-list"
-                         id="selectedList">
-
-                        <div class="selected-empty">
-
-                            Select reference fragrances
-                            from the center panel.
-
-                        </div>
-
-                    </div>
-
-
-                    <button
-                        class="modal-submit"
-                        onclick="submitFragranceInquiry()">
-
-                        REQUEST QUOTE
-
-                    </button>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</div>
-
-
-
-<!-- =======================================================
-     FIGURE MODAL
-======================================================= -->
-
-<div class="modal-overlay" id="figureModal">
-
-    <div class="custom-modal">
-
-        <div class="modal-header">
-
-            <div class="modal-title">
-                CUSTOM FIGURE PROJECT
-            </div>
-
-            <button
-                class="modal-close"
-                onclick="closeFigureModal()">
-                ×
-            </button>
-
-        </div>
-
-
-        <div class="modal-body">
-
-
-            <div class="modal-column">
-
-                <div class="modal-step-title">
-                    1. PROJECT
-                </div>
-
-                <div class="form-field">
-
-                    <label>
-                        YOUR NAME *
-                    </label>
-
-                    <input
-                        id="figureName"
-                        type="text"
-                        placeholder="Full Name">
-
-                </div>
-
-
-                <div class="form-field">
-
-                    <label>
-                        COMPANY
-                    </label>
-
-                    <input
-                        id="figureCompany"
-                        type="text"
-                        placeholder="Company">
-
-                </div>
-
-
-                <div class="form-field">
-
-                    <label>
-                        EMAIL *
-                    </label>
-
-                    <input
-                        id="figureEmail"
-                        type="email"
-                        placeholder="Email">
-
-                </div>
-
-            </div>
-
-
-
-            <div class="modal-column">
-
-                <div class="modal-step-title">
-                    2. FIGURE TYPE
-                </div>
-
-
-                <div class="figure-options">
-
-                    <div class="option-card">
-                        Anime Figure
-                    </div>
-
-                    <div class="option-card">
-                        Character Figure
-                    </div>
-
-                    <div class="option-card">
-                        Collectible
-                    </div>
-
-                    <div class="option-card">
-                        Statue
-                    </div>
-
-                    <div class="option-card">
-                        Chibi
-                    </div>
-
-                    <div class="option-card">
-                        Custom Toy
-                    </div>
-
-                </div>
-
-
-                <div class="form-field"
-                     style="margin-top:20px;">
-
-                    <label>
-                        SIZE
-                    </label>
-
-                    <select id="figureSize">
-
-                        <option>10cm</option>
-                        <option>15cm</option>
-                        <option>20cm</option>
-                        <option>30cm</option>
-                        <option>Custom</option>
-
-                    </select>
-
-                </div>
-
-
-                <div class="form-field">
-
-                    <label>
-                        QUANTITY
-                    </label>
-
-                    <select id="figureQuantity">
-
-                        <option>1 - 9</option>
-                        <option>10 - 49</option>
-                        <option>50 - 99</option>
-                        <option>100+</option>
-
-                    </select>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="modal-column">
-
-                <div class="modal-step-title">
-                    3. REFERENCE
-                </div>
-
-
-                <div class="upload-box">
-
-                    <label
-                        class="upload-label"
-                        for="figureImage">
-
-                        <strong>
-                            + UPLOAD IMAGE
-                        </strong>
-
-                        <br><br>
-
-                        JPG / PNG / WEBP
-
-                    </label>
-
-
-                    <input
-                        id="figureImage"
-                        type="file"
-                        accept="image/*"
-                        onchange="previewFigureImage(event)">
-
-
-                    <img
-                        id="previewImage"
-                        alt="Preview">
-
-                </div>
-
-
-                <div class="form-field"
-                     style="margin-top:20px;">
-
-                    <label>
-                        PROJECT DESCRIPTION
-                    </label>
-
-                    <textarea
-                        id="figureRequirements"
-                        placeholder="Describe your figure project..."></textarea>
-
-                </div>
-
-
-                <button
-                    class="modal-submit"
-                    onclick="submitFigureInquiry()">
-
-                    REQUEST QUOTE
-
-                </button>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</div>
-
-
-
-<!-- =======================================================
-     TOAST
-======================================================= -->
+<!-- =========================
+     CUSTOM MODAL
+========================= -->
 
 <div
-    class="toast"
-    id="toast">
+class="modal"
+id="customModal">
+
+<div class="modal-box">
+
+<div
+class="close"
+onclick="closeCustom()">
+
+×
+
+</div>
+
+
+<div class="modal-header">
+
+<small>
+HYSCENT CUSTOM CREATION
+</small>
+
+<h2>
+Create Your Product
+</h2>
+
+</div>
+
+
+
+<!-- TYPE -->
+
+<div class="type-switch">
+
+<button
+class="type-btn active"
+id="fragranceTab"
+onclick="switchType('fragrance')">
+
+FRAGRANCE
+
+</button>
+
+<button
+class="type-btn"
+id="modelTab"
+onclick="switchType('model')">
+
+MODEL
+
+</button>
+
+</div>
+
+
+
+<!-- =====================
+     FRAGRANCE FORM
+===================== -->
+
+<div
+class="custom-content active"
+id="fragranceContent">
+
+
+<div class="form-group">
+
+<label>
+FRAGRANCE STYLE
+</label>
+
+<div class="options">
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+WOODY OUD
+
+</div>
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+AMBER SPICY
+
+</div>
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+FRESH CITRUS
+
+</div>
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+WHITE FLORAL
+
+</div>
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+DARK WOODS
+
+</div>
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+CUSTOM SCENT
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+BOTTLE SIZE
+</label>
+
+<div class="options">
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+30 ML
+
+</div>
+
+<div
+class="option selected"
+onclick="selectOption(this)">
+
+50 ML
+
+</div>
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+100 ML
+
+</div>
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+CUSTOM
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+QUANTITY
+</label>
+
+<div class="quantity">
+
+<button onclick="changeQuantity(-1)">
+−
+</button>
+
+<span id="fragranceQuantity">
+100
+</span>
+
+<button onclick="changeQuantity(1)">
++
+</button>
+
+</div>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+BUSINESS MODEL
+</label>
+
+<div class="options">
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+OEM
+
+</div>
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+ODM
+
+</div>
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+PRIVATE LABEL
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- =====================
+     MODEL FORM
+===================== -->
+
+<div
+class="custom-content"
+id="modelContent">
+
+
+<div class="form-group">
+
+<label>
+MODEL TYPE
+</label>
+
+<div class="options">
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+CHARACTER FIGURE
+
+</div>
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+COLLECTIBLE TOY
+
+</div>
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+BRAND MASCOT
+
+</div>
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+IP MODEL
+
+</div>
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+DISPLAY FIGURE
+
+</div>
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+CUSTOM MODEL
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+MODEL SIZE
+</label>
+
+<div class="options">
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+10 CM
+
+</div>
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+15 CM
+
+</div>
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+20 CM
+
+</div>
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+30 CM
+
+</div>
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+CUSTOM SIZE
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+QUANTITY
+</label>
+
+<div class="quantity">
+
+<button onclick="changeModelQuantity(-1)">
+−
+</button>
+
+<span id="modelQuantity">
+50
+</span>
+
+<button onclick="changeModelQuantity(1)">
++
+</button>
+
+</div>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+PROJECT TYPE
+</label>
+
+<div class="options">
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+RETAIL
+
+</div>
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+WHOLESALE
+
+</div>
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+BRAND PROMOTION
+
+</div>
+
+<div
+class="option"
+onclick="selectOption(this)">
+
+GIFT
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- =====================
+     CONTACT FORM
+===================== -->
+
+<div class="form-grid">
+
+<div>
+
+<div class="form-group">
+
+<label>
+YOUR NAME
+</label>
+
+<input
+type="text"
+id="customerName"
+placeholder="Your name">
+
+</div>
+
+</div>
+
+
+
+<div>
+
+<div class="form-group">
+
+<label>
+COMPANY
+</label>
+
+<input
+type="text"
+id="company"
+placeholder="Company name">
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="form-grid">
+
+<div>
+
+<div class="form-group">
+
+<label>
+EMAIL
+</label>
+
+<input
+type="email"
+id="email"
+placeholder="your@email.com">
+
+</div>
+
+</div>
+
+
+
+<div>
+
+<div class="form-group">
+
+<label>
+WHATSAPP
+</label>
+
+<input
+type="text"
+id="whatsapp"
+placeholder="+86">
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+PROJECT DESCRIPTION
+</label>
+
+<textarea
+id="description"
+placeholder="Tell us about your product, fragrance direction, packaging, target market or project requirements..."></textarea>
+
+</div>
+
+
+
+<button
+class="submit-btn"
+onclick="submitInquiry()">
+
+REQUEST A QUOTE
+
+</button>
+
+
+</div>
+
 </div>
 
 
 
 <script>
 
-/* =========================================================
-   FRAGRANCE DATABASE
-========================================================= */
+/* =========================
+   MODAL
+========================= */
 
-const fragrances = [
-
-    {
-        brand:"DIOR",
-        gender:"MEN",
-        scents:[
-            "Sauvage",
-            "Sauvage Elixir",
-            "Homme Intense",
-            "Homme Sport"
-        ]
-    },
-
-    {
-        brand:"CHANEL",
-        gender:"MEN",
-        scents:[
-            "Bleu Direction",
-            "Allure Homme",
-            "Allure Homme Sport"
-        ]
-    },
-
-    {
-        brand:"TOM FORD",
-        gender:"MEN",
-        scents:[
-            "Oud Wood",
-            "Tobacco Oud",
-            "Ombre Leather",
-            "Neroli Portofino"
-        ]
-    },
-
-    {
-        brand:"CREED",
-        gender:"MEN",
-        scents:[
-            "Aventus",
-            "Green Irish Tweed",
-            "Silver Mountain Water"
-        ]
-    },
-
-    {
-        brand:"YSL",
-        gender:"MEN",
-        scents:[
-            "Y",
-            "La Nuit Direction",
-            "L'Homme"
-        ]
-    },
-
-    {
-        brand:"DIOR",
-        gender:"WOMEN",
-        scents:[
-            "Miss Dior Direction",
-            "J'adore Direction",
-            "Hypnotic Direction"
-        ]
-    },
-
-    {
-        brand:"CHANEL",
-        gender:"WOMEN",
-        scents:[
-            "Coco Direction",
-            "Chance Direction",
-            "Coco Mademoiselle Direction"
-        ]
-    },
-
-    {
-        brand:"JO MALONE",
-        gender:"WOMEN",
-        scents:[
-            "English Pear",
-            "Peony & Blush",
-            "Wood Sage & Sea Salt"
-        ]
-    },
-
-    {
-        brand:"BYREDO",
-        gender:"WOMEN",
-        scents:[
-            "Blanche",
-            "Gypsy Water",
-            "Mojave Ghost"
-        ]
-    },
-
-    {
-        brand:"LE LABO",
-        gender:"UNISEX",
-        scents:[
-            "Santal Direction",
-            "Another Direction",
-            "Rose Direction"
-        ]
-    },
-
-    {
-        brand:"MAISON MARGIELA",
-        gender:"UNISEX",
-        scents:[
-            "Lazy Sunday Direction",
-            "Jazz Club Direction",
-            "By The Fireplace Direction"
-        ]
-    },
-
-    {
-        brand:"TOM FORD",
-        gender:"UNISEX",
-        scents:[
-            "Lost Cherry",
-            "Oud Minerale",
-            "White Suede"
-        ]
-    },
-
-    {
-        brand:"JO MALONE",
-        gender:"UNISEX",
-        scents:[
-            "Wood Sage",
-            "Myrrh & Tonka",
-            "Blackberry & Bay"
-        ]
-    }
-
-];
+const modal =
+document.getElementById("customModal");
 
 
-/* =========================================================
-   STATE
-========================================================= */
+function openCustom(type){
 
-let currentGender = "MEN";
+    modal.classList.add("active");
 
-let selectedScents = [];
+    switchType(type);
 
-
-/* =========================================================
-   OPEN / CLOSE FRAGRANCE
-========================================================= */
-
-function openFragranceModal(){
-
-    document
-        .getElementById("fragranceModal")
-        .classList.add("active");
-
-    document.body.style.overflow = "hidden";
-
-    renderScents();
-
+    document.body.style.overflow="hidden";
 }
 
 
-function closeFragranceModal(){
+function closeCustom(){
 
-    document
-        .getElementById("fragranceModal")
-        .classList.remove("active");
+    modal.classList.remove("active");
 
-    document.body.style.overflow = "";
-
+    document.body.style.overflow="auto";
 }
 
 
-/* =========================================================
-   OPEN / CLOSE FIGURE
-========================================================= */
+modal.addEventListener("click",function(e){
 
-function openFigureModal(){
+    if(e.target === modal){
 
-    document
-        .getElementById("figureModal")
-        .classList.add("active");
-
-    document.body.style.overflow = "";
-
-}
-
-
-function closeFigureModal(){
-
-    document
-        .getElementById("figureModal")
-        .classList.remove("active");
-
-    document.body.style.overflow = "";
-
-}
-
-
-/* =========================================================
-   GENDER FILTER
-========================================================= */
-
-function filterGender(gender,button){
-
-    currentGender = gender;
-
-    document
-        .querySelectorAll(".gender-tab")
-        .forEach(btn=>{
-            btn.classList.remove("active");
-        });
-
-    button.classList.add("active");
-
-    renderScents();
-
-}
-
-
-/* =========================================================
-   SEARCH
-========================================================= */
-
-function searchScents(){
-
-    renderScents();
-
-}
-
-
-/* =========================================================
-   RENDER SCENTS
-========================================================= */
-
-function renderScents(){
-
-    const list =
-        document.getElementById("brandList");
-
-    const search =
-        document
-        .getElementById("scentSearch")
-        .value
-        .toLowerCase();
-
-    list.innerHTML = "";
-
-    const filtered =
-        fragrances.filter(item =>
-            item.gender === currentGender
-        );
-
-    filtered.forEach(group => {
-
-        const matchedScents =
-            group.scents.filter(scent => {
-
-                return (
-                    scent.toLowerCase()
-                    .includes(search) ||
-                    group.brand.toLowerCase()
-                    .includes(search)
-                );
-
-            });
-
-
-        if(!matchedScents.length){
-            return;
-        }
-
-
-        const groupDiv =
-            document.createElement("div");
-
-        groupDiv.className =
-            "brand-group";
-
-
-        groupDiv.innerHTML =
-            `<div class="brand-name">
-                ${group.brand}
-             </div>`;
-
-
-        matchedScents.forEach(scent => {
-
-            const item =
-                document.createElement("div");
-
-            item.className =
-                "scent-item";
-
-
-            const selected =
-                selectedScents
-                .some(x =>
-                    x.brand === group.brand &&
-                    x.scent === scent
-                );
-
-
-            item.innerHTML = `
-
-                <span>
-                    ${scent}
-                </span>
-
-                <button
-                    onclick="addScent('${group.brand}','${scent}')">
-
-                    ${selected ? "✓" : "+"}
-
-                </button>
-
-            `;
-
-
-            groupDiv.appendChild(item);
-
-        });
-
-
-        list.appendChild(groupDiv);
-
-    });
-
-}
-
-
-/* =========================================================
-   ADD SCENT
-========================================================= */
-
-function addScent(brand,scent){
-
-    const exists =
-        selectedScents.some(
-            item =>
-            item.brand === brand &&
-            item.scent === scent
-        );
-
-
-    if(exists){
-
-        selectedScents =
-            selectedScents.filter(
-                item =>
-                !(item.brand === brand &&
-                  item.scent === scent)
-            );
-
-    }else{
-
-        if(selectedScents.length >= 4){
-
-            showToast(
-                "You can select up to 4 reference scents."
-            );
-
-            return;
-        }
-
-        selectedScents.push({
-            brand:brand,
-            scent:scent
-        });
-
-    }
-
-
-    renderScents();
-
-    renderSelected();
-
-}
-
-
-/* =========================================================
-   SELECTED SCENTS
-========================================================= */
-
-function renderSelected(){
-
-    const list =
-        document.getElementById("selectedList");
-
-    const count =
-        document.getElementById("selectedCount");
-
-    const progress =
-        document.getElementById("progressBar");
-
-    const progressText =
-        document.getElementById("progressText");
-
-
-    count.innerText =
-        selectedScents.length;
-
-
-    progress.style.width =
-        (selectedScents.length / 4 * 100) + "%";
-
-
-    progressText.innerText =
-        selectedScents.length + " / 4 selections";
-
-
-    if(!selectedScents.length){
-
-        list.innerHTML = `
-            <div class="selected-empty">
-                Select reference fragrances
-                from the center panel.
-            </div>
-        `;
-
-        return;
-    }
-
-
-    list.innerHTML = "";
-
-
-    selectedScents.forEach((item,index)=>{
-
-        const row =
-            document.createElement("div");
-
-        row.className =
-            "selected-item";
-
-
-        row.innerHTML = `
-
-            <span>
-                ${item.brand}<br>
-                ${item.scent}
-            </span>
-
-            <button
-                class="remove"
-                onclick="removeScent(${index})">
-                ×
-            </button>
-
-        `;
-
-
-        list.appendChild(row);
-
-    });
-
-}
-
-
-function removeScent(index){
-
-    selectedScents.splice(index,1);
-
-    renderSelected();
-
-    renderScents();
-
-}
-
-
-/* =========================================================
-   FIGURE IMAGE PREVIEW
-========================================================= */
-
-function previewFigureImage(event){
-
-    const file =
-        event.target.files[0];
-
-    if(!file){
-        return;
-    }
-
-    const image =
-        document.getElementById("previewImage");
-
-    image.src =
-        URL.createObjectURL(file);
-
-    image.style.display =
-        "block";
-
-}
-
-
-/* =========================================================
-   FRAGRANCE SUBMISSION
-========================================================= */
-
-function submitFragranceInquiry(){
-
-    const name =
-        document.getElementById("clientName").value.trim();
-
-    const email =
-        document.getElementById("clientEmail").value.trim();
-
-
-    if(!name || !email){
-
-        showToast(
-            "Please enter your name and email."
-        );
-
-        return;
-    }
-
-
-    if(!selectedScents.length){
-
-        showToast(
-            "Please select at least one reference scent."
-        );
-
-        return;
-    }
-
-
-    const size =
-        document.getElementById("bottleSize").value;
-
-    const quantity =
-        document.getElementById("quantity").value;
-
-    const bottle =
-        document.getElementById("bottleType").value;
-
-    const packaging =
-        document.getElementById("packaging").value;
-
-    const requirements =
-        document.getElementById("requirements").value;
-
-
-    const scentText =
-        selectedScents
-        .map(
-            item =>
-            item.brand + " - " + item.scent
-        )
-        .join(", ");
-
-
-    const subject =
-        encodeURIComponent(
-            "HYSCENT Fragrance Inquiry"
-        );
-
-
-    const body =
-        encodeURIComponent(
-
-`HYSCENT FRAGRANCE INQUIRY
-
-Name:
-${name}
-
-Company:
-${document.getElementById("companyName").value}
-
-Email:
-${email}
-
-WhatsApp:
-${document.getElementById("clientWhatsapp").value}
-
-Reference Fragrance:
-${scentText}
-
-Bottle Size:
-${size}
-
-Quantity:
-${quantity}
-
-Bottle:
-${bottle}
-
-Packaging:
-${packaging}
-
-Requirements:
-${requirements}
-`
-        );
-
-
-    /*
-       IMPORTANT:
-       Replace this email with your real business email.
-    */
-
-    const emailAddress =
-        "iloree@163.com";
-
-
-    window.location.href =
-        "mailto:" +
-        emailAddress +
-        "?subject=" +
-        subject +
-        "&body=" +
-        body;
-
-
-    showToast(
-        "Inquiry prepared. Please complete the email."
-    );
-
-}
-
-
-/* =========================================================
-   FIGURE SUBMISSION
-========================================================= */
-
-function submitFigureInquiry(){
-
-    const name =
-        document
-        .getElementById("figureName")
-        .value.trim();
-
-    const email =
-        document
-        .getElementById("figureEmail")
-        .value.trim();
-
-
-    if(!name || !email){
-
-        showToast(
-            "Please enter your name and email."
-        );
-
-        return;
-    }
-
-
-    const subject =
-        encodeURIComponent(
-            "HYSCENT Custom Figure Inquiry"
-        );
-
-
-    const body =
-        encodeURIComponent(
-
-`HYSCENT CUSTOM FIGURE INQUIRY
-
-Name:
-${name}
-
-Company:
-${document.getElementById("figureCompany").value}
-
-Email:
-${email}
-
-Figure Size:
-${document.getElementById("figureSize").value}
-
-Quantity:
-${document.getElementById("figureQuantity").value}
-
-Project Requirements:
-${document.getElementById("figureRequirements").value}
-`
-        );
-
-
-    const emailAddress =
-        "YOUR_EMAIL@example.com";
-
-
-    window.location.href =
-        "mailto:" +
-        emailAddress +
-        "?subject=" +
-        subject +
-        "&body=" +
-        body;
-
-
-    showToast(
-        "Inquiry prepared. Please complete the email."
-    );
-
-}
-
-
-/* =========================================================
-   TOAST
-========================================================= */
-
-function showToast(message){
-
-    const toast =
-        document.getElementById("toast");
-
-    toast.innerText =
-        message;
-
-    toast.classList.add("show");
-
-
-    setTimeout(()=>{
-
-        toast.classList.remove("show");
-
-    },3500);
-
-}
-
-
-/* =========================================================
-   CLOSE MODAL BY CLICKING BACKGROUND
-========================================================= */
-
-document
-    .getElementById("fragranceModal")
-    .addEventListener("click",function(e){
-
-        if(e.target === this){
-            closeFragranceModal();
-        }
-
-    });
-
-
-document
-    .getElementById("figureModal")
-    .addEventListener("click",function(e){
-
-        if(e.target === this){
-            closeFigureModal();
-        }
-
-    });
-
-
-/* =========================================================
-   ESC KEY
-========================================================= */
-
-document.addEventListener("keydown",function(e){
-
-    if(e.key === "Escape"){
-
-        closeFragranceModal();
-        closeFigureModal();
+        closeCustom();
 
     }
 
 });
 
 
-/* =========================================================
-   INITIAL
-========================================================= */
+/* =========================
+   SWITCH TYPE
+========================= */
 
-renderScents();
+function switchType(type){
+
+    const fragranceContent =
+    document.getElementById("fragranceContent");
+
+    const modelContent =
+    document.getElementById("modelContent");
+
+    const fragranceTab =
+    document.getElementById("fragranceTab");
+
+    const modelTab =
+    document.getElementById("modelTab");
+
+
+    if(type === "fragrance"){
+
+        fragranceContent.classList.add("active");
+
+        modelContent.classList.remove("active");
+
+        fragranceTab.classList.add("active");
+
+        modelTab.classList.remove("active");
+
+    }else{
+
+        fragranceContent.classList.remove("active");
+
+        modelContent.classList.add("active");
+
+        fragranceTab.classList.remove("active");
+
+        modelTab.classList.add("active");
+
+    }
+
+}
+
+
+/* =========================
+   OPTION SELECT
+========================= */
+
+function selectOption(element){
+
+    const parent =
+    element.parentElement;
+
+    const options =
+    parent.querySelectorAll(".option");
+
+    options.forEach(function(option){
+
+        option.classList.remove("selected");
+
+    });
+
+    element.classList.add("selected");
+
+}
+
+
+/* =========================
+   QUANTITY
+========================= */
+
+let fragranceQuantity = 100;
+
+function changeQuantity(value){
+
+    fragranceQuantity += value;
+
+    if(fragranceQuantity < 1){
+
+        fragranceQuantity = 1;
+
+    }
+
+    document.getElementById(
+        "fragranceQuantity"
+    ).innerText = fragranceQuantity;
+
+}
+
+
+let modelQuantity = 50;
+
+function changeModelQuantity(value){
+
+    modelQuantity += value;
+
+    if(modelQuantity < 1){
+
+        modelQuantity = 1;
+
+    }
+
+    document.getElementById(
+        "modelQuantity"
+    ).innerText = modelQuantity;
+
+}
+
+
+/* =========================
+   SUBMIT
+========================= */
+
+function submitInquiry(){
+
+    const name =
+    document.getElementById("customerName").value;
+
+    const email =
+    document.getElementById("email").value;
+
+    const company =
+    document.getElementById("company").value;
+
+    const whatsapp =
+    document.getElementById("whatsapp").value;
+
+    const description =
+    document.getElementById("description").value;
+
+
+    if(!name || !email){
+
+        alert(
+            "Please enter your name and email."
+        );
+
+        return;
+
+    }
+
+
+    alert(
+        "Thank you, " +
+        name +
+        ". Your inquiry has been prepared. HYSCENT will contact you soon."
+    );
+
+
+    console.log({
+
+        name:name,
+
+        company:company,
+
+        email:email,
+
+        whatsapp:whatsapp,
+
+        description:description,
+
+        fragranceQuantity:fragranceQuantity,
+
+        modelQuantity:modelQuantity
+
+    });
+
+}
 
 </script>
 
+
 </body>
+
 </html>
