@@ -1,26 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>HYSCENT | The Art of Niche Fragrance</title>
 
 <meta
 name="description"
-content="HYSCENT creates luxury niche fragrances inspired by oriental culture, nature and timeless elegance."
+content="HYSCENT creates luxury niche fragrances, private label perfumes and custom fragrance solutions."
 >
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link
 href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
-rel="stylesheet"
->
+rel="stylesheet">
 
 <style>
 
@@ -29,135 +25,115 @@ rel="stylesheet"
 ========================= */
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-background:#080808;
-color:#f5f1e8;
-font-family:"Inter",sans-serif;
-overflow-x:hidden;
+    background:#090909;
+    color:#f5f1e8;
+    font-family:Inter,sans-serif;
+    overflow-x:hidden;
 }
 
 a{
-text-decoration:none;
-color:inherit;
+    color:inherit;
+    text-decoration:none;
 }
 
 button{
-font-family:inherit;
+    font-family:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
 }
 
 
 /* =========================
-   NAVIGATION
+   TOP BAR
+========================= */
+
+.topbar{
+    height:36px;
+    background:#111;
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:11px;
+    letter-spacing:3px;
+    color:#c9a96e;
+}
+
+
+/* =========================
+   HEADER
 ========================= */
 
 header{
+    position:fixed;
+    top:36px;
+    left:0;
+    width:100%;
+    height:82px;
 
-position:fixed;
+    z-index:1000;
 
-top:0;
-left:0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-width:100%;
+    padding:0 7%;
 
-height:88px;
+    background:rgba(7,7,7,.82);
+    backdrop-filter:blur(18px);
 
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-padding:0 6%;
-
-z-index:1000;
-
-background:rgba(5,5,5,.72);
-
-backdrop-filter:blur(14px);
-
-border-bottom:1px solid rgba(255,255,255,.08);
-
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .logo{
-
-font-family:"Playfair Display",serif;
-
-font-size:30px;
-
-letter-spacing:6px;
-
-color:#d6b36a;
-
+    font-family:"Playfair Display",serif;
+    font-size:30px;
+    letter-spacing:7px;
 }
 
-.logo small{
-
-display:block;
-
-font-family:"Inter",sans-serif;
-
-font-size:9px;
-
-letter-spacing:4px;
-
-color:#aaa;
-
-margin-top:4px;
-
+.logo span{
+    display:block;
+    font-family:Inter,sans-serif;
+    font-size:9px;
+    letter-spacing:5px;
+    color:#c6a46b;
+    margin-top:2px;
 }
 
 nav{
-
-display:flex;
-
-align-items:center;
-
-gap:38px;
-
+    display:flex;
+    align-items:center;
+    gap:38px;
 }
 
 nav a{
-
-font-size:12px;
-
-letter-spacing:2px;
-
-color:#ddd;
-
-transition:.3s;
-
+    font-size:12px;
+    letter-spacing:2px;
+    color:#eee;
+    transition:.3s;
 }
 
 nav a:hover{
-
-color:#d6b36a;
-
+    color:#c9a96e;
 }
 
 .nav-custom{
-
-color:#d6b36a;
-
-}
-
-.menu-button{
-
-display:none;
-
-font-size:25px;
-
-cursor:pointer;
-
+    color:#c9a96e !important;
 }
 
 
@@ -166,194 +142,186 @@ cursor:pointer;
 ========================= */
 
 .hero{
+    position:relative;
 
-min-height:100vh;
+    height:100vh;
+    min-height:700px;
 
-position:relative;
+    overflow:hidden;
 
-display:flex;
-
-align-items:center;
-
-overflow:hidden;
-
-background:#050505;
-
+    display:flex;
+    align-items:center;
 }
 
-.hero-bg{
+.hero-video{
+    position:absolute;
+    inset:0;
 
-position:absolute;
+    width:100%;
+    height:100%;
 
-inset:0;
+    object-fit:cover;
 
-background-image:
+    opacity:.45;
+    z-index:0;
+}
 
-linear-gradient(
-90deg,
-rgba(0,0,0,.88) 0%,
-rgba(0,0,0,.52) 40%,
-rgba(0,0,0,.12) 100%
-),
+.hero-image{
+    position:absolute;
+    inset:0;
 
-url("hero.jpg");
+    width:100%;
+    height:100%;
 
-background-size:cover;
+    object-fit:cover;
 
-background-position:center;
+    z-index:-1;
 
-transform:scale(1.03);
-
-animation:heroZoom 14s ease-in-out infinite alternate;
-
+    animation:heroZoom 12s ease-in-out infinite alternate;
 }
 
 @keyframes heroZoom{
 
-from{
-transform:scale(1.03);
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.07);
+    }
+
 }
 
-to{
-transform:scale(1.08);
-}
+.hero-overlay{
+    position:absolute;
+    inset:0;
 
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.92) 0%,
+        rgba(0,0,0,.62) 45%,
+        rgba(0,0,0,.3) 100%
+    );
+
+    z-index:1;
 }
 
 .hero-content{
+    position:relative;
+    z-index:2;
 
-position:relative;
+    width:100%;
+    max-width:1400px;
 
-z-index:2;
-
-width:100%;
-
-padding:140px 7% 80px;
-
-max-width:800px;
-
+    margin:auto;
+    padding:0 8%;
 }
 
-.hero-eyebrow{
-
-font-size:12px;
-
-letter-spacing:5px;
-
-color:#d6b36a;
-
-margin-bottom:25px;
-
+.hero-kicker{
+    color:#c9a96e;
+    letter-spacing:7px;
+    font-size:12px;
+    margin-bottom:25px;
 }
 
 .hero h1{
+    font-family:"Playfair Display",serif;
 
-font-family:"Playfair Display",serif;
+    font-size:clamp(50px,7vw,105px);
 
-font-weight:400;
+    font-weight:400;
+    line-height:1.02;
 
-font-size:clamp(55px,7vw,105px);
-
-line-height:.98;
-
-letter-spacing:-2px;
-
+    max-width:850px;
 }
 
-.hero h1 span{
-
-color:#d6b36a;
-
-}
-
-.hero-line{
-
-width:90px;
-
-height:1px;
-
-background:#d6b36a;
-
-margin:32px 0;
-
+.hero h1 em{
+    font-style:normal;
+    color:#c9a96e;
 }
 
 .hero-description{
+    max-width:600px;
 
-max-width:570px;
+    margin-top:30px;
 
-font-size:16px;
+    font-size:16px;
+    line-height:1.9;
 
-line-height:1.9;
+    color:#ddd;
 
-font-weight:300;
-
-color:#d0cbc0;
-
+    font-weight:300;
 }
 
 .hero-buttons{
-
-display:flex;
-
-gap:15px;
-
-margin-top:42px;
-
-flex-wrap:wrap;
-
+    display:flex;
+    gap:15px;
+    margin-top:42px;
+    flex-wrap:wrap;
 }
 
 .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
 
-padding:17px 34px;
+    min-width:190px;
 
-border:1px solid #c9a55c;
+    padding:16px 30px;
 
-font-size:11px;
+    border:1px solid rgba(255,255,255,.65);
 
-letter-spacing:3px;
+    font-size:11px;
+    letter-spacing:3px;
 
-transition:.35s;
+    transition:.35s;
 
-cursor:pointer;
-
-background:transparent;
-
-color:#fff;
-
+    cursor:pointer;
 }
 
-.btn-primary{
-
-background:#c9a55c;
-
-color:#080808;
-
+.btn-gold{
+    background:#c59b51;
+    border-color:#c59b51;
+    color:#080808;
 }
 
 .btn:hover{
-
-transform:translateY(-3px);
-
-box-shadow:0 12px 30px rgba(201,165,92,.18);
-
+    transform:translateY(-3px);
+    background:#fff;
+    color:#111;
 }
 
-.hero-scroll{
 
-position:absolute;
+/* =========================
+   HERO SLIDER DOTS
+========================= */
 
-bottom:30px;
+.hero-dots{
+    position:absolute;
+    bottom:45px;
+    left:8%;
 
-left:7%;
+    z-index:3;
 
-font-size:10px;
+    display:flex;
+    gap:10px;
+}
 
-letter-spacing:4px;
+.hero-dot{
+    width:35px;
+    height:2px;
 
-color:#aaa;
+    background:rgba(255,255,255,.35);
 
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.hero-dot.active{
+    background:#c9a96e;
+    width:60px;
 }
 
 
@@ -362,239 +330,130 @@ color:#aaa;
 ========================= */
 
 section{
-
-padding:120px 7%;
-
+    padding:120px 8%;
 }
 
 .section-label{
+    text-align:center;
 
-font-size:10px;
+    color:#c9a96e;
 
-letter-spacing:5px;
+    letter-spacing:5px;
 
-color:#c9a55c;
+    font-size:11px;
 
-text-align:center;
-
-margin-bottom:18px;
-
+    margin-bottom:18px;
 }
 
 .section-title{
+    text-align:center;
 
-font-family:"Playfair Display",serif;
+    font-family:"Playfair Display",serif;
 
-font-size:clamp(40px,5vw,65px);
+    font-size:55px;
 
-font-weight:400;
-
-text-align:center;
-
-margin-bottom:20px;
-
+    font-weight:400;
 }
 
 .section-description{
+    max-width:650px;
 
-max-width:680px;
+    margin:20px auto 65px;
 
-margin:0 auto 70px;
+    text-align:center;
 
-text-align:center;
+    color:#aaa;
 
-font-size:15px;
+    line-height:1.8;
 
-line-height:1.9;
-
-color:#999;
-
+    font-size:14px;
 }
 
 
 /* =========================
-   COLLECTIONS
+   COLLECTION
 ========================= */
 
-.collections{
+.collection-grid{
+    max-width:1400px;
 
-display:grid;
+    margin:auto;
 
-grid-template-columns:repeat(3,1fr);
+    display:grid;
 
-gap:22px;
+    grid-template-columns:repeat(3,1fr);
 
+    gap:25px;
 }
 
 .collection-card{
+    position:relative;
 
-position:relative;
+    height:520px;
 
-height:500px;
+    overflow:hidden;
 
-overflow:hidden;
+    background:#111;
 
-background:#111;
-
-cursor:pointer;
-
+    cursor:pointer;
 }
 
-.collection-card::before{
+.collection-card img{
+    width:100%;
+    height:100%;
 
-content:"";
+    object-fit:cover;
 
-position:absolute;
-
-inset:0;
-
-background:
-linear-gradient(
-transparent 35%,
-rgba(0,0,0,.9)
-);
-
-z-index:1;
-
+    transition:1s;
 }
 
-.collection-card::after{
-
-content:"";
-
-position:absolute;
-
-inset:0;
-
-border:1px solid rgba(201,165,92,.15);
-
-z-index:3;
-
-transition:.5s;
-
+.collection-card:hover img{
+    transform:scale(1.08);
 }
 
-.collection-card:hover::after{
+.collection-overlay{
+    position:absolute;
+    inset:0;
 
-border-color:#c9a55c;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
 
-}
+    padding:35px;
 
-.collection-bg{
-
-position:absolute;
-
-inset:0;
-
-background-size:cover;
-
-background-position:center;
-
-transition:.8s;
-
-filter:saturate(.8);
-
-}
-
-.collection-card:hover .collection-bg{
-
-transform:scale(1.08);
-
-}
-
-.collection-1{
-
-background-image:
-url("hero.jpg");
-
-}
-
-.collection-2{
-
-background-image:
-linear-gradient(
-rgba(0,0,0,.25),
-rgba(0,0,0,.4)
-),
-url("hero.jpg");
-
-background-position:65% center;
-
-}
-
-.collection-3{
-
-background-image:
-linear-gradient(
-rgba(0,0,0,.25),
-rgba(0,0,0,.5)
-),
-url("hero.jpg");
-
-background-position:35% center;
-
-}
-
-.collection-content{
-
-position:absolute;
-
-bottom:35px;
-
-left:35px;
-
-right:35px;
-
-z-index:2;
-
+    background:
+    linear-gradient(
+        transparent 30%,
+        rgba(0,0,0,.92)
+    );
 }
 
 .collection-number{
+    color:#c9a96e;
 
-font-size:10px;
+    font-size:10px;
 
-letter-spacing:4px;
+    letter-spacing:3px;
 
-color:#c9a55c;
-
-margin-bottom:12px;
-
+    margin-bottom:10px;
 }
 
-.collection-content h3{
+.collection-card h3{
+    font-family:"Playfair Display",serif;
 
-font-family:"Playfair Display",serif;
+    font-size:32px;
 
-font-size:32px;
+    font-weight:400;
 
-font-weight:400;
-
-margin-bottom:12px;
-
+    margin-bottom:8px;
 }
 
-.collection-content p{
+.collection-card p{
+    color:#bbb;
 
-font-size:13px;
+    font-size:12px;
 
-line-height:1.7;
-
-color:#bbb;
-
-}
-
-.collection-link{
-
-display:inline-block;
-
-margin-top:20px;
-
-font-size:10px;
-
-letter-spacing:3px;
-
-color:#d6b36a;
-
+    line-height:1.6;
 }
 
 
@@ -603,137 +462,167 @@ color:#d6b36a;
 ========================= */
 
 .custom-section{
-
-background:
-linear-gradient(
-rgba(10,10,10,.94),
-rgba(10,10,10,.96)
-);
-
-border-top:1px solid #222;
-
-border-bottom:1px solid #222;
-
+    background:
+    radial-gradient(
+        circle at 20% 30%,
+        rgba(180,140,70,.13),
+        transparent 35%
+    ),
+    #0d0d0d;
 }
 
 .custom-box{
+    max-width:1400px;
 
-max-width:1100px;
+    margin:auto;
 
-margin:auto;
+    min-height:520px;
 
-border:1px solid #292929;
+    display:grid;
 
-padding:70px;
+    grid-template-columns:1fr 1fr;
 
-text-align:center;
-
-position:relative;
-
-background:
-radial-gradient(
-circle at center,
-rgba(201,165,92,.08),
-transparent 60%
-);
-
+    border:1px solid rgba(201,169,110,.2);
 }
 
-.custom-box h2{
-
-font-family:"Playfair Display",serif;
-
-font-size:55px;
-
-font-weight:400;
-
-margin-bottom:20px;
-
+.custom-image{
+    position:relative;
+    overflow:hidden;
 }
 
-.custom-box p{
-
-max-width:650px;
-
-margin:auto;
-
-color:#999;
-
-line-height:1.9;
-
-font-size:15px;
-
+.custom-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.custom-button{
+.custom-image:after{
+    content:"";
 
-margin-top:35px;
+    position:absolute;
+    inset:0;
 
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(0,0,0,.3)
+    );
+}
+
+.custom-content{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    padding:70px;
+}
+
+.custom-content .section-label{
+    text-align:left;
+}
+
+.custom-content h2{
+    font-family:"Playfair Display",serif;
+
+    font-size:58px;
+
+    font-weight:400;
+
+    margin-bottom:25px;
+}
+
+.custom-content p{
+    color:#aaa;
+
+    line-height:1.9;
+
+    font-size:14px;
+
+    max-width:520px;
+}
+
+.custom-features{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:18px;
+
+    margin:35px 0;
+}
+
+.feature{
+    border-top:1px solid #333;
+
+    padding-top:14px;
+
+    font-size:11px;
+
+    letter-spacing:1px;
+
+    color:#ccc;
 }
 
 
 /* =========================
-   FEATURES
+   VIDEO SECTION
 ========================= */
 
-.features{
+.video-section{
+    position:relative;
 
-display:grid;
+    min-height:620px;
 
-grid-template-columns:repeat(4,1fr);
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-border-top:1px solid #292929;
-
-border-bottom:1px solid #292929;
-
+    overflow:hidden;
 }
 
-.feature{
+.video-background{
+    position:absolute;
+    inset:0;
 
-padding:45px 30px;
+    width:100%;
+    height:100%;
 
-text-align:center;
+    object-fit:cover;
 
-border-right:1px solid #292929;
-
+    opacity:.45;
 }
 
-.feature:last-child{
+.video-overlay{
+    position:absolute;
+    inset:0;
 
-border-right:none;
-
+    background:rgba(0,0,0,.58);
 }
 
-.feature-icon{
+.video-content{
+    position:relative;
 
-font-size:28px;
+    z-index:2;
 
-color:#c9a55c;
+    text-align:center;
 
-margin-bottom:18px;
-
+    max-width:800px;
 }
 
-.feature h4{
+.video-content h2{
+    font-family:"Playfair Display",serif;
 
-font-family:"Playfair Display",serif;
+    font-size:65px;
 
-font-size:20px;
-
-font-weight:400;
-
-margin-bottom:10px;
-
+    font-weight:400;
 }
 
-.feature p{
+.video-content p{
+    color:#ccc;
 
-font-size:12px;
+    margin:25px auto;
 
-line-height:1.7;
-
-color:#777;
-
+    line-height:1.8;
 }
 
 
@@ -742,164 +631,21 @@ color:#777;
 ========================= */
 
 .about{
+    max-width:900px;
 
-max-width:950px;
+    margin:auto;
 
-margin:auto;
-
-text-align:center;
-
+    text-align:center;
 }
 
-.about-text{
+.about p{
+    color:#aaa;
 
-font-family:"Playfair Display",serif;
+    font-size:17px;
 
-font-size:28px;
+    line-height:2;
 
-line-height:1.7;
-
-font-weight:400;
-
-color:#ddd;
-
-}
-
-.about-small{
-
-margin-top:30px;
-
-font-size:14px;
-
-line-height:2;
-
-color:#888;
-
-}
-
-
-/* =========================
-   OEM
-========================= */
-
-.oem-grid{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:60px;
-
-align-items:center;
-
-max-width:1150px;
-
-margin:auto;
-
-}
-
-.oem-image{
-
-height:560px;
-
-background:
-
-linear-gradient(
-rgba(0,0,0,.2),
-rgba(0,0,0,.65)
-),
-
-url("hero.jpg");
-
-background-size:cover;
-
-background-position:center;
-
-}
-
-.oem-content h2{
-
-font-family:"Playfair Display",serif;
-
-font-size:55px;
-
-font-weight:400;
-
-margin-bottom:25px;
-
-}
-
-.oem-content p{
-
-font-size:15px;
-
-line-height:2;
-
-color:#999;
-
-margin-bottom:30px;
-
-}
-
-.oem-list{
-
-list-style:none;
-
-}
-
-.oem-list li{
-
-padding:16px 0;
-
-border-bottom:1px solid #292929;
-
-font-size:13px;
-
-letter-spacing:1px;
-
-}
-
-.oem-list li::before{
-
-content:"✦";
-
-color:#c9a55c;
-
-margin-right:12px;
-
-}
-
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact{
-
-text-align:center;
-
-border-top:1px solid #222;
-
-}
-
-.contact h2{
-
-font-family:"Playfair Display",serif;
-
-font-size:55px;
-
-font-weight:400;
-
-margin-bottom:20px;
-
-}
-
-.contact p{
-
-color:#888;
-
-margin-bottom:35px;
-
+    font-weight:300;
 }
 
 
@@ -908,85 +654,29 @@ margin-bottom:35px;
 ========================= */
 
 footer{
+    padding:60px 8%;
 
-padding:60px 7% 30px;
+    border-top:1px solid #222;
 
-border-top:1px solid #292929;
-
-}
-
-.footer-main{
-
-display:flex;
-
-justify-content:space-between;
-
-gap:40px;
-
-padding-bottom:45px;
-
+    text-align:center;
 }
 
 .footer-logo{
+    font-family:"Playfair Display",serif;
 
-font-family:"Playfair Display",serif;
+    font-size:28px;
 
-font-size:30px;
-
-letter-spacing:5px;
-
-color:#c9a55c;
-
+    letter-spacing:6px;
 }
 
-.footer-column h4{
+footer p{
+    margin-top:15px;
 
-font-size:10px;
+    color:#777;
 
-letter-spacing:3px;
+    font-size:11px;
 
-margin-bottom:20px;
-
-color:#c9a55c;
-
-}
-
-.footer-column a{
-
-display:block;
-
-font-size:12px;
-
-color:#777;
-
-margin-bottom:12px;
-
-transition:.3s;
-
-}
-
-.footer-column a:hover{
-
-color:#fff;
-
-}
-
-.footer-bottom{
-
-border-top:1px solid #222;
-
-padding-top:25px;
-
-font-size:10px;
-
-letter-spacing:2px;
-
-color:#555;
-
-display:flex;
-
-justify-content:space-between;
-
+    letter-spacing:2px;
 }
 
 
@@ -995,463 +685,352 @@ justify-content:space-between;
 ========================= */
 
 .modal{
+    position:fixed;
 
-position:fixed;
+    inset:0;
 
-inset:0;
+    background:rgba(0,0,0,.78);
 
-background:rgba(0,0,0,.78);
+    backdrop-filter:blur(10px);
 
-backdrop-filter:blur(10px);
+    z-index:5000;
 
-z-index:3000;
+    display:none;
 
-display:none;
+    align-items:center;
+    justify-content:center;
 
-align-items:center;
-
-justify-content:center;
-
-padding:30px;
-
+    padding:20px;
 }
 
 .modal.active{
-
-display:flex;
-
+    display:flex;
 }
 
-.modal-window{
+.modal-box{
+    width:min(1200px,100%);
 
-width:min(1200px,100%);
+    max-height:90vh;
 
-height:min(760px,90vh);
+    overflow:hidden;
 
-background:#f7f6f2;
+    background:#f8f7f3;
 
-color:#222;
+    color:#161616;
 
-border-radius:4px;
+    border-radius:4px;
 
-overflow:hidden;
+    display:grid;
 
-display:grid;
-
-grid-template-columns:260px 1fr 280px;
-
-box-shadow:0 30px 100px rgba(0,0,0,.5);
-
+    grid-template-columns:260px 1fr 270px;
 }
 
 .modal-header{
+    grid-column:1/-1;
 
-position:absolute;
+    height:75px;
 
-top:20px;
+    border-bottom:1px solid #ddd;
 
-right:30px;
+    display:flex;
 
-z-index:10;
+    align-items:center;
 
-color:white;
+    justify-content:space-between;
 
-font-size:30px;
-
-cursor:pointer;
-
+    padding:0 30px;
 }
 
-.modal-sidebar{
+.modal-header h2{
+    font-size:20px;
 
-padding:35px 25px;
-
-border-right:1px solid #ddd;
-
-background:#faf9f6;
-
+    letter-spacing:2px;
 }
 
-.modal-sidebar h2{
+.close{
+    border:0;
 
-font-family:"Playfair Display",serif;
+    background:none;
 
-font-weight:400;
+    font-size:28px;
 
-font-size:27px;
+    cursor:pointer;
 
-margin-bottom:35px;
+    color:#555;
+}
 
+
+/* LEFT */
+
+.modal-left{
+    padding:25px;
+
+    border-right:1px solid #ddd;
 }
 
 .step{
+    font-size:10px;
 
-font-size:10px;
+    letter-spacing:2px;
 
-letter-spacing:1px;
+    color:#999;
 
-color:#999;
-
-padding:18px 0;
-
-border-bottom:1px solid #ddd;
-
+    margin-bottom:12px;
 }
 
-.step.active{
+.input{
+    width:100%;
 
-color:#b48622;
+    padding:14px;
 
+    border:1px solid #ddd;
+
+    margin-bottom:12px;
+
+    outline:none;
 }
 
-.pack-box{
+.pack{
+    margin-top:25px;
 
-margin-top:35px;
+    padding:20px;
 
-padding:25px;
+    background:#faf6ed;
 
-background:#f1eee6;
-
+    border:1px solid #ead9b6;
 }
 
-.pack-box strong{
+.pack strong{
+    display:block;
 
-display:block;
+    font-size:18px;
 
-font-family:"Playfair Display",serif;
-
-font-size:22px;
-
-margin:8px 0;
-
+    margin-bottom:10px;
 }
 
 .progress{
+    margin-top:15px;
 
-height:4px;
+    height:4px;
 
-background:#ddd;
-
-margin-top:15px;
-
+    background:#ddd;
 }
 
-.progress-bar{
+.progress span{
+    display:block;
 
-height:100%;
+    width:0%;
 
-width:25%;
+    height:100%;
 
-background:#c69b38;
+    background:#c3973e;
 
-transition:.3s;
-
+    transition:.3s;
 }
 
-.fragrance-area{
 
-padding:35px;
+/* CENTER */
 
-overflow-y:auto;
+.modal-center{
+    padding:25px;
 
-}
-
-.fragrance-area h3{
-
-font-family:"Playfair Display",serif;
-
-font-size:28px;
-
-font-weight:400;
-
-margin-bottom:20px;
-
+    overflow-y:auto;
 }
 
 .search{
+    width:100%;
 
-width:100%;
+    padding:15px 18px;
 
-padding:16px 18px;
+    border:0;
 
-border:1px solid #ddd;
+    background:#f0f1f3;
 
-background:#f3f3f3;
+    border-radius:8px;
 
-border-radius:5px;
+    outline:none;
 
-font-size:13px;
-
-outline:none;
-
-margin-bottom:20px;
-
+    margin-bottom:15px;
 }
 
 .gender{
+    display:grid;
 
-display:grid;
+    grid-template-columns:1fr 1fr;
 
-grid-template-columns:1fr 1fr;
+    gap:10px;
 
-gap:8px;
-
-margin-bottom:25px;
-
+    margin-bottom:18px;
 }
 
 .gender button{
+    border:1px solid #ddd;
 
-border:1px solid #ddd;
+    background:white;
 
-background:white;
+    padding:12px;
 
-padding:13px;
+    cursor:pointer;
 
-cursor:pointer;
+    font-size:11px;
 
-font-size:11px;
-
-letter-spacing:1px;
-
+    letter-spacing:1px;
 }
 
 .gender button.active{
+    background:#c3973e;
 
-background:#c69b38;
+    border-color:#c3973e;
 
-color:white;
-
-border-color:#c69b38;
-
+    color:white;
 }
 
 .brand{
-
-margin-bottom:24px;
-
+    margin-bottom:15px;
 }
 
 .brand-name{
+    color:#999;
 
-font-size:11px;
+    font-size:10px;
 
-letter-spacing:2px;
+    letter-spacing:2px;
 
-color:#999;
-
-border-bottom:1px solid #ddd;
-
-padding-bottom:8px;
-
-margin-bottom:5px;
-
+    margin-bottom:7px;
 }
 
 .fragrance{
+    display:flex;
 
-display:flex;
+    align-items:center;
 
-justify-content:space-between;
+    justify-content:space-between;
 
-align-items:center;
+    padding:15px;
 
-padding:14px 12px;
+    border:1px solid #e5e5e5;
 
-border-bottom:1px solid #eee;
+    background:#fff;
 
-transition:.2s;
+    margin-bottom:7px;
 
+    transition:.2s;
 }
 
 .fragrance:hover{
-
-background:#f5f3ed;
-
+    border-color:#c3973e;
 }
 
-.fragrance-name{
+.fragrance-info strong{
+    font-size:13px;
+}
 
-font-size:13px;
+.fragrance-info span{
+    display:block;
 
+    margin-top:4px;
+
+    color:#999;
+
+    font-size:10px;
 }
 
 .add{
+    width:30px;
+    height:30px;
 
-width:30px;
+    border-radius:50%;
 
-height:30px;
+    border:0;
 
-border-radius:50%;
+    background:#111;
 
-border:none;
+    color:white;
 
-background:#111;
+    cursor:pointer;
 
-color:#fff;
-
-font-size:18px;
-
-cursor:pointer;
-
+    font-size:18px;
 }
 
 .add.selected{
-
-background:#c69b38;
-
+    background:#c3973e;
 }
 
-.summary{
 
-padding:35px 25px;
+/* RIGHT */
 
-border-left:1px solid #ddd;
+.modal-right{
+    padding:25px;
 
-background:#fff;
+    border-left:1px solid #ddd;
 
+    background:#fafafa;
 }
 
-.summary h3{
+.summary-title{
+    font-size:10px;
 
-font-size:11px;
+    letter-spacing:2px;
 
-letter-spacing:2px;
+    color:#888;
 
-margin-bottom:25px;
-
+    margin-bottom:20px;
 }
 
 .selected-list{
+    min-height:260px;
 
-min-height:200px;
+    max-height:350px;
 
-max-height:300px;
-
-overflow-y:auto;
-
+    overflow-y:auto;
 }
 
 .selected-item{
+    display:flex;
 
-font-size:12px;
+    justify-content:space-between;
 
-padding:12px 0;
+    padding:10px 0;
 
-border-bottom:1px solid #eee;
+    border-bottom:1px solid #ddd;
 
-display:flex;
-
-justify-content:space-between;
-
-}
-
-.total-box{
-
-margin-top:30px;
-
-padding-top:25px;
-
-border-top:1px dashed #ccc;
-
-}
-
-.total-label{
-
-font-size:11px;
-
-color:#888;
-
+    font-size:11px;
 }
 
 .total{
+    margin-top:25px;
 
-font-size:32px;
+    padding-top:20px;
 
-font-family:"Playfair Display",serif;
+    border-top:1px solid #ddd;
 
-margin-top:7px;
+    font-size:13px;
 
+    display:flex;
+
+    justify-content:space-between;
 }
 
-.complete{
+.submit{
+    width:100%;
 
-width:100%;
+    margin-top:20px;
 
-margin-top:25px;
+    padding:16px;
 
-padding:16px;
+    border:0;
 
-border:none;
+    background:#111;
 
-background:#c69b38;
+    color:white;
 
-color:white;
+    cursor:pointer;
 
-letter-spacing:2px;
-
-cursor:pointer;
-
+    letter-spacing:2px;
 }
 
-
-/* =========================
-   FLOATING CONTACT
-========================= */
-
-.floating-contact{
-
-position:fixed;
-
-right:25px;
-
-bottom:25px;
-
-width:55px;
-
-height:55px;
-
-border-radius:50%;
-
-background:#c9a55c;
-
-color:#080808;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:24px;
-
-z-index:900;
-
-box-shadow:0 10px 30px rgba(0,0,0,.35);
-
-}
-
-
-/* =========================
-   SCROLL ANIMATION
-========================= */
-
-.reveal{
-
-opacity:0;
-
-transform:translateY(35px);
-
-transition:1s;
-
-}
-
-.reveal.show{
-
-opacity:1;
-
-transform:translateY(0);
-
+.submit:hover{
+    background:#c3973e;
 }
 
 
@@ -1459,229 +1038,91 @@ transform:translateY(0);
    MOBILE
 ========================= */
 
+.mobile-menu{
+    display:none;
+
+    font-size:25px;
+
+    cursor:pointer;
+}
+
 @media(max-width:900px){
 
-nav{
-
-display:none;
-
-}
-
-.menu-button{
-
-display:block;
-
-}
-
-.hero-content{
-
-padding:140px 8% 80px;
-
-}
-
-.collections{
-
-grid-template-columns:1fr;
-
-}
-
-.collection-card{
-
-height:450px;
-
-}
-
-.features{
-
-grid-template-columns:1fr 1fr;
-
-}
-
-.feature:nth-child(2){
-
-border-right:none;
-
-}
-
-.feature:nth-child(3){
-
-border-top:1px solid #292929;
-
-}
-
-.feature:nth-child(4){
-
-border-top:1px solid #292929;
-
-border-right:none;
-
-}
-
-.oem-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.oem-image{
-
-height:400px;
-
-}
-
-.modal-window{
-
-grid-template-columns:1fr;
-
-height:90vh;
-
-overflow-y:auto;
-
-}
-
-.modal-sidebar,
-.summary{
-
-display:none;
-
-}
-
-.fragrance-area{
-
-padding:25px;
-
-}
-
-.footer-main{
-
-flex-direction:column;
-
-}
-
-.footer-bottom{
-
-flex-direction:column;
-
-gap:15px;
-
-}
-
-}
-
-@media(max-width:550px){
-
-section{
-
-padding:80px 6%;
-
-}
-
-.hero h1{
-
-font-size:52px;
-
-}
-
-.hero-description{
-
-font-size:14px;
-
-}
-
-.custom-box{
-
-padding:40px 25px;
-
-}
-
-.custom-box h2{
-
-font-size:40px;
-
-}
-
-.features{
-
-grid-template-columns:1fr;
-
-}
-
-.feature{
-
-border-right:none!important;
-
-border-bottom:1px solid #292929;
-
-}
-
-.oem-content h2,
-.contact h2{
-
-font-size:42px;
-
-}
-
-}
-
-
-/* =========================
-   MOBILE MENU
-========================= */
-
-.mobile-menu{
-
-position:fixed;
-
-inset:0;
-
-background:#080808;
-
-z-index:2000;
-
-display:none;
-
-padding:110px 35px;
-
-}
-
-.mobile-menu.active{
-
-display:block;
-
-}
-
-.mobile-menu a{
-
-display:block;
-
-font-family:"Playfair Display",serif;
-
-font-size:35px;
-
-padding:18px 0;
-
-border-bottom:1px solid #222;
-
-}
-
-.mobile-close{
-
-position:absolute;
-
-top:25px;
-
-right:30px;
-
-font-size:30px;
+    nav{
+        display:none;
+    }
+
+    .mobile-menu{
+        display:block;
+    }
+
+    .hero{
+        min-height:650px;
+    }
+
+    .hero h1{
+        font-size:55px;
+    }
+
+    .collection-grid{
+        grid-template-columns:1fr;
+    }
+
+    .collection-card{
+        height:450px;
+    }
+
+    .custom-box{
+        grid-template-columns:1fr;
+    }
+
+    .custom-image{
+        height:400px;
+    }
+
+    .custom-content{
+        padding:45px 30px;
+    }
+
+    .custom-content h2{
+        font-size:42px;
+    }
+
+    .modal-box{
+        grid-template-columns:1fr;
+        max-height:95vh;
+        overflow-y:auto;
+    }
+
+    .modal-header{
+        grid-column:1;
+    }
+
+    .modal-left,
+    .modal-right{
+        border:0;
+    }
+
+    .modal-right{
+        border-top:1px solid #ddd;
+    }
 
 }
 
 </style>
-
 </head>
 
 
 <body>
+
+
+<!-- =========================
+     TOP BAR
+========================= -->
+
+<div class="topbar">
+    ✦ PRIVATE LABEL · OEM · ODM · WORLDWIDE ✦
+</div>
 
 
 <!-- =========================
@@ -1690,64 +1131,25 @@ font-size:30px;
 
 <header>
 
-<a href="#home">
+    <a href="#" class="logo">
+        HYSCENT
+        <span>THE ART OF NICHE FRAGRANCE</span>
+    </a>
 
-<div class="logo">
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#collections">COLLECTIONS</a>
+        <a href="#custom" class="nav-custom">CUSTOM</a>
+        <a href="#story">STORY</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
 
-HYSCENT
-
-<small>THE ART OF NICHE FRAGRANCE</small>
-
-</div>
-
-</a>
-
-
-<nav>
-
-<a href="#home">HOME</a>
-
-<a href="#collections">COLLECTIONS</a>
-
-<a href="#custom" class="nav-custom">CUSTOM</a>
-
-<a href="#oem">OEM / ODM</a>
-
-<a href="#about">ABOUT</a>
-
-<a href="#contact">CONTACT</a>
-
-</nav>
-
-
-<div class="menu-button" onclick="openMobileMenu()">
-
-☰
-
-</div>
+    <div class="mobile-menu">
+        ☰
+    </div>
 
 </header>
 
-
-<!-- MOBILE MENU -->
-
-<div class="mobile-menu" id="mobileMenu">
-
-<div class="mobile-close" onclick="closeMobileMenu()">×</div>
-
-<a href="#home" onclick="closeMobileMenu()">HOME</a>
-
-<a href="#collections" onclick="closeMobileMenu()">COLLECTIONS</a>
-
-<a href="#custom" onclick="closeMobileMenu()">CUSTOM</a>
-
-<a href="#oem" onclick="closeMobileMenu()">OEM / ODM</a>
-
-<a href="#about" onclick="closeMobileMenu()">ABOUT</a>
-
-<a href="#contact" onclick="closeMobileMenu()">CONTACT</a>
-
-</div>
 
 
 <!-- =========================
@@ -1756,66 +1158,94 @@ HYSCENT
 
 <section class="hero" id="home">
 
-<div class="hero-bg"></div>
+    <!--
+        视频直接写在代码里面
+        不需要上传视频到 GitHub
 
-<div class="hero-content reveal">
+        如果视频链接以后失效，
+        网站会自动继续显示下面的 hero 图片。
+    -->
 
-<div class="hero-eyebrow">
+    <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=2000&q=90"
+    >
 
-ORIENTAL INSPIRATION · MODERN LUXURY
+        <source
+        src="https://assets.mixkit.co/videos/preview/mixkit-perfume-bottle-on-a-table-39811-large.mp4"
+        type="video/mp4">
 
-</div>
-
-<h1>
-
-THE ART OF
-
-<br>
-
-<span>NICHE FRAGRANCE</span>
-
-</h1>
-
-<div class="hero-line"></div>
-
-<p class="hero-description">
-
-HYSCENT crafts luxurious niche fragrances inspired by oriental culture,
-nature and timeless emotions.
-
-Each scent is a story.
-
-Each bottle is an art.
-
-</p>
+    </video>
 
 
-<div class="hero-buttons">
+    <!-- Hero 图片 -->
 
-<a href="#collections" class="btn btn-primary">
-
-EXPLORE COLLECTIONS
-
-</a>
-
-<button class="btn" onclick="openCustomizer()">
-
-CUSTOM YOUR SCENT
-
-</button>
-
-</div>
-
-</div>
+    <img
+        class="hero-image"
+        src="https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&w=2200&q=90"
+        alt="HYSCENT luxury fragrance"
+    >
 
 
-<div class="hero-scroll">
+    <div class="hero-overlay"></div>
 
-SCROLL TO DISCOVER ↓
 
-</div>
+    <div class="hero-content">
+
+        <div class="hero-kicker">
+            THE ART OF NICHE FRAGRANCE
+        </div>
+
+        <h1>
+            More Than<br>
+            <em>Just Perfume.</em>
+        </h1>
+
+        <p class="hero-description">
+
+            Original niche fragrances inspired by
+            oriental culture, nature and timeless emotions.
+
+            <br><br>
+
+            Private label · OEM · ODM fragrance solutions
+            for global brands and retailers.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a href="#collections" class="btn btn-gold">
+                DISCOVER COLLECTION
+            </a>
+
+            <button
+                class="btn"
+                onclick="openCustom()"
+            >
+                BUILD YOUR CUSTOM
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-dots">
+
+        <div class="hero-dot active"></div>
+        <div class="hero-dot"></div>
+        <div class="hero-dot"></div>
+
+    </div>
 
 </section>
+
 
 
 <!-- =========================
@@ -1824,1204 +1254,1230 @@ SCROLL TO DISCOVER ↓
 
 <section id="collections">
 
-<div class="section-label reveal">
+    <div class="section-label">
+        SIGNATURE COLLECTIONS
+    </div>
 
-THE COLLECTION
+    <h2 class="section-title">
+        The House of HYSCENT
+    </h2>
 
-</div>
+    <p class="section-description">
 
-<h2 class="section-title reveal">
+        Six original fragrance concepts inspired by
+        oriental heritage, nature and modern luxury.
 
-Signature Fragrances
+    </p>
 
-</h2>
 
-<p class="section-description reveal">
+    <div class="collection-grid">
 
-A collection of original fragrances inspired by oriental heritage,
-precious woods, flowers, amber and timeless rituals.
 
-</p>
+        <!-- 01 -->
 
+        <div class="collection-card">
 
-<div class="collections">
+            <img
+            src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1200&q=90"
+            alt="Oud Dynasty"
+            >
 
+            <div class="collection-overlay">
 
-<div class="collection-card reveal">
+                <div class="collection-number">
+                    01 · ORIENTAL
+                </div>
 
-<div class="collection-bg collection-1"></div>
+                <h3>
+                    Oud Dynasty
+                </h3>
 
-<div class="collection-content">
+                <p>
+                    Agarwood · Incense · Amber · Royal Woods
+                </p>
 
-<div class="collection-number">
+            </div>
 
-01 · OUD
+        </div>
 
-</div>
 
-<h3>
 
-Oud Dynasty
+        <!-- 02 -->
 
-</h3>
+        <div class="collection-card">
 
-<p>
+            <img
+            src="https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&w=1200&q=90"
+            alt="Silk Road"
+            >
 
-Deep agarwood, incense and precious woods
-inspired by ancient royal ceremonies.
+            <div class="collection-overlay">
 
-</p>
+                <div class="collection-number">
+                    02 · SPICE
+                </div>
 
-<a class="collection-link">
+                <h3>
+                    Silk Road
+                </h3>
 
-DISCOVER →
+                <p>
+                    Saffron · Rose · Spices · Precious Woods
+                </p>
 
-</a>
+            </div>
 
-</div>
+        </div>
 
-</div>
 
 
-<div class="collection-card reveal">
+        <!-- 03 -->
 
-<div class="collection-bg collection-2"></div>
+        <div class="collection-card">
 
-<div class="collection-content">
+            <img
+            src="https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=1200&q=90"
+            alt="Jasmine Moon"
+            >
 
-<div class="collection-number">
+            <div class="collection-overlay">
 
-02 · AMBER
+                <div class="collection-number">
+                    03 · FLORAL
+                </div>
 
-</div>
+                <h3>
+                    Jasmine Moon
+                </h3>
 
-<h3>
+                <p>
+                    Jasmine · White Flowers · Musk · Moonlight
+                </p>
 
-Imperial Amber
+            </div>
 
-</h3>
+        </div>
 
-<p>
 
-Warm amber blended with rich woods,
-silk and golden oriental elegance.
 
-</p>
+        <!-- 04 -->
 
-<a class="collection-link">
+        <div class="collection-card">
 
-DISCOVER →
+            <img
+            src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1200&q=90"
+            alt="Imperial Amber"
+            >
 
-</a>
+            <div class="collection-overlay">
 
-</div>
+                <div class="collection-number">
+                    04 · AMBER
+                </div>
 
-</div>
+                <h3>
+                    Imperial Amber
+                </h3>
 
+                <p>
+                    Amber · Vanilla · Oud · Warm Woods
+                </p>
 
-<div class="collection-card reveal">
+            </div>
 
-<div class="collection-bg collection-3"></div>
+        </div>
 
-<div class="collection-content">
 
-<div class="collection-number">
 
-03 · FLORAL
+        <!-- 05 -->
 
-</div>
+        <div class="collection-card">
 
-<h3>
+            <img
+            src="https://images.unsplash.com/photo-1619994403073-2cec844b8e63?auto=format&fit=crop&w=1200&q=90"
+            alt="Tea Ceremony"
+            >
 
-Jasmine Moon
+            <div class="collection-overlay">
 
-</h3>
+                <div class="collection-number">
+                    05 · TEA
+                </div>
 
-<p>
+                <h3>
+                    Tea Ceremony
+                </h3>
 
-A delicate floral composition inspired by
-moonlit oriental gardens.
+                <p>
+                    Green Tea · Bergamot · Cedar · Soft Musk
+                </p>
 
-</p>
+            </div>
 
-<a class="collection-link">
+        </div>
 
-DISCOVER →
 
-</a>
 
-</div>
+        <!-- 06 -->
 
-</div>
+        <div class="collection-card">
 
+            <img
+            src="https://images.unsplash.com/photo-1588405748880-12d1d2a59db9?auto=format&fit=crop&w=1200&q=90"
+            alt="Dragon Wood"
+            >
 
-</div>
+            <div class="collection-overlay">
+
+                <div class="collection-number">
+                    06 · WOODY
+                </div>
+
+                <h3>
+                    Dragon Wood
+                </h3>
+
+                <p>
+                    Dark Woods · Leather · Incense · Oud
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
+
 
 
 <!-- =========================
      CUSTOM
 ========================= -->
 
-<section class="custom-section" id="custom">
+<section
+class="custom-section"
+id="custom"
+>
 
-<div class="custom-box reveal">
+    <div class="custom-box">
 
-<div class="section-label">
+        <div class="custom-image">
 
-BESPOKE FRAGRANCE
+            <img
+            src="https://images.unsplash.com/photo-1600612253971-422e7f7faeb6?auto=format&fit=crop&w=1600&q=90"
+            alt="Custom fragrance"
+            >
 
-</div>
+        </div>
 
-<h2>
 
-Create Your Signature Scent
+        <div class="custom-content">
 
-</h2>
+            <div class="section-label">
+                PRIVATE LABEL · OEM · ODM
+            </div>
 
-<p>
+            <h2>
+                Build Your<br>
+                Own Scent.
+            </h2>
 
-Choose your preferred fragrance direction and explore
-our curated selection of iconic scent profiles.
+            <p>
 
-From masculine woods and oud to feminine florals,
-amber and modern oriental compositions.
+                Select a fragrance direction,
+                choose your reference scent,
+                customize your perfume,
+                bottle and packaging.
 
-</p>
+                HYSCENT provides complete fragrance
+                customization solutions for brands,
+                retailers and private clients.
 
-<button class="btn btn-primary custom-button" onclick="openCustomizer()">
+            </p>
 
-START CUSTOMIZATION
 
-</button>
+            <div class="custom-features">
 
-</div>
+                <div class="feature">
+                    01 · FRAGRANCE DEVELOPMENT
+                </div>
+
+                <div class="feature">
+                    02 · BOTTLE CUSTOMIZATION
+                </div>
+
+                <div class="feature">
+                    03 · PRIVATE LABEL
+                </div>
+
+                <div class="feature">
+                    04 · OEM / ODM
+                </div>
+
+            </div>
+
+
+            <button
+                class="btn btn-gold"
+                onclick="openCustom()"
+            >
+                START CUSTOMIZATION
+            </button>
+
+        </div>
+
+    </div>
 
 </section>
 
 
+
 <!-- =========================
-     FEATURES
+     VIDEO BRAND STORY
 ========================= -->
 
-<div class="features">
+<section class="video-section">
 
-<div class="feature reveal">
+    <video
+        class="video-background"
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=2200&q=90"
+    >
 
-<div class="feature-icon">♢</div>
+        <source
+        src="https://assets.mixkit.co/videos/preview/mixkit-perfume-bottle-on-a-table-39811-large.mp4"
+        type="video/mp4">
 
-<h4>Premium Quality</h4>
-
-<p>
-
-Finest ingredients sourced from around the world.
-
-</p>
-
-</div>
-
-
-<div class="feature reveal">
-
-<div class="feature-icon">✦</div>
-
-<h4>Expert Craftsmanship</h4>
-
-<p>
-
-Experienced perfumers and professional formulation.
-
-</p>
-
-</div>
+    </video>
 
 
-<div class="feature reveal">
-
-<div class="feature-icon">❈</div>
-
-<h4>Oriental Heritage</h4>
-
-<p>
-
-Inspired by timeless eastern culture and nature.
-
-</p>
-
-</div>
+    <div class="video-overlay"></div>
 
 
-<div class="feature reveal">
+    <div class="video-content">
 
-<div class="feature-icon">◇</div>
+        <div class="section-label">
+            THE HYSCENT EXPERIENCE
+        </div>
 
-<h4>Bespoke Service</h4>
+        <h2>
+            Scent Becomes<br>
+            Memory.
+        </h2>
 
-<p>
+        <p>
 
-OEM / ODM and private label fragrance solutions.
+            From oriental woods to modern florals,
+            every HYSCENT fragrance is designed
+            to tell a story.
 
-</p>
+        </p>
 
-</div>
+        <a
+        href="#contact"
+        class="btn"
+        >
+            DISCOVER HYSCENT
+        </a>
 
-</div>
+    </div>
+
+</section>
+
 
 
 <!-- =========================
      ABOUT
 ========================= -->
 
-<section id="about">
+<section id="story">
 
-<div class="about reveal">
+    <div class="about">
 
-<div class="section-label">
+        <div class="section-label">
+            OUR STORY
+        </div>
 
-ABOUT HYSCENT
+        <h2 class="section-title">
+            About HYSCENT
+        </h2>
 
-</div>
+        <p>
 
-<h2 class="section-title">
+            HYSCENT is a fragrance house focused on
+            original niche perfumes and private label
+            fragrance solutions.
 
-The Story Behind The Scent
+            <br><br>
 
-</h2>
+            Inspired by oriental culture, natural
+            ingredients and contemporary aesthetics,
+            we transform memories, landscapes and
+            emotions into unique scents.
 
-<p class="about-text">
+        </p>
 
-"Fragrance is not simply something you wear.
-
-It is a memory, an emotion and a story
-that remains long after you leave."
-
-</p>
-
-<p class="about-small">
-
-HYSCENT is a luxury fragrance house dedicated to creating
-original niche perfumes that combine oriental inspiration,
-natural ingredients and contemporary aesthetics.
-
-We transform memories, landscapes and emotions
-into unique olfactory experiences.
-
-</p>
-
-</div>
+    </div>
 
 </section>
 
-
-<!-- =========================
-     OEM / ODM
-========================= -->
-
-<section id="oem">
-
-<div class="oem-grid">
-
-<div class="oem-image reveal"></div>
-
-
-<div class="oem-content reveal">
-
-<div class="section-label" style="text-align:left">
-
-PRIVATE LABEL · OEM · ODM
-
-</div>
-
-<h2>
-
-Build Your Fragrance Brand
-
-</h2>
-
-<p>
-
-From fragrance concept and formulation to packaging
-and finished products, HYSCENT provides complete
-customization solutions for brands, retailers
-and private clients.
-
-</p>
-
-<ul class="oem-list">
-
-<li>Original fragrance development</li>
-
-<li>Private label perfume</li>
-
-<li>OEM / ODM manufacturing</li>
-
-<li>Custom bottle & packaging</li>
-
-<li>Brand fragrance solutions</li>
-
-</ul>
-
-<br>
-
-<a href="#contact" class="btn">
-
-CONTACT US
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section class="contact" id="contact">
-
-<div class="section-label reveal">
-
-LET'S CREATE TOGETHER
-
-</div>
-
-<h2 class="reveal">
-
-Start Your Fragrance Project
-
-</h2>
-
-<p class="reveal">
-
-For fragrance development, private label,
-OEM / ODM or business inquiries.
-
-</p>
-
-<a
-class="btn btn-primary reveal"
-href="mailto:info@hyscent.com"
->
-
-CONTACT HYSCENT
-
-</a>
-
-</section>
 
 
 <!-- =========================
      FOOTER
 ========================= -->
 
-<footer>
+<footer id="contact">
 
-<div class="footer-main">
+    <div class="footer-logo">
+        HYSCENT
+    </div>
 
-<div>
+    <p>
+        THE ART OF NICHE FRAGRANCE
+    </p>
 
-<div class="footer-logo">
+    <p>
+        PRIVATE LABEL · OEM · ODM
+    </p>
 
-HYSCENT
-
-</div>
-
-<p style="color:#666;font-size:12px;margin-top:12px;">
-
-THE ART OF NICHE FRAGRANCE
-
-</p>
-
-</div>
-
-
-<div class="footer-column">
-
-<h4>EXPLORE</h4>
-
-<a href="#home">Home</a>
-
-<a href="#collections">Collections</a>
-
-<a href="#custom">Custom Fragrance</a>
-
-</div>
-
-
-<div class="footer-column">
-
-<h4>BUSINESS</h4>
-
-<a href="#oem">OEM / ODM</a>
-
-<a href="#about">About HYSCENT</a>
-
-<a href="#contact">Contact</a>
-
-</div>
-
-
-<div class="footer-column">
-
-<h4>CONTACT</h4>
-
-<a href="mailto:info@hyscent.com">
-
-info@hyscent.com
-
-</a>
-
-<a href="#contact">
-
-Business Inquiry
-
-</a>
-
-</div>
-
-</div>
-
-
-<div class="footer-bottom">
-
-<span>
-
-© 2026 HYSCENT. ALL RIGHTS RESERVED.
-
-</span>
-
-<span>
-
-THE ART OF NICHE FRAGRANCE
-
-</span>
-
-</div>
+    <p style="margin-top:30px;color:#555;">
+        © 2026 HYSCENT. All Rights Reserved.
+    </p>
 
 </footer>
 
 
-<!-- =========================
-     FLOATING CONTACT
-========================= -->
 
-<a
-href="https://wa.me/"
-class="floating-contact"
-target="_blank"
-title="Contact HYSCENT"
->
-
-◔
-
-</a>
-
-
-<!-- =========================
-     CUSTOMIZER MODAL
-========================= -->
-
-<div class="modal" id="customModal">
-
-<div class="modal-header" onclick="closeCustomizer()">
-
-×
-
-</div>
-
-
-<div class="modal-window">
-
-
-<!-- LEFT -->
-
-<div class="modal-sidebar">
-
-<h2>
-
-BUILD YOUR SCENT
-
-</h2>
-
-
-<div class="step active">
-
-01 · CHOOSE YOUR STYLE
-
-</div>
-
-<div class="step">
-
-02 · CHOOSE FRAGRANCES
-
-</div>
-
-<div class="step">
-
-03 · REQUEST QUOTE
-
-</div>
-
-
-<div class="pack-box">
-
-<small>
-
-SELECTION
-
-</small>
-
-<strong>
-
-HYSCENT BESPOKE
-
-</strong>
-
-<span>
-
-Choose up to 4 fragrances
-
-</span>
-
-
-<div class="progress">
-
-<div class="progress-bar" id="progressBar"></div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- CENTER -->
-
-<div class="fragrance-area">
-
-<h3>
-
-Choose Your Fragrance
-
-</h3>
-
-
-<input
-class="search"
-id="searchInput"
-type="text"
-placeholder="Search brands or fragrances..."
-onkeyup="searchFragrances()"
->
-
-
-<div class="gender">
-
-<button
-class="active"
-onclick="filterGender('men',this)"
->
-
-MEN
-
-</button>
-
-<button
-onclick="filterGender('women',this)"
->
-
-WOMEN
-
-</button>
-
-</div>
-
-
-<div id="fragranceList">
-
-
-<!-- BRAND -->
-
-<div class="brand fragrance-item men">
-
-<div class="brand-name">
-
-OUD COLLECTION
-
-</div>
-
-<div class="fragrance">
-
-<span class="fragrance-name">
-
-Oud Royal
-
-</span>
-
-<button class="add" onclick="addFragrance(this,'Oud Royal')">
-
-+
-
-</button>
-
-</div>
-
-<div class="fragrance">
-
-<span class="fragrance-name">
-
-Oud Dynasty
-
-</span>
-
-<button class="add" onclick="addFragrance(this,'Oud Dynasty')">
-
-+
-
-</button>
-
-</div>
-
-</div>
-
-
-<div class="brand fragrance-item men">
-
-<div class="brand-name">
-
-WOODY COLLECTION
-
-</div>
-
-<div class="fragrance">
-
-<span class="fragrance-name">
-
-Santal Noir
-
-</span>
-
-<button class="add" onclick="addFragrance(this,'Santal Noir')">
-
-+
-
-</button>
-
-</div>
-
-<div class="fragrance">
-
-<span class="fragrance-name">
-
-Dragon Wood
-
-</span>
-
-<button class="add" onclick="addFragrance(this,'Dragon Wood')">
-
-+
-
-</button>
-
-</div>
-
-</div>
-
-
-<div class="brand fragrance-item men">
-
-<div class="brand-name">
-
-AMBER COLLECTION
-
-</div>
-
-<div class="fragrance">
-
-<span class="fragrance-name">
-
-Imperial Amber
-
-</span>
-
-<button class="add" onclick="addFragrance(this,'Imperial Amber')">
-
-+
-
-</button>
-
-</div>
-
-<div class="fragrance">
-
-<span class="fragrance-name">
-
-Golden Oud
-
-</span>
-
-<button class="add" onclick="addFragrance(this,'Golden Oud')">
-
-+
-
-</button>
-
-</div>
-
-</div>
-
-
-<div class="brand fragrance-item women">
-
-<div class="brand-name">
-
-FLORAL COLLECTION
-
-</div>
-
-<div class="fragrance">
-
-<span class="fragrance-name">
-
-Jasmine Moon
-
-</span>
-
-<button class="add" onclick="addFragrance(this,'Jasmine Moon')">
-
-+
-
-</button>
-
-</div>
-
-<div class="fragrance">
-
-<span class="fragrance-name">
-
-Rose Imperial
-
-</span>
-
-<button class="add" onclick="addFragrance(this,'Rose Imperial')">
-
-+
-
-</button>
-
-</div>
-
-</div>
-
-
-<div class="brand fragrance-item women">
-
-<div class="brand-name">
-
-TEA COLLECTION
-
-</div>
-
-<div class="fragrance">
-
-<span class="fragrance-name">
-
-Silk Road
-
-</span>
-
-<button class="add" onclick="addFragrance(this,'Silk Road')">
-
-+
-
-</button>
-
-</div>
-
-<div class="fragrance">
-
-<span class="fragrance-name">
-
-Tea Ceremony
-
-</span>
-
-<button class="add" onclick="addFragrance(this,'Tea Ceremony')">
-
-+
-
-</button>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-
-<!-- RIGHT -->
-
-<div class="summary">
-
-<h3>
-
-YOUR SELECTION
-
-</h3>
-
+<!-- =====================================================
+     CUSTOM FRAGRANCE MODAL
+===================================================== -->
 
 <div
-class="selected-list"
-id="selectedList"
+class="modal"
+id="customModal"
 >
 
-<p style="font-size:12px;color:#aaa;">
+    <div class="modal-box">
 
-No fragrances selected yet.
 
-</p>
+        <!-- HEADER -->
+
+        <div class="modal-header">
+
+            <h2>
+                BUILD YOUR CUSTOM FRAGRANCE
+            </h2>
+
+            <button
+            class="close"
+            onclick="closeCustom()"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+
+        <!-- LEFT -->
+
+        <div class="modal-left">
+
+            <div class="step">
+                1 · CONTACT INFORMATION
+            </div>
+
+            <input
+            class="input"
+            id="name"
+            placeholder="Full Name *"
+            >
+
+            <input
+            class="input"
+            id="email"
+            placeholder="Email *"
+            >
+
+            <input
+            class="input"
+            id="company"
+            placeholder="Company / Brand"
+            >
+
+            <input
+            class="input"
+            id="country"
+            placeholder="Country / Region"
+            >
+
+
+            <div class="pack">
+
+                <strong>
+                    HYSCENT CUSTOM
+                </strong>
+
+                <div>
+                    Selected:
+                    <span id="count">
+                        0
+                    </span>
+                    / 4
+                </div>
+
+                <div class="progress">
+                    <span id="progressBar"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CENTER -->
+
+        <div class="modal-center">
+
+            <div class="step">
+                2 · CHOOSE YOUR FRAGRANCE DIRECTION
+            </div>
+
+
+            <input
+            class="search"
+            id="search"
+            placeholder="Search fragrance or brand..."
+            onkeyup="filterFragrances()"
+            >
+
+
+            <div class="gender">
+
+                <button
+                class="active"
+                onclick="setGender(this,'men')"
+                >
+                    MEN
+                </button>
+
+                <button
+                onclick="setGender(this,'women')"
+                >
+                    WOMEN
+                </button>
+
+            </div>
+
+
+            <div id="fragranceList">
+
+
+                <!-- CHANEL -->
+
+                <div class="brand">
+
+                    <div class="brand-name">
+                        CHANEL
+                    </div>
+
+                    <div
+                    class="fragrance"
+                    data-gender="men"
+                    data-search="chanel bleu blue woody"
+                    >
+
+                        <div class="fragrance-info">
+
+                            <strong>
+                                Blue-style Woody
+                            </strong>
+
+                            <span>
+                                Fresh · Woody · Aromatic
+                            </span>
+
+                        </div>
+
+                        <button
+                        class="add"
+                        onclick="selectFragrance(this,'Blue-style Woody')"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- DIOR -->
+
+                <div class="brand">
+
+                    <div class="brand-name">
+                        DIOR
+                    </div>
+
+                    <div
+                    class="fragrance"
+                    data-gender="men"
+                    data-search="dior sauvage fresh woody"
+                    >
+
+                        <div class="fragrance-info">
+
+                            <strong>
+                                Fresh Aromatic Style
+                            </strong>
+
+                            <span>
+                                Fresh · Spicy · Woody
+                            </span>
+
+                        </div>
+
+                        <button
+                        class="add"
+                        onclick="selectFragrance(this,'Fresh Aromatic Style')"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TOM FORD -->
+
+                <div class="brand">
+
+                    <div class="brand-name">
+                        TOM FORD
+                    </div>
+
+                    <div
+                    class="fragrance"
+                    data-gender="men"
+                    data-search="tom ford oud tobacco amber"
+                    >
+
+                        <div class="fragrance-info">
+
+                            <strong>
+                                Oud & Amber Style
+                            </strong>
+
+                            <span>
+                                Oud · Amber · Woody
+                            </span>
+
+                        </div>
+
+                        <button
+                        class="add"
+                        onclick="selectFragrance(this,'Oud & Amber Style')"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- LE LABO -->
+
+                <div class="brand">
+
+                    <div class="brand-name">
+                        LE LABO
+                    </div>
+
+                    <div
+                    class="fragrance"
+                    data-gender="women"
+                    data-search="le labo rose musk floral"
+                    >
+
+                        <div class="fragrance-info">
+
+                            <strong>
+                                Rose & Musk Style
+                            </strong>
+
+                            <span>
+                                Rose · Musk · Floral
+                            </span>
+
+                        </div>
+
+                        <button
+                        class="add"
+                        onclick="selectFragrance(this,'Rose & Musk Style')"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BYREDO -->
+
+                <div class="brand">
+
+                    <div class="brand-name">
+                        BYREDO
+                    </div>
+
+                    <div
+                    class="fragrance"
+                    data-gender="women"
+                    data-search="byredo floral clean musk"
+                    >
+
+                        <div class="fragrance-info">
+
+                            <strong>
+                                Clean Floral Style
+                            </strong>
+
+                            <span>
+                                Floral · Clean · Musk
+                            </span>
+
+                        </div>
+
+                        <button
+                        class="add"
+                        onclick="selectFragrance(this,'Clean Floral Style')"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CREED -->
+
+                <div class="brand">
+
+                    <div class="brand-name">
+                        CREED
+                    </div>
+
+                    <div
+                    class="fragrance"
+                    data-gender="men"
+                    data-search="creed citrus woody fresh"
+                    >
+
+                        <div class="fragrance-info">
+
+                            <strong>
+                                Citrus Woody Style
+                            </strong>
+
+                            <span>
+                                Citrus · Fresh · Woody
+                            </span>
+
+                        </div>
+
+                        <button
+                        class="add"
+                        onclick="selectFragrance(this,'Citrus Woody Style')"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- MAISON FRANCIS -->
+
+                <div class="brand">
+
+                    <div class="brand-name">
+                        MAISON FRANCIS KURKDJIAN
+                    </div>
+
+                    <div
+                    class="fragrance"
+                    data-gender="women"
+                    data-search="baccarat amber floral luxury"
+                    >
+
+                        <div class="fragrance-info">
+
+                            <strong>
+                                Amber Floral Style
+                            </strong>
+
+                            <span>
+                                Amber · Floral · Sweet
+                            </span>
+
+                        </div>
+
+                        <button
+                        class="add"
+                        onclick="selectFragrance(this,'Amber Floral Style')"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div
+            style="
+            margin-top:20px;
+            color:#999;
+            font-size:10px;
+            line-height:1.6;
+            "
+            >
+
+                * Reference fragrances are shown for scent
+                direction only. HYSCENT is not affiliated
+                with or authorized by the referenced brands.
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RIGHT -->
+
+        <div class="modal-right">
+
+            <div class="summary-title">
+                3 · YOUR SELECTION
+            </div>
+
+
+            <div
+            class="selected-list"
+            id="selectedList"
+            >
+
+                <div
+                style="
+                color:#aaa;
+                font-size:12px;
+                "
+                >
+                    No fragrance selected yet.
+                </div>
+
+            </div>
+
+
+            <div class="total">
+
+                <span>
+                    SELECTED
+                </span>
+
+                <strong id="totalCount">
+                    0 / 4
+                </strong>
+
+            </div>
+
+
+            <button
+            class="submit"
+            onclick="submitCustom()"
+            >
+                REQUEST CUSTOM QUOTE
+            </button>
+
+        </div>
+
+
+    </div>
 
 </div>
 
-
-<div class="total-box">
-
-<div class="total-label">
-
-SELECTED
-
-</div>
-
-<div class="total" id="selectedCount">
-
-0 / 4
-
-</div>
-
-</div>
-
-
-<button
-class="complete"
-onclick="requestQuote()"
->
-
-REQUEST QUOTE
-
-</button>
-
-</div>
-
-
-</div>
-
-</div>
 
 
 <script>
 
-/* =========================
-   MOBILE MENU
-========================= */
+/* =========================================
+   HERO SLIDER
+========================================= */
 
-function openMobileMenu(){
+const heroImages = [
 
-document
-.getElementById("mobileMenu")
-.classList
-.add("active");
+"https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&w=2200&q=90",
+
+"https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=2200&q=90",
+
+"https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=2200&q=90"
+
+];
+
+let heroIndex = 0;
+
+const heroImage =
+document.querySelector(".hero-image");
+
+const dots =
+document.querySelectorAll(".hero-dot");
+
+
+function changeHero(index){
+
+    heroIndex = index;
+
+    heroImage.style.opacity = "0";
+
+    setTimeout(()=>{
+
+        heroImage.src = heroImages[index];
+
+        heroImage.style.opacity = "1";
+
+    },250);
+
+    dots.forEach((dot,i)=>{
+
+        dot.classList.toggle(
+            "active",
+            i === index
+        );
+
+    });
 
 }
 
-function closeMobileMenu(){
 
-document
-.getElementById("mobileMenu")
-.classList
-.remove("active");
+dots.forEach((dot,index)=>{
 
-}
+    dot.addEventListener(
+        "click",
+        ()=>changeHero(index)
+    );
+
+});
 
 
-/* =========================
-   CUSTOMIZER
-========================= */
+setInterval(()=>{
+
+    heroIndex++;
+
+    if(heroIndex >= heroImages.length){
+        heroIndex = 0;
+    }
+
+    changeHero(heroIndex);
+
+},6000);
+
+
+
+/* =========================================
+   CUSTOM MODAL
+========================================= */
 
 const modal =
 document.getElementById("customModal");
 
+
+function openCustom(){
+
+    modal.classList.add("active");
+
+    document.body.style.overflow="hidden";
+
+}
+
+
+function closeCustom(){
+
+    modal.classList.remove("active");
+
+    document.body.style.overflow="";
+
+}
+
+
+modal.addEventListener(
+"click",
+function(e){
+
+    if(e.target === modal){
+
+        closeCustom();
+
+    }
+
+});
+
+
+
+/* =========================================
+   SELECT FRAGRANCE
+========================================= */
+
 let selected = [];
 
 
-function openCustomizer(){
+function selectFragrance(button,name){
 
-modal.classList.add("active");
-
-document.body.style.overflow="hidden";
-
-}
+    const index =
+    selected.indexOf(name);
 
 
-function closeCustomizer(){
+    if(index !== -1){
 
-modal.classList.remove("active");
+        selected.splice(index,1);
 
-document.body.style.overflow="";
+        button.classList.remove("selected");
 
-}
+        button.innerHTML="+";
+
+    }
+
+    else{
+
+        if(selected.length >= 4){
+
+            alert(
+                "You can select up to 4 fragrance directions."
+            );
+
+            return;
+
+        }
+
+        selected.push(name);
+
+        button.classList.add("selected");
+
+        button.innerHTML="✓";
+
+    }
 
 
-function addFragrance(button,name){
-
-if(selected.includes(name)){
-
-selected =
-selected.filter(item => item !== name);
-
-button.classList.remove("selected");
-
-button.innerHTML="+";
-
-}
-
-else{
-
-if(selected.length >= 4){
-
-alert("You can select up to 4 fragrances.");
-
-return;
-
-}
-
-selected.push(name);
-
-button.classList.add("selected");
-
-button.innerHTML="✓";
-
-}
-
-updateSelection();
+    updateSummary();
 
 }
 
 
-function updateSelection(){
+function updateSummary(){
 
-const list =
-document.getElementById("selectedList");
+    const list =
+    document.getElementById("selectedList");
 
-const count =
-document.getElementById("selectedCount");
+    const count =
+    document.getElementById("count");
 
-const progress =
-document.getElementById("progressBar");
+    const total =
+    document.getElementById("totalCount");
 
-
-count.innerText =
-selected.length + " / 4";
-
-
-progress.style.width =
-(selected.length / 4 * 100) + "%";
+    const progress =
+    document.getElementById("progressBar");
 
 
-if(selected.length === 0){
+    count.innerText =
+    selected.length;
 
-list.innerHTML =
 
-'<p style="font-size:12px;color:#aaa;">No fragrances selected yet.</p>';
+    total.innerText =
+    selected.length + " / 4";
 
-return;
+
+    progress.style.width =
+    (selected.length / 4 * 100) + "%";
+
+
+    if(selected.length === 0){
+
+        list.innerHTML = `
+            <div style="
+            color:#aaa;
+            font-size:12px;
+            ">
+                No fragrance selected yet.
+            </div>
+        `;
+
+        return;
+
+    }
+
+
+    list.innerHTML =
+    selected.map(
+        item => `
+        <div class="selected-item">
+
+            <span>
+                ${item}
+            </span>
+
+            <span>
+                ✓
+            </span>
+
+        </div>
+        `
+    ).join("");
 
 }
 
 
-list.innerHTML = "";
 
-selected.forEach(function(item){
-
-const div =
-document.createElement("div");
-
-div.className="selected-item";
-
-div.innerHTML =
-"<span>"+item+"</span><span>✓</span>";
-
-list.appendChild(div);
-
-});
-
-}
-
-
-/* =========================
+/* =========================================
    SEARCH
-========================= */
+========================================= */
 
-function searchFragrances(){
+function filterFragrances(){
 
-const value =
-document
-.getElementById("searchInput")
-.value
-.toLowerCase();
+    const keyword =
+    document
+    .getElementById("search")
+    .value
+    .toLowerCase();
 
 
-document
-.querySelectorAll(".fragrance-item")
-.forEach(function(item){
+    document
+    .querySelectorAll(".fragrance")
+    .forEach(item=>{
 
-const text =
-item.innerText.toLowerCase();
+        const text =
+        item.dataset.search
+        .toLowerCase();
 
-item.style.display =
-text.includes(value)
-? ""
-: "none";
+        item.style.display =
+        text.includes(keyword)
+        ? "flex"
+        : "none";
 
-});
+    });
 
 }
 
 
-/* =========================
+
+/* =========================================
    MEN / WOMEN
-========================= */
+========================================= */
 
-function filterGender(gender,button){
+function setGender(button,gender){
 
-document
-.querySelectorAll(".gender button")
-.forEach(function(btn){
+    document
+    .querySelectorAll(".gender button")
+    .forEach(btn=>{
+        btn.classList.remove("active");
+    });
 
-btn.classList.remove("active");
-
-});
-
-button.classList.add("active");
+    button.classList.add("active");
 
 
-document
-.querySelectorAll(".fragrance-item")
-.forEach(function(item){
+    document
+    .querySelectorAll(".fragrance")
+    .forEach(item=>{
 
-if(item.classList.contains(gender)){
+        item.style.display =
+        item.dataset.gender === gender
+        ? "flex"
+        : "none";
 
-item.style.display="";
-
-}else{
-
-item.style.display="none";
-
-}
-
-});
+    });
 
 }
 
 
-/* =========================
-   REQUEST QUOTE
-========================= */
 
-function requestQuote(){
+/* =========================================
+   SUBMIT
+========================================= */
 
-if(selected.length === 0){
+function submitCustom(){
 
-alert("Please select at least one fragrance.");
+    const name =
+    document.getElementById("name").value;
 
-return;
-
-}
-
-const subject =
-encodeURIComponent(
-"HYSCENT Custom Fragrance Inquiry"
-);
-
-const body =
-encodeURIComponent(
-
-"Hello HYSCENT,%0A%0A" +
-
-"I would like to request a quotation for a custom fragrance.%0A%0A" +
-
-"Selected fragrances:%0A" +
-
-selected.join("%0A") +
-
-"%0A%0A" +
-
-"Please contact me with MOQ, pricing and customization options."
-
-);
-
-window.location.href =
-"mailto:info@hyscent.com?subject="
-+subject+
-"&body="
-+body;
-
-}
+    const email =
+    document.getElementById("email").value;
 
 
-/* =========================
-   SCROLL REVEAL
-========================= */
+    if(!name || !email){
 
-const observer =
-new IntersectionObserver(
-function(entries){
+        alert(
+            "Please enter your name and email."
+        );
 
-entries.forEach(function(entry){
+        return;
 
-if(entry.isIntersecting){
+    }
 
-entry.target.classList.add("show");
+
+    if(selected.length === 0){
+
+        alert(
+            "Please select at least one fragrance direction."
+        );
+
+        return;
+
+    }
+
+
+    alert(
+        "Thank you, " +
+        name +
+        "! Your custom fragrance request has been prepared.\n\n" +
+        "Selected directions: " +
+        selected.join(", ")
+    );
 
 }
 
-});
-
-},
-{
-threshold:.12
-}
-);
 
 
-document
-.querySelectorAll(".reveal")
-.forEach(function(element){
-
-observer.observe(element);
-
-});
-
-
-/* =========================
-   ESC CLOSE MODAL
-========================= */
+/* =========================================
+   ESC CLOSE
+========================================= */
 
 document.addEventListener(
 "keydown",
-function(event){
+function(e){
 
-if(event.key === "Escape"){
+    if(e.key === "Escape"){
 
-closeCustomizer();
+        closeCustom();
 
-}
+    }
 
 });
 
@@ -3029,5 +2485,4 @@ closeCustomizer();
 
 
 </body>
-
 </html>
